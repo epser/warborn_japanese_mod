@@ -33,6 +33,13 @@ if __name__ == '__main__':
         'import': '--import',
     }
 
+    # 引数が足りない場合はエラーを出力して終了
+    if len(sys.argv) < 4:
+        # コマンドヘルプ --export or --import
+        print("Usage: python json_control.py --export <json_file_name> <tsv_file_name>")
+        print("Usage: python json_control.py --import <json_file_name> <tsv_file_name>")
+        sys.exit(1)
+
     # 第1引数がexport: 第2引数のJSONに二重格納されているJSONデータをTSV形式で出力する
     if sys.argv[1] == options['export']:
         json_file_name = sys.argv[2]
@@ -56,27 +63,20 @@ if __name__ == '__main__':
         tsv_file_name = sys.argv[3]
 
         # TSVファイルを読み込む
-        with open(tsv_file_name, 'r', encoding='utf-8') as file:
-            lines = file.readlines()
-
-        # TSVをkey-valueの辞書に変換
         inner_json = {}
-        for line in lines:
-            key, value = line.strip().split("\t")
-            if value is not None:
-                inner_json[key] = unescape_string(value)
+        with open(tsv_file_name, 'r', encoding='utf-8') as file:
+            # TSVの1行目はヘッダーなのでスキップ
+            file.readline()
+
+            for line in file:
+                # TSVをkey-valueの辞書に変換
+                key, value = line.strip().split("\t")
+                if value is not None:
+                    inner_json[key] = unescape_string(value)
 
         # JSONファイルを読み込む
         json_all = load_json_file(json_file_name)
-        json_all['m_Script'] = json.dumps(inner_json)
+        json_all['m_Script'] = json.dumps(inner_json, ensure_ascii=False)
 
         # JSONファイルを上書き
         write_json_file(json_file_name, json_all)
-
-    else:
-        # コマンドヘルプ --export or --import
-        print("Usage: python json_control.py --export <json_file_name> <tsv_file_name>")
-        print("Usage: python json_control.py --import <json_file_name> <tsv_file_name>")
-        sys.exit(1)
-
-
