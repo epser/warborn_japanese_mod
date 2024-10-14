@@ -173,7 +173,7 @@ OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべ�
 OBJECTIVE_ALL_UNITS_OR_REFINERIES_DEFEAT_CONDITION	エイオナイト精製所をすべて奪われる、または味方ユニットの全滅。
 OBJECTIVE_ALL_CAPTURE_CAPABLE_UNITS_DEFEAT_CONDITION	占領スキルを持つ味方ユニットの全滅。
 RESULTS_TOTAL_TURNS	合計ターン数:
-RESULTS_UNITS_DEPLOYED	自軍の全ユニット:
+RESULTS_UNITS_DEPLOYED	配備したユニット:
 RESULTS_UNITS_LOST	失ったユニット:
 RESULTS_ENEMY_UNITS_DESTROYED	撃破した敵ユニット:
 NEW_COMMANDER_TRAIT_ACQUIRED	新たなコマンダー特性\n"{0}"\nを獲得！
@@ -343,17 +343,17 @@ REPAIRING	{0}ターン後にリペア完了
 LUELLA_COMMANDER_SPECIALITY	長距離戦闘
 LUELLA_COMMANDER_POWER_NAME	DUSKオーバードライブ
 LUELLA_COMMANDER_POWER_DESC	DUSKオーバードライブが有効な間、射程2以上の味方スキルの最大射程が{0}上昇する。すべての味方の攻撃スキルの基礎クリティカルヒット率も{1}%に上昇する。
-VINCENT_COMMANDER_SPECIALITY	CQC - Close Quarters Combat
+VINCENT_COMMANDER_SPECIALITY	CQC(Close Quarters Combat)
 VINCENT_COMMANDER_POWER_NAME	マキシマム・アウトプット
-VINCENT_COMMANDER_POWER_DESC	マキシマム・アウトプットが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、味方の射程1のエネルギー攻撃スキルが{1}%の追加ダメージを与える。
+VINCENT_COMMANDER_POWER_DESC	マキシマム・アウトプットが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、味方の射程1のエネルギー攻撃スキルが{1}%のダメージを与える。
 IZOL_COMMANDER_SPECIALITY	防衛戦闘
 IZOL_COMMANDER_POWER_NAME	ファランクス
-IZOL_COMMANDER_POWER_DESC	ファランクスが有効な間、味方の攻撃スキルは、攻撃者自身の隣接タイルに存在する味方ユニットごとに{0}%の追加ダメージを与える。
-AURIELLE_COMMANDER_SPECIALITY	修理とサポート
+IZOL_COMMANDER_POWER_DESC	ファランクスが有効な間、味方ユニットの攻撃ダメージは、攻撃者自身に隣接する味方ユニットごとに{0}%上昇する。
+AURIELLE_COMMANDER_SPECIALITY	修理および戦闘支援
 AURIELLE_COMMANDER_POWER_NAME	重工業の威力
 AURIELLE_COMMANDER_POWER_DESC	重工業の威力が有効な間、味方ユニットを修復するスキルの効果が{0}%上昇し、また対象に自動修復を与える効果を持つ。
 LYSANDER_COMMANDER_POWER_NAME	アクシオム・システム
-LYSANDER_COMMANDER_POWER_DESC	アクシオム・システムが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、最大射程が2以上の味方スキルの最大射程が{1}上昇する。さらにすべての味方の攻撃スキルが{2}%の追加ダメージを与える。
+LYSANDER_COMMANDER_POWER_DESC	アクシオム・システムが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、最大射程が2以上の味方スキルの最大射程が{1}上昇する。さらにすべての味方ユニットの攻撃ダメージが{2}%上昇する。
 CERVANTES_COMMANDER_POWER_NAME	海賊の災い
 CERVANTES_COMMANDER_POWER_DESC	海賊の災いが有効な間、ステータス付与を持たない味方攻撃スキルは、ウィルスを付与する効果を持つ。
 NO_TRAITS	このコマンダーには特性がありません。
@@ -424,17 +424,17 @@ SKILL_DESC_TURNS	ターン
 SKILL_DESC_STATUS_CHANGE	{1}を{2} {3}{0} 。
 SKILL_DESC_AND_REPAIRS	修理を含む
 SKILL_DESC_REPAIRS	修理
-SKILL_DESC_AND_DEALS_DAMAGE	また、{0}{1}ダメージを与える。
+SKILL_DESC_AND_DEALS_DAMAGE	更に{0}{1}ダメージを与える。
 SKILL_DESC_DEALS_DAMAGE	{0}{1}ダメージを与える。
 SKILL_DESC_ON	この
 SKILL_DESC_TO	この
-SKILL_DESC_TARGET	対象
-SKILL_DESC_TARGETS	対象
-SKILL_DESC_THE_USER	対象は自分自身。
-SKILL_DESC_A_SINGLE_TARGET	対象は単体。
-SKILL_DESC_A_SINGLE_ALLY	対象は味方単体。
-SKILL_DESC_MULTIPLE_TARGETS	対象は複数。
-SKILL_DESC_MULTIPLE_ALLIES	対象は味方複数。
+SKILL_DESC_TARGET	ターゲット
+SKILL_DESC_TARGETS	ターゲット
+SKILL_DESC_THE_USER	ターゲットは自分自身。
+SKILL_DESC_A_SINGLE_TARGET	ターゲットは単体。
+SKILL_DESC_A_SINGLE_ALLY	ターゲットは味方単体。
+SKILL_DESC_MULTIPLE_TARGETS	ターゲットは複数。
+SKILL_DESC_MULTIPLE_ALLIES	ターゲットは味方複数。
 SKILL_DESC_REMOVES_BUFF_AND_DEBUFF	また、{2}の<color={0}>バフ</color>と<color={1}>デバフ</color>を解除する。
 SKILL_DESC_REMOVES_BUFF	また、{1}の<color={0}>バフ</color>を解除する。
 SKILL_DESC_REMOVES_DEBUFF	また、{1}の<color={0}>デバフ</color>を解除する。
@@ -581,7 +581,7 @@ PROFILE	プロフィール
 COMMANDER_NAME	名前
 AFFILIATION	所属
 SPECIALITY	特化技能
-COMMANDER_POWER_TITLE	コマンダーパワー
+COMMANDER_POWER_TITLE	コマンダースキル
 BIOGRAPHY	プロファイル
 YOUR_COMMANDER	自軍コマンダー
 ENEMY_COMMANDER	敵軍コマンダー
@@ -605,7 +605,7 @@ IZOL_LOKMAN_DEPLOY_1	全システム正常。任務は必ず、私の手で成�
 IZOL_LOKMAN_DEPLOY_2	私ひとりでも、勝利を掴んでみせるぞ！　イゾル・ルクマーン、アービター。戦列に参加する。
 IZOL_LOKMAN_REPAIR	このままではアービターを失いかねん。修理のため離脱する。
 VINCENT_UVIIR_POWER_1	こりゃ、マジになる時かな……。
-VINCENT_UVIIR_POWER_2	ギアを上げていくぞ！
+VINCENT_UVIIR_POWER_2	さーて、ギアを上げていくぞ！
 VINCENT_UVIIR_POWER_3	あんたのせいだぜ！
 VINCENT_UVIIR_POWER_4	もう終わりにしないか？
 VINCENT_UVIIR_DEPLOY_1	さっさと片付けようか！　ヴィンセント・ユヴィール、メイルストロム、出るぞ！
@@ -629,7 +629,7 @@ AURIELLE_BIO	若く聡明な指揮官・オーリエル。クルコフ鉱業社�
 TRAIT_SNIPER_TRAINING	スナイパー・トレーニング
 TRAIT_SNIPER_TRAINING_DESC	味方の "インサイト" の攻撃スキルの最大射程が{0}上昇する。
 TRAIT_PATIENCE	耐久
-TRAIT_PATIENCE_DESC	味方ユニットによるアーマーアップの継続ターン数が{0}延長される。
+TRAIT_PATIENCE_DESC	味方ユニットによるアーマーアップの継続ターン数を{0}延長する。
 TRAIT_AMBUSH	奇襲砲撃
 TRAIT_AMBUSH_DESC	味方の射線不要の攻撃スキルは、攻撃ダメージが{0}%上昇する。
 TRAIT_SHARPSHOOTING	狙撃
@@ -639,41 +639,41 @@ TRAIT_TERMINAL_VELOCITY_DESC	味方ユニットの攻撃スキルを最大射程
 TRAIT_GUERRILLA_TACTICS	ゲリラ戦術
 TRAIT_GUERRILLA_TACTICS_DESC	森林または密林タイルの上にいる味方ユニットの物理防御値が{0}上昇する。
 TRAIT_CQC_EXPERT	CQCエキスパート
-TRAIT_CQC_EXPERT_DESC	最大射程がちょうど1の味方ユニットの攻撃は、攻撃ダメージが{0}%上昇する。
+TRAIT_CQC_EXPERT_DESC	最大射程がちょうど1の味方ユニットによる攻撃ダメージが{0}%上昇する。
 TRAIT_URBAN_COMBAT_TRAINING	市街戦訓練
 TRAIT_URBAN_COMBAT_TRAINING_DESC	都市タイルの上にいるターゲットに対して味方ユニットが攻撃した時、すべての攻撃ダメージが{0}%上昇する。
 TRAIT_CUSTOM_VANGUARD_REACTORS	リアクター改造: ヴァンガード
 TRAIT_CUSTOM_VANGUARD_REACTORS_DESC	味方の "ヴァンガード" の移動力が{0}上昇する。
 TRAIT_HEAT_DISPERSION	熱分散
-TRAIT_HEAT_DISPERSION_DESC	味方ユニットによるオーバーチャージの継続ターン数が{0}延長される。
+TRAIT_HEAT_DISPERSION_DESC	味方ユニットによるオーバーチャージの継続ターン数を{0}延長する。
 TRAIT_BLITZ	ブリッツ
 TRAIT_BLITZ_DESC	同じターン中に味方ユニットが{0}タイル以上移動して攻撃した時、クリティカルヒット率が{1}%上昇する。
 TRAIT_GRIDLOCK	グリッドロック
-TRAIT_GRIDLOCK_DESC	味方の攻撃スキルによる移動不能の継続ターン数が{0}延長される。
+TRAIT_GRIDLOCK_DESC	味方の攻撃スキルによる移動不能の継続ターン数を{0}延長する。
 TRAIT_DISCIPLINE	規律
-TRAIT_DISCIPLINE_DESC	敵の攻撃スキルは、ターゲットに隣接する味方ユニットごとにダメージが{0}%減少する。
+TRAIT_DISCIPLINE_DESC	敵の攻撃スキルによるダメージは、ターゲットに隣接する味方ユニットごとに{0}%減少する。
 TRAIT_REINFORCED_INVADER_ARMOUR	アーマー改修: インベーダー
 TRAIT_REINFORCED_INVADER_ARMOUR_DESC	味方の "インベーダー" の全ダメージタイプへの防御値が{0}上昇する。
 TRAIT_REINFORCED_NOVUS_ARMOUR	アーマー改修: ノーヴァス
 TRAIT_REINFORCED_NOVUS_ARMOUR_DESC	味方の "ノーヴァス" の全ダメージタイプへの防御値が{0}上昇する。
 TRAIT_STEADFAST	不動
 TRAIT_STEADFAST_DESC	同じターン中に味方ユニットが移動せず攻撃した時、攻撃ダメージが{0}%上昇する。
-TRAIT_ATTRITION	武装減耗
-TRAIT_ATTRITION_DESC	味方の攻撃スキルによる弱体化ステータスの継続ターン数が{0}延長される。
-TRAIT_DESTABILISATION	装甲減耗
-TRAIT_DESTABILISATION_DESC	味方の攻撃スキルによるアーマーダウンの継続ターン数が{0}延長される。
+TRAIT_ATTRITION	武器消耗戦術
+TRAIT_ATTRITION_DESC	味方の攻撃スキルによる弱体化ステータスの継続ターン数を{0}延長する。
+TRAIT_DESTABILISATION	装甲消耗戦術
+TRAIT_DESTABILISATION_DESC	味方の攻撃スキルによるアーマーダウンの継続ターン数を{0}延長する。
 TRAIT_EXPERT_ENGINEERING	エキスパート・エンジニアリング
-TRAIT_EXPERT_ENGINEERING_DESC	味方の修復スキルの効力が{0}上昇する。
+TRAIT_EXPERT_ENGINEERING_DESC	味方の修復スキルの効力が{0}%上昇する。
 TRAIT_ADVANCED_AEGIS_DESIGN	次世代設計: イージス
 TRAIT_ADVANCED_AEGIS_DESIGN_DESC	味方の "イージス" の全ダメージタイプへの防御値が{0}上昇し、移動力が{1}上昇する。
-TRAIT_FACTORY_FAMILIARITY	ファクトリー・タクティクス
+TRAIT_FACTORY_FAMILIARITY	工場の熟知
 TRAIT_FACTORY_FAMILIARITY_DESC	工場または施設タイルの上にいるターゲットに対して味方ユニットが攻撃した時、すべての攻撃ダメージが{0}%上昇する。
 TRAIT_ARMOUR_AUGMENTATION	アーマー増強
-TRAIT_ARMOUR_AUGMENTATION_DESC	味方ユニットによるアーマーアップの継続ターン数が{0}延長される。
+TRAIT_ARMOUR_AUGMENTATION_DESC	味方ユニットによるアーマーアップの継続ターン数を{0}延長する。
 TRAIT_CHEMICAL_PAYLOADS	炸薬量増加
 TRAIT_CHEMICAL_PAYLOADS_DESC	味方の爆発攻撃スキルのクリティカルヒット率が{0}%上昇する。
 TRAIT_LOGIC_BOMB	ロジック・ボム
-TRAIT_LOGIC_BOMB_DESC	味方の攻撃スキルによるウィルスの継続ターン数が{0}延長される。
+TRAIT_LOGIC_BOMB_DESC	味方の攻撃スキルによるウィルスの継続ターン数を{0}延長する。
 INTEL	ヘルプ
 TOPICS	トピック
 HELP_CONTROLS	操作
@@ -703,7 +703,7 @@ HELP_DAMAGE_TYPES	ダメージ種別
 HELP_DEFENCE_RATINGS	防御値
 HELP_COVER	カバー効果
 HELP_CRITICAL_HITS	クリティカルヒット
-HELP_CHECK_TOPICS	コマンダーメニューを開いて "情報" オプションを選択すると、ヘルプトピックを確認できます。
+HELP_CHECK_TOPICS	コマンダーメニューの "ヘルプ" を選択すると、ヘルプトピックを確認できます。
 HELP_MOVING_UNITS_DESC	味方ユニットをクリックして移動オプションを選択すると、そのユニットの移動可能な範囲が表示されます。\n\n表示された範囲内の有効なタイルを選択すると、ユニットがその位置に移動します。\n\n移動後にキャンセル ボタンを押すと移動がキャンセルされ、ユニットは前の位置に戻ります。
 HELP_USING_UNIT_SKILLS_DESC	味方ユニットをクリックしてスキルを選択すると、そのスキルの範囲と有効なターゲットが表示されます。\n\n範囲内の有効なターゲットを選択すると、その対象に向けてスキルを使用します。\n\n範囲が "セルフ" のスキルは、範囲表示なしですぐに使用します。
 HELP_SP_DESC	戦略ポイント(SP)は、占領した前哨基地に増援ユニットを配備すると消費されます。
@@ -756,7 +756,7 @@ CAPTURE	占領
 MISSION_IN_PROGRESS	進行中
 WARNING_TRANSMISSION_OVERRIDE	WARNING! TRANSMISSION OVERRIDE!
 OBJECTIVES_UPDATED	作戦目標が更新されました
-HELP_CHECK_OBJECTIVES	コマンダーメニューを開いて "情報" オプションを選択すると、作戦目標と敗北条件を確認できます。
+HELP_CHECK_OBJECTIVES	コマンダーメニューの "ヘルプ" を選択すると、作戦目標と敗北条件を確認できます。
 RANK	ランク
 RANK_S	S
 RANK_A	A
@@ -776,9 +776,9 @@ MISSION_NAME_LUELLA_08	ルーエン
 MISSION_NAME_LUELLA_09	ダスク
 MISSION_NAME_LUELLA_10	パラゴン
 MISSION_DESCRIPTION_LUELLA_00	NOMAD傭兵団は惑星セルリアに降下し、ヴァリアブルアーマーのエネルギー源であるエイオナイトを探索する。
-MISSION_DESCRIPTION_LUELLA_01	ルエラは初めてコマンダーの役割を引き受け、都市防衛の任務を遂行する。
+MISSION_DESCRIPTION_LUELLA_01	ルエラは初めて指揮官の役割を引き受け、都市防衛の任務を遂行する。
 MISSION_DESCRIPTION_LUELLA_02	NOMADは、セルリア市民の移住を支援するミッションを受諾する。
-MISSION_DESCRIPTION_LUELLA_03	サムは匿名の要請に応じ、セルリア軍施設にNOMADを派遣する。
+MISSION_DESCRIPTION_LUELLA_03	サムは匿名の要請に応じ、セルリア軍の施設へNOMADを派遣する。
 MISSION_DESCRIPTION_LUELLA_04	ルエラは、NOMADの空母ベイグラントへの脅威を阻止すべく出撃する。
 MISSION_DESCRIPTION_LUELLA_05	NOMADは、囚われた仲間たちを取り戻すための救出作戦を展開する。
 MISSION_DESCRIPTION_LUELLA_06	NOMADはセルリアの宙域から脱出中に、思わぬ敵対者と遭遇する。
