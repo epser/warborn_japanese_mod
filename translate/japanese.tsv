@@ -28,8 +28,8 @@ HOST_GAME	ゲームをホスト
 BACK	戻る
 ERASE	消去
 CANCEL	キャンセル
-CONFIRM	確定
-CONTINUE	続ける
+CONFIRM	決定
+CONTINUE	次へ
 CLOSE	閉じる
 SELECT	選択
 SAVE_AND_QUIT	セーブして終了
@@ -101,12 +101,12 @@ PLAYER_UNREADY	プレイヤー {0} は準備中です
 PLAYER_CHANGED_TEAM_COLOUR	プレイヤー {0} がチームカラーを変更しました
 MATCH_SETTINGS	マッチの設定
 ALLOW_COMMANDER_TRAITS	コマンダー特性
-ALLOW_COMMANDER_POWERS	コマンダーパワー
+ALLOW_COMMANDER_POWERS	コマンダースキル
 ALLOW_COMMANDER_UNITS	コマンダーユニット
 VICTORY_CONDITIONS	勝利条件
 INITIAL_SP	初期SP
 SP_INCOME	精製所SP
-INCOME_PER_TURN	供給量
+INCOME_PER_TURN	ターン毎の供給量
 TURN_TIME_LIMIT	ターンの制限時間
 NONE	なし
 VICTORY_CONDITION_ALL_UNITS	ユニット
@@ -131,15 +131,15 @@ WINS	勝利
 LOSSES	敗退
 SP	SP
 CP	CP
-STRATEGY_POINTS	戦略ポイント
-COMMANDER_POWER	コマンダーパワー
+STRATEGY_POINTS	戦略ポイント(SP)
+COMMANDER_POWER	コマンダーパワー(CP)
 MIN	MIN
 MAX	MAX
 AVAILABLE_SP	使用可能SP
 AVAILABLE_CP	使用可能CP
 ZOOM_IN	ズームイン
 ZOOM_OUT	ズームアウト
-PAUSED	Paused
+PAUSED	ポーズ
 RESUME	戻る
 SETTINGS	設定
 SURRENDER	降伏
@@ -164,20 +164,20 @@ CURRENT_OBJECTIVE_UPPER	作戦目標
 VICTORY_CONDITIONS_UPPER	勝利条件
 DEFEAT_CONDITION_UPPER	敗北条件
 DEFEAT_CONDITION	敗北条件
-OBJECTIVE_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地を全て占領する。
-OBJECTIVE_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地を全て奪われる。
-OBJECTIVE_ALL_UNITS_VICTORY_CONDITION	敵ユニットを全て撃破する。
+OBJECTIVE_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地をすべて占領する。
+OBJECTIVE_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべて奪われる。
+OBJECTIVE_ALL_UNITS_VICTORY_CONDITION	敵ユニットをすべて撃破する。
 OBJECTIVE_ALL_UNITS_DEFEAT_CONDITION	味方ユニットの全滅。
-OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地を全て占領、または敵ユニットを全て撃破する。
-OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地を全て奪われる、または味方ユニットの全滅。
-OBJECTIVE_ALL_UNITS_OR_REFINERIES_DEFEAT_CONDITION	エイオナイト精製所を全て奪われる、または味方ユニットの全滅。
+OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地をすべて占領、または敵ユニットをすべて撃破する。
+OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべて奪われる、または味方ユニットの全滅。
+OBJECTIVE_ALL_UNITS_OR_REFINERIES_DEFEAT_CONDITION	エイオナイト精製所をすべて奪われる、または味方ユニットの全滅。
 OBJECTIVE_ALL_CAPTURE_CAPABLE_UNITS_DEFEAT_CONDITION	占領スキルを持つ味方ユニットの全滅。
 RESULTS_TOTAL_TURNS	合計ターン数:
-RESULTS_UNITS_DEPLOYED	配備したユニット:
+RESULTS_UNITS_DEPLOYED	自軍の全ユニット:
 RESULTS_UNITS_LOST	失ったユニット:
 RESULTS_ENEMY_UNITS_DESTROYED	撃破した敵ユニット:
-NEW_COMMANDER_TRAIT_ACQUIRED	新たなコマンダー特性 "{0}" を獲得！
-NEW_DATA_ENTRY_UNLOCKED	新データ "{0}" がアンロックされた！
+NEW_COMMANDER_TRAIT_ACQUIRED	新たなコマンダー特性\n"{0}"\nを獲得！
+NEW_DATA_ENTRY_UNLOCKED	新データ\n"{0}"\nがアンロックされた！
 UNLOCKED	アンロック
 UNLOCKED_EXCLAMATION	アンロックされた！
 FINALE_MISSION_UNLOCKED	{0}のフィナーレミッションに進めるようになった！
@@ -185,11 +185,11 @@ COMMANDER_SELECTION	コマンダーの選択
 SKILL	スキル
 SKILLS	スキル
 HELP	ヘルプ
-HELP_SELECT_DESTINATION	移動先の選択
-HELP_SELECT_TARGET	ターゲットの選択
-HELP_CHOOSE_REINFORCEMENT_TO_DEPLOY	強化先の選択
-HELP_SELECT_DEPLOYMENT_LOCATION	配備先の選択
-ALL_UNIT_AND_DEPLOYMENT_ACTIONS_COMPLETE_END_TURN	全てのユニットと前哨基地の行動が終了しました。\n\nターンを終了しますか？
+HELP_SELECT_DESTINATION	移動先の指定
+HELP_SELECT_TARGET	ターゲットの指定
+HELP_CHOOSE_REINFORCEMENT_TO_DEPLOY	強化先の指定
+HELP_SELECT_DEPLOYMENT_LOCATION	配備先の指定
+ALL_UNIT_AND_DEPLOYMENT_ACTIONS_COMPLETE_END_TURN	すべてのユニットと前哨基地の行動が終了しました。\n\nターンを終了しますか？
 NOT_APPLICABLE	N/A
 COMMANDER	コマンダー
 LUELLA_AUGSTEIN	ルエラ・アウグシュタイン
@@ -241,13 +241,13 @@ PIRATES	海賊
 LOYALISTS	親衛隊
 INDEPENDENT_ZONES	独立\nゾーン
 MINING_BELTS	採掘用\n小惑星帯
-ALLIED_UNIT	味方ユニット
-ENEMY_UNIT	敵ユニット
-ALLIED_STRUCTURE	友軍基地
+ALLIED_UNIT	自軍ユニット
+ENEMY_UNIT	敵軍ユニット
+ALLIED_STRUCTURE	自軍基地
 ENEMY_STRUCTURE	敵軍基地
 COMMAND	命令
 INSPECT	調査
-DEFENCE	防御
+DEFENCE	防御値
 HP	HP
 MAX_HP	MAX HP
 TECH_LV	Tech Lv.
@@ -265,7 +265,7 @@ WEAK_DEFENCE_CHAR	C
 NORMAL_DEFENCE_CHAR	B
 STRONG_DEFENCE_CHAR	A
 HITS	ヒット
-INFLICTS	仕掛ける
+INFLICTS	付与する
 STATUS	状態
 PROVIDES	供給
 BESTOWS	付与する
@@ -274,7 +274,7 @@ TARGET	ターゲット
 COOLDOWN	クールダウン
 CRITICAL	クリティカル
 DAMAGE_LIGHT	軽度の
-DAMAGE_MEDIUM	中度の
+DAMAGE_MEDIUM	中程度の
 DAMAGE_HEAVY	重度の
 DAMAGE_EXTREME	極度の
 INSUFFICIENT_SP	SPが足りません
@@ -287,7 +287,7 @@ UNIT_OVERVIEW	ユニット概要
 UNIT	ユニット
 UNITS	ユニット
 MAXIMUM_HP	最大HP
-MOVEMENT	移動
+MOVEMENT	移動力
 DEPLOY	配備
 PLAYER_TURN	PLAYER TURN
 ENEMY_TURN	ENEMY TURN
@@ -307,7 +307,7 @@ LOST	損失
 OVERRIDE_ABORTED	オーバーライド中断
 ABORTING	中断
 NEUTRAL	中立
-COVER	遮蔽効果
+COVER	カバー効果
 IMPASSABLE	通行不可
 CAPTURABLE	占領可
 STATUS_EFFECT	ステータス効果
@@ -322,11 +322,11 @@ IMMOBILISED_DESC	ターゲットが移動できなくなる。
 JAMMING	ジャミング
 JAMMING_DESC	ターゲットがスキルを使用できなくなる。
 VIRUS	ウィルス
-VIRUS_DESC	ターゲットは使用者のターン開始時、一定のHPを失う。
+VIRUS_DESC	ターゲットは自身のターン開始時、一定のHPを失う。
 WEAKENED	弱体化
 WEAKENED_DESC	ターゲットの攻撃スキルで与えるダメージが{0}%減少する。
 ARMOUR_DOWN	アーマーダウン
-ARMOUR_DOWN_DESC	対象の物理、エネルギー、爆発の防御値が{0}減少する。
+ARMOUR_DOWN_DESC	ターゲットの物理、エネルギー、爆発の防御値が{0}減少する。
 BUFF	バフ
 POSITIVE_STATUSES	ポジティブ・ステータス
 AIM_ASSISTED	エイムアシスト
@@ -342,7 +342,7 @@ DEPLOYED_UPPER	配備済み
 REPAIRING	{0}ターン後にリペア完了
 LUELLA_COMMANDER_SPECIALITY	長距離戦闘
 LUELLA_COMMANDER_POWER_NAME	DUSKオーバードライブ
-LUELLA_COMMANDER_POWER_DESC	DUSKオーバードライブが有効な間、最大射程が2以上の味方スキルの最大射程が{0}上昇する。すべての味方の攻撃スキルの基礎クリティカルヒット率も{1}%に上昇する。
+LUELLA_COMMANDER_POWER_DESC	DUSKオーバードライブが有効な間、射程2以上の味方スキルの最大射程が{0}上昇する。すべての味方の攻撃スキルの基礎クリティカルヒット率も{1}%に上昇する。
 VINCENT_COMMANDER_SPECIALITY	CQC - Close Quarters Combat
 VINCENT_COMMANDER_POWER_NAME	マキシマム・アウトプット
 VINCENT_COMMANDER_POWER_DESC	マキシマム・アウトプットが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、味方の射程1のエネルギー攻撃スキルが{1}%の追加ダメージを与える。
@@ -366,17 +366,17 @@ MOVE_DESC	{0}タイルまで移動します。
 DEPLOY_DESC	予備のユニットを配備します。
 CAPTURE_STRUCTURE	占領
 OVERRIDE_STRUCTURE	オーバーライド
-CAPTURE_STRUCTURE_DESC	ユニットと同じタイルにある、中立またはオーバーライドされた建造物を占領します。
-OVERRIDE_STRUCTURE_DESC	敵の持つ建造物をオーバーライドすると、次のターンに味方ユニットが占領できるようになります。
+CAPTURE_STRUCTURE_DESC	ユニットと同じタイルにある、中立またはオーバーライドされた施設を占領する。
+OVERRIDE_STRUCTURE_DESC	次のターンに味方ユニットが占領できるよう、敵施設をオーバーライドする。
 UNABLE_TO_MOVE	移動不可地形
 MOVE_INFO	ユニットを移動させます。
-WAIT_INFO	ユニットを待機させ、このターンのアクションを終了します。
+WAIT_INFO	ユニットを待機させ、このターンの行動を終了します。
 COMMANDER_SYSTEM_MENU_INFO	ポーズメニューを開きます。
 COMMANDER_INFO	コマンダー情報
-VIEW_COMMANDER_INFO	コマンダーのパワーと特性の情報を表示します。
-COMMANDER_POWER_INFO	CPバーがフルになると、コマンダーパワー {0} を使用できます。
+VIEW_COMMANDER_INFO	コマンダーのスキルや特性の情報を表示します。
+COMMANDER_POWER_INFO	CPバーがフルになると、CPを使用して\nコマンダースキル "{0}" を発動できます。
 HELP_INFO	ヘルプを表示します。
-INTEL_INFO	ミッションの目的とヘルプ情報を表示します。
+INTEL_INFO	ミッションの目標とヘルプ情報を表示します。
 END_TURN_INFO	現在のターンを終了します。
 HAVOK_RIFLE	ハボック・ライフル
 GRENADE_LAUNCHER	グレネード・ランチャー
@@ -416,9 +416,9 @@ HEX_LAUNCHER	HEXランチャー
 NANITE_REPAIR_DRONES	ナノリペア・ドローン
 PRECISION_RAIL_RIFLE	高精度レール・ライフル
 TWIN_ENERGY_CANNONS	ツイン・エネルギー・キャノン
-IGNORES_LOS_AND_COVER	射線不要、カバーを無視する。
-IGNORES_LOS	射線不要。
-IGNORES_COVER	カバーを無視する。
+IGNORES_LOS_AND_COVER	射線は不要。さらに地形のカバー効果を無視する。
+IGNORES_LOS	射線は不要。
+IGNORES_COVER	地形のカバー効果を無視する。
 SKILL_DESC_TURN	ターン
 SKILL_DESC_TURNS	ターン
 SKILL_DESC_STATUS_CHANGE	{1}を{2} {3}{0} 。
@@ -441,7 +441,7 @@ SKILL_DESC_REMOVES_DEBUFF	また、{1}の<color={0}>デバフ</color>を解除�
 PROXIMITY_MINE_DESC	クローキング地雷を敷設する。この地雷は敵が同じタイルに留まると爆発する。
 SCAN_DESC	周囲のタイルをスキャンし、地雷の位置を明らかにする。位置の判明した敵地雷は爆発する。
 CLOAKING_DESC	短時間、使用者を敵から見えなくする。
-REQUIRES_NO_MOVE_DESC	同じターン中に移動した後は使用不可。
+REQUIRES_NO_MOVE_DESC	同じターンの移動後には使用できない。
 VARIABLE_ARMOUR	ヴァリアブルアーマー
 HAVOK	ハボック
 NOVUS	ノーヴァス
@@ -641,7 +641,7 @@ TRAIT_GUERRILLA_TACTICS_DESC	森林または密林タイルの上にいる味方
 TRAIT_CQC_EXPERT	CQCエキスパート
 TRAIT_CQC_EXPERT_DESC	最大射程がちょうど1の味方ユニットの攻撃は、攻撃ダメージが{0}%上昇する。
 TRAIT_URBAN_COMBAT_TRAINING	市街戦訓練
-TRAIT_URBAN_COMBAT_TRAINING_DESC	都市タイルの上にいるターゲットに対して味方ユニットが攻撃した時、その全ての攻撃ダメージが{0}%上昇する。
+TRAIT_URBAN_COMBAT_TRAINING_DESC	都市タイルの上にいるターゲットに対して味方ユニットが攻撃した時、すべての攻撃ダメージが{0}%上昇する。
 TRAIT_CUSTOM_VANGUARD_REACTORS	リアクター改造: ヴァンガード
 TRAIT_CUSTOM_VANGUARD_REACTORS_DESC	味方の "ヴァンガード" の移動力が{0}上昇する。
 TRAIT_HEAT_DISPERSION	熱分散
@@ -667,7 +667,7 @@ TRAIT_EXPERT_ENGINEERING_DESC	味方の修復スキルの効力が{0}上昇す�
 TRAIT_ADVANCED_AEGIS_DESIGN	次世代設計: イージス
 TRAIT_ADVANCED_AEGIS_DESIGN_DESC	味方の "イージス" の全ダメージタイプへの防御値が{0}上昇し、移動力が{1}上昇する。
 TRAIT_FACTORY_FAMILIARITY	ファクトリー・タクティクス
-TRAIT_FACTORY_FAMILIARITY_DESC	工場または施設タイルの上にいるターゲットに対して味方ユニットが攻撃した時、その全ての攻撃ダメージが{0}%上昇する。
+TRAIT_FACTORY_FAMILIARITY_DESC	工場または施設タイルの上にいるターゲットに対して味方ユニットが攻撃した時、すべての攻撃ダメージが{0}%上昇する。
 TRAIT_ARMOUR_AUGMENTATION	アーマー増強
 TRAIT_ARMOUR_AUGMENTATION_DESC	味方ユニットによるアーマーアップの継続ターン数が{0}延長される。
 TRAIT_CHEMICAL_PAYLOADS	炸薬量増加
@@ -693,31 +693,31 @@ HELP_MOVING_UNITS	ユニットの移動
 HELP_USING_UNIT_SKILLS	ユニットスキルの使用
 HELP_SP	戦略ポイント(SP)
 HELP_CP	コマンダーパワー(CP)
-HELP_CAPTURING_STRUCTURES	建造物の占領
+HELP_CAPTURING_STRUCTURES	施設の占領
 HELP_OUTPOSTS	前哨基地
 HELP_EIONITE_REFINERIES	エイオナイト精製所
-HELP_COMMANDER_POWERS	コマンダーパワー
+HELP_COMMANDER_POWERS	コマンダースキル
 HELP_COMMANDER_UNITS	コマンダーユニット
 HELP_COMMANDER_TRAITS	コマンダー特性
 HELP_DAMAGE_TYPES	ダメージ種別
 HELP_DEFENCE_RATINGS	防御値
-HELP_COVER	カバー
+HELP_COVER	カバー効果
 HELP_CRITICAL_HITS	クリティカルヒット
 HELP_CHECK_TOPICS	コマンダーメニューを開いて "情報" オプションを選択すると、ヘルプトピックを確認できます。
 HELP_MOVING_UNITS_DESC	味方ユニットをクリックして移動オプションを選択すると、そのユニットの移動可能な範囲が表示されます。\n\n表示された範囲内の有効なタイルを選択すると、ユニットがその位置に移動します。\n\n移動後にキャンセル ボタンを押すと移動がキャンセルされ、ユニットは前の位置に戻ります。
-HELP_USING_UNIT_SKILLS_DESC	味方ユニットをクリックしてスキルを選択すると、そのスキルの範囲と有効なターゲットが表示されます。\n\n範囲内の有効なターゲットを選択すると、その対象に向けてスキルが使用されます。\n\n範囲が "セルフ" のスキルは、範囲表示なしですぐに使用されます。
-HELP_SP_DESC	戦略ポイント(SP)は、占領した前哨基地施設に増援を呼ぶために消費されます。
-HELP_CP_DESC	コマンダーパワーを有効化したり、前哨基地にコマンダーの機体を配備するためには、CPゲージが最大になっている必要があります（CPが利用可能な状況に限る）。CPは戦闘によって蓄積されます。
+HELP_USING_UNIT_SKILLS_DESC	味方ユニットをクリックしてスキルを選択すると、そのスキルの範囲と有効なターゲットが表示されます。\n\n範囲内の有効なターゲットを選択すると、その対象に向けてスキルを使用します。\n\n範囲が "セルフ" のスキルは、範囲表示なしですぐに使用します。
+HELP_SP_DESC	戦略ポイント(SP)は、占領した前哨基地に増援ユニットを配備すると消費されます。
+HELP_CP_DESC	コマンダースキルを使用したり、前哨基地にコマンダーの機体を配備するためには、CPゲージが最大になっている必要があります（CPが利用可能な状況に限る）。CPは戦闘によって蓄積されます。
 HELP_CAPTURING_STRUCTURES_DESC	前哨基地とエイオナイト精製所は、占領スキルを持つユニットによって占領できます。\n\n中立の施設はすぐに占領できますが、敵軍の支配下にある施設は、まずオーバーライドする必要があります。\n\n敵施設のタイルにユニットを乗せると、占領コマンドが "オーバーライド" に変わります。\n\n敵施設をオーバーライドすると、次の味方ターンにその施設は占領状態になります。
-HELP_OUTPOSTS_DESC	前哨基地は、占領スキルを持つヴァリアブルアーマーで占領できます。\n\n自軍の支配下にある前哨基地を選択すると、ユニット配備オプションが表示され、追加のヴァリアブルアーマーを戦場に配備することができます。\n\n前哨基地は1ターンにつき1つのユニットのみ配備可能です。タイル上にユニットが居る場合は選択できません。
+HELP_OUTPOSTS_DESC	前哨基地は、占領スキルを持つヴァリアブルアーマーで占領できます。\n\n自軍の支配下にある前哨基地を選択すると、ユニット配備オプションが表示され、追加のヴァリアブルアーマーを戦場に配備することができます。\n\n前哨基地は1ターンにつき1つのユニットのみ配備可能です。タイル上にユニットが居る場合、前哨基地は選択できません。
 HELP_EIONITE_REFINERIES_DESC	エイオナイト精製所は、占領スキルを持つヴァリアブルアーマーで占領できます。\n\n占領下にあるエイオナイト精製所は、所有者のターン開始時に追加のSPを供給します。
-HELP_COMMANDER_POWERS_DESC	コマンダーパワーは、戦いの流れを変えるのに役立つアクティブな効果です。\n\n各指揮官には固有のコマンダーパワーがあり、その効果はコマンダー情報画面で確認できます。\n\nコマンダーパワーを有効にするには、CPゲージが最大になっている必要があります。
+HELP_COMMANDER_POWERS_DESC	コマンダースキルは、戦いの流れを変えるのに役立つ、一定時間有効な効果です。\n\n各指揮官には固有のコマンダースキルがあり、効果はコマンダー情報画面で確認できます。\n\nコマンダースキルを有効化するには、CPゲージが最大になっている必要があります。
 HELP_COMMANDER_UNITS_DESC	各指揮官は、強力な個性を持った指揮官用ヴァリアブルアーマーに搭乗できます。\n\n出撃可能なステージでは、通常のヴァリアブルアーマーと同じ手順で前哨基地に配備できます。\n\nただし、指揮官機の配備には、SPの代わりに最大値のCPゲージをすべて消費する必要があります。
 HELP_COMMANDER_TRAITS_DESC	各指揮官は、戦いを有利に進められるユニークな特性を持っています。これらの効果はコマンダー情報画面で確認できます。
-HELP_DAMAGE_TYPES_DESC	ダメージには、物理、エネルギー、爆発の3つのタイプがあります。\n\n攻撃スキルのタイプによって、ターゲットの使用する防御タイプも変わります。\n\nターゲットの弱点となるタイプを使い、最大のダメージを目指しましょう。
+HELP_DAMAGE_TYPES_DESC	ダメージには、物理、エネルギー、爆発の3つのタイプがあります。\n\n攻撃スキルを使用する際には、ターゲットの同名の防御タイプによってダメージが左右されます。\n\n相手の防御値の低いタイプを選んで、最大のダメージを目指しましょう。
 HELP_DEFENCE_RATINGS_DESC	各ユニットには、ダメージ タイプに対応する物理、エネルギー、爆発に対する防御値があります。\n\n防御値が高いほど、ユニットはそのダメージタイプへの耐性が高くなります。\n\n防御値は、特定のステータス効果や地形の影響を受けます。
-HELP_COVER_DESC	特定の種類の地形はカバー率を持っており、ユニットがタイルの上に居る間、防御値を高める効果があります。
-HELP_CRITICAL_HITS_DESC	全てのユニットの攻撃スキルは、クリティカルヒットになる可能性があり、与えるダメージが増加します。
+HELP_COVER_DESC	地形は種類ごとのカバー効果を持っており、ユニットがタイルの上に居る間、防御値を高める効果があります。
+HELP_CRITICAL_HITS_DESC	すべてのユニットの攻撃スキルは、クリティカルヒットになる可能性があり、与えるダメージが増加します。
 HELP_ACTION_HOLD_BUTTON	(ホールド)
 HELP_ACTION_PAUSE_GAME	ポーズ
 HELP_ACTION_PREV_UNIT	前のユニット
@@ -787,27 +787,27 @@ MISSION_DESCRIPTION_LUELLA_08	サムはルエラを救うため、危険な決�
 MISSION_DESCRIPTION_LUELLA_09	NOMADがルーエンのネサリス軍から逃れるには、戦わねばならない。
 MISSION_DESCRIPTION_LUELLA_10	ルエラはチームを率いて、宇宙要塞パラゴンを内部から破壊する。
 MISSION_LUELLA_00_CAPTURE_OBJECTIVE	"ハボック" または "ノーヴァス" の占領スキルを使い、エイオナイト精製所を占領する。
-MISSION_LUELLA_00_START_LINE_1	命令を受信。コマンダーからだ。
-MISSION_LUELLA_00_START_LINE_2	目的は付近のエイオナイト精製所の確保。我ら独立傭兵団NOMADとしては、燃料は必要だからな。
+MISSION_LUELLA_00_START_LINE_1	よし、改めてコマンダーの命令を確認する。
+MISSION_LUELLA_00_START_LINE_2	今回の目的は、あのエイオナイト精製所の確保だ。\n独立傭兵団の俺達NOMADとしては、エネルギーの補給は必要だからな。
 MISSION_LUELLA_00_START_LINE_3	通信は最小限にしろ。サンクタムの部隊に見つからないよう、事を済ませるぞ。
 MISSION_LUELLA_00_START_LINE_4	各員、行動開始。
 MISSION_LUELLA_00_MID_LINE_1	セルリア軍!?　戦闘は避けられないか。
 MISSION_LUELLA_00_MID_LINE_2	コマンダー、こちらは目標の確保に成功。ですがセルリア軍に捕捉されました。
 MISSION_LUELLA_00_MID_LINE_3	包囲されています。戦力差も大きい。即時支援を求む。
-MISSION_LUELLA_00_MID_LINE_4	クソッ、奴らの通信妨害か？
+MISSION_LUELLA_00_MID_LINE_4	……クソッ、奴らの通信妨害か？
 MISSION_LUELLA_00_MID_LINE_5	ルエラ、地上部隊が完全に包囲されている。通信もできん！
 MISSION_LUELLA_00_MID_LINE_6	セルリア軍のジャミングに違いない。
 MISSION_LUELLA_00_MID_LINE_7	（カチカチッ……カチッ）
-MISSION_LUELLA_00_MID_LINE_8	サブシステム、オンライン……兵装チェック……。
+MISSION_LUELLA_00_MID_LINE_8	よし……サブシステム、オンライン……兵装チェック……。
 MISSION_LUELLA_00_MID_LINE_9	ルエラ、どこだ！　出撃準備はどうした！
 MISSION_LUELLA_00_MID_LINE_10	準備ならできてるよ、サム。いつでも行ける。
 MISSION_LUELLA_00_MID_LINE_11	ルエラ・アウグシュタイン！　"ディアティ"、降下開始！
-MISSION_LUELLA_00_MID_LINE_12	間に合ったみたいね。みんな、調子はどう？
-MISSION_LUELLA_00_MID_LINE_13	そりゃ最高さ。NOMADのエースパイロットが来てくれたんだものな。
+MISSION_LUELLA_00_MID_LINE_12	間に合ったみたいね。みんな、状況は？
+MISSION_LUELLA_00_MID_LINE_13	たった今、最高になったとこだ。\nNOMADのエースパイロットが来てくれたんだものな。
 MISSION_LUELLA_00_MID_LINE_14	OK！　さーて、貴族のイヌどもの腕試しと行くか！
 MISSION_LUELLA_00_END_LINE_1	お前もディアティも、無事でなによりだ。
 MISSION_LUELLA_00_END_LINE_2	あたしたちが確保したエイオナイト精製所のおかげで、燃料満タンで戻って来れたんだからね。
-MISSION_LUELLA_00_END_LINE_3	よくやってくれているよ。ヴァリアブルアーマーのパイロットとしては脅威的なほどだ。
+MISSION_LUELLA_00_END_LINE_3	よくやってくれているよ。\nヴァリアブルアーマーのパイロットとしては脅威的なほどだ。
 MISSION_LUELLA_00_END_LINE_4	そうだね、あたしのDUSK強化は役に立ってる。父さんと母さんのおかげだ。
 MISSION_LUELLA_00_END_LINE_5	今も彼らが居れば……ルエラが俺と傭兵稼業なんぞしているのを、親としてはどう思うだろうな。
 MISSION_LUELLA_00_END_LINE_6	会ったこともない人たちが、あたしの選択をどう思うかなんて分かんないよ。両親のことは、サム、あんたが教えてくれたことしか知らない。
@@ -817,14 +817,14 @@ MISSION_LUELLA_00_END_LINE_9	詳細はお前の端末に送っておいた。準
 MISSION_LUELLA_01_DEPLOY_HAVOK_OBJECTIVE	前哨基地を選択して配備オプションを開き、"ハボック" を配備する。
 MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。彼らはシティ88の同胞を保護しようとしている。その間に我々がサンクタムの攻撃部隊を阻止する、という内容だな。
 MISSION_LUELLA_01_BRIEFING_LINE_2	ライフライン？
-MISSION_LUELLA_01_BRIEFING_LINE_3	反貴族主義を掲げるレジスタンスの、わずかな生き残りさ。聖議会サンクタムを民主的な世界政府に置き換えることを求めている。ネサリスのスペースコロニー共和同盟と同じような形態にな。
-MISSION_LUELLA_01_BRIEFING_LINE_4	そういうのって、サンクタムとしては許さないんでしょ？　金持ちのエリートがセルリアを支配すべきだって考えていれば、民衆のことなんか何とも思ってないんだからさ。
-MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反対の声を武力で黙らせるだろう。サンクタムの攻撃部隊は、ライフラインの構成員を検挙するためにシティ88へと目下移動中だ。
+MISSION_LUELLA_01_BRIEFING_LINE_3	反貴族主義を掲げるレジスタンスの、わずかな生き残りさ。\n聖議会サンクタムを民主的な世界政府に置き換えることを求めている。\nネサリスのスペースコロニー共和同盟と同じような形態にな。
+MISSION_LUELLA_01_BRIEFING_LINE_4	そういうのって、サンクタムとしては許さないんでしょ？\n金持ちのエリートがセルリアを支配すべきだって考えていれば、\n民衆のことなんか何とも思ってないんだからさ。
+MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反対の声を武力で黙らせるだろう。\nそのサンクタムの攻撃部隊だが、\nライフラインの構成員を検挙するためにシティ88へと目下移動中だ。
 MISSION_LUELLA_01_BRIEFING_LINE_6	攻撃部隊のセルリア軍VAは、西側の2つのポイントから現れると予測される。
 MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。俺は指揮の説明のためにブリッジに上がるが、ルエラ、お前も長々と準備しているヒマは無いぞ。
 MISSION_LUELLA_01_BRIEFING_LINE_8	こっちもいつでもいいよ、サム。やろう！
 MISSION_LUELLA_01_START_LINE_1	よし、ルエラ。仕事にかかるぞ。
-MISSION_LUELLA_01_START_LINE_2	ライフラインがシティに前哨基地を用意してくれているな。これを使えば、俺たちの船 "ベイグラント" から新しく部隊を呼ぶことができる。
+MISSION_LUELLA_01_START_LINE_2	ライフラインがシティに前哨基地を用意してくれているな。\nこれを使えば、俺たちの船 "ベイグラント" から新しく部隊を呼ぶことができる。
 MISSION_LUELLA_01_START_LINE_3	前哨基地を選択し、配備メニューから "ハボック" を呼び出してみろ。
 MISSION_LUELLA_01_START_LINE_4	いいぞ！　しかも、ここは地の利もある。
 MISSION_LUELLA_01_START_LINE_5	この手の建造物は部隊の移動を遅らせてしまうが、身を守るのにも役立つんだ。民間人はライフラインが避難させたから、街の構造はうまく使っていけ。
@@ -1080,7 +1080,7 @@ MISSION_VINCENT_01_END_LINE_6	私の率いる部隊との決闘に勝てば、�
 MISSION_VINCENT_01_END_LINE_7	ぐっ……それで封鎖を解いてくれるんだな？
 MISSION_VINCENT_02_BRIEFING_LINE_1	クルコフのお嬢様と、まだ揉めているのか？
 MISSION_VINCENT_02_BRIEFING_LINE_2	ううむ、はい……今度は私と決闘したいだとか、ナンセンスなことを言っております。
-MISSION_VINCENT_02_BRIEFING_LINE_3	こんなことをしている間に、NOMADは逃げおおせてしまいますよ。
+MISSION_VINCENT_02_BRIEFING_LINE_3	こんなことをしている間に、NOMADは遥か先へと逃げおおせてしまうのですよ。
 MISSION_VINCENT_02_BRIEFING_LINE_4	彼女の挑戦精神は称賛すべきだよ。貴様も見習え、ヴィンセント。ルーエンでNOMADに負けただなんて、ナマってたんじゃないか？
 MISSION_VINCENT_02_BRIEFING_LINE_5	クルコフ嬢の決闘には、付き合ってやれ。NOMADを追うのはその後でいい。
 MISSION_VINCENT_02_START_LINE_1	さあ、どちらがより優れた戦略家か、はっきりさせましょう。
@@ -1198,7 +1198,7 @@ MISSION_VINCENT_07_START_LINE_5	なんであれ、お前はネサリスに連行
 MISSION_VINCENT_07_START_LINE_6	イイねェェェ！　俺様の手下どもが、ちょうど退屈で死にそうだったとこだ！
 MISSION_VINCENT_07_START_LINE_7	ちょっくら楽しませてくれよ、ハハハ!!!
 MISSION_VINCENT_07_END_LINE_1	これはただのウォーミングアップよ！　メインイベントが見たきゃ、追ってくるこったな！　ハーハハハ！
-MISSION_VINCENT_08_BRIEFING_LINE_1	……では、全ての黒幕はセルバンテス・モレイのシャドーウルヴスか？
+MISSION_VINCENT_08_BRIEFING_LINE_1	……では、すべての黒幕はセルバンテス・モレイのシャドーウルヴスか？
 MISSION_VINCENT_08_BRIEFING_LINE_2	しかし奴は、「悪事のパートナー」とも言っていました。そこは気になります……。
 MISSION_VINCENT_08_BRIEFING_LINE_3	無人VAか？
 MISSION_VINCENT_08_BRIEFING_LINE_4	そうです。糸を引いているのは、モレイだけではないのでしょう。
@@ -1562,16 +1562,16 @@ MISSION_IZOL_07_BRIEFING_LINE_6	そんなことができるのは……。
 MISSION_IZOL_07_BRIEFING_LINE_7	オズウェル？　彼ではありません。あのクーデターの際、彼のVAは間違いなく破壊しました。生きているとは思えない。
 MISSION_IZOL_07_BRIEFING_LINE_8	オズウェル派といったものは、彼の死後に機能を失いました。ですが彼の掲げた大義に殉じようとした者もまだ多いのです。
 MISSION_IZOL_07_BRIEFING_LINE_9	貴方という新議長のもとでこそソブリン戦争を終結させられるというのは、大多数の見方ではありますが……。
-MISSION_IZOL_07_BRIEFING_LINE_10	サンクタムの全てが閣下のクーデターを支持したわけでもない。私とて、周囲にオズウェルの同調者は見ております。
+MISSION_IZOL_07_BRIEFING_LINE_10	サンクタムのすべてが閣下のクーデターを支持したわけでもない。私とて、周囲にオズウェルの同調者は見ております。
 MISSION_IZOL_07_BRIEFING_LINE_11	ええ。彼の理想に基づいて行動する者がサンクタムに居ることは、気付いていますとも。更なる調査は慎重に行わねばね。
 MISSION_IZOL_07_START_LINE_1	会敵はもうすぐだ。戦力を整えなければ！
 MISSION_IZOL_07_MID_LINE_1	コマンダー、これが最後の敵増援のようです！
 MISSION_IZOL_08_BRIEFING_LINE_1	奮闘に感謝します。これで必要な分のVAを各地に送ることもできましょう。
 MISSION_IZOL_08_BRIEFING_LINE_2	戦力は維持せねばなりませんからな。謎の敵の襲撃頻度が上がっているならば、尚のことです。
-MISSION_IZOL_08_BRIEFING_LINE_3	緊急報告です、議長閣下。セルバンテスを収容した施設が攻撃を受けています！
-MISSION_IZOL_08_BRIEFING_LINE_4	周辺のエイオナイト精製所にも襲撃があり、賊はそれら全ての確保も目的としているようです。
-MISSION_IZOL_08_BRIEFING_LINE_5	奴ら、あのエイオナイト精製所が刑務所のエネルギー源であると気付いたに違いない。精製所を奪われ、オーバーロードでもされたら……。
-MISSION_IZOL_08_BRIEFING_LINE_6	刑務所のリアクターは破損して、セキュリティ機構が停まることになります！
+MISSION_IZOL_08_BRIEFING_LINE_3	緊急報告です、議長閣下。セルバンテスを収容した刑務所が攻撃を受けております！
+MISSION_IZOL_08_BRIEFING_LINE_4	賊は周辺のエイオナイト精製所にも仕掛けているとのことです。
+MISSION_IZOL_08_BRIEFING_LINE_5	奴ら、あのエイオナイト精製所が刑務所のエネルギー源だと気付いたに違いない。精製所を奪われ、オーバーロードでもされたら……。
+MISSION_IZOL_08_BRIEFING_LINE_6	刑務所のリアクターが破損して、セキュリティ機構まで止まってしまう！
 MISSION_IZOL_08_BRIEFING_LINE_7	シャドーウルヴスめ。セルバンテスを奪い返そうと躍起だろうが……やらせるわけにはいかん！
 MISSION_IZOL_08_START_LINE_1	こちらの部隊は統制を失っている。陣形を整え、エイオナイト精製所を守らなければ！
 MISSION_IZOL_09_CAPTURE_OBJECTIVE	建造物を占領し、調査を行う。
@@ -1604,16 +1604,16 @@ MISSION_IZOL_09_END_LINE_8	このパラゴンはアクシオム・AIシステム
 MISSION_IZOL_09_END_LINE_9	無限の軍勢は、貴殿らの喉元まで迫っている。その事実を受け入れ、我が軍門に下るのだ！
 MISSION_IZOL_10_BRIEFING_LINE_1	議長、周囲の状況は？
 MISSION_IZOL_10_BRIEFING_LINE_2	イゾル！　急いで防衛部隊を指揮してください。
-MISSION_IZOL_10_BRIEFING_LINE_3	あの放送の直後、オズウェルの部隊がサンクタム本部を包囲したのです！
-MISSION_IZOL_10_BRIEFING_LINE_4	しかし最大の問題は、オズウェルの宇宙要塞と、VAをコントロールしているという "アクシオム" なるシステムです。
-MISSION_IZOL_10_BRIEFING_LINE_5	艦隊には要塞攻撃の態勢を整えさせていますから、あなたには、まず本部防衛に集中してもらいます。
-MISSION_IZOL_10_BRIEFING_LINE_6	あの宙域に、今までずっと要塞が隠れていたのでしょうか。オズウェルめは、どうやって秘密裏に建造を果たしたのだ……？
+MISSION_IZOL_10_BRIEFING_LINE_3	あの放送の直後、オズウェルの部隊がこのサンクタム本部を包囲しているのです！
+MISSION_IZOL_10_BRIEFING_LINE_4	しかし最大の問題は、オズウェルの宇宙要塞と、VAをコントロールしているという "アクシオム" なるシステムでありましょう。
+MISSION_IZOL_10_BRIEFING_LINE_5	艦隊には要塞攻撃の態勢を整えさせていますから、あなたは、まず本部防衛に集中してください。
+MISSION_IZOL_10_BRIEFING_LINE_6	……あのような宙域に、今までずっと要塞が隠れていたとは。オズウェルめ、どうやって秘密裏に建造を果たしたというの？
 MISSION_IZOL_10_START_LINE_1	サンクタムを落とさせるわけにはいかん！　セルリア全土のため、各員奮闘せよ！
 MISSION_IZOL_10_END_LINE_1	防衛成功だ。本部を包囲していたVAが後退してゆく！
 MISSION_IZOL_10_END_LINE_2	とはいえ、このまま守り続けられるものでもないが……。
 MISSION_IZOL_10_END_LINE_3	いいえ、よく守り通しました、イゾル！　あなたの稼いでくれた時間で、反攻作戦の準備が整いました。
-MISSION_IZOL_10_END_LINE_4	オズウェルは自身を守るため、セルリア仕様の戦艦を複数配備しています。
-MISSION_IZOL_10_END_LINE_5	彼の艦隊と交戦し、要塞への道を開くためにも、リヴァイアサンには我々の艦隊に加わってもらいたいのです。
+MISSION_IZOL_10_END_LINE_4	オズウェルは護衛のため、セルリア仕様の戦艦を多数配備しています。
+MISSION_IZOL_10_END_LINE_5	オズウェルの戦力を破り、要塞への道を開くためにも、リヴァイアサンには我々の艦隊に加わってもらいたいのです。
 MISSION_IZOL_10_END_LINE_6	はっ、議長閣下！　我がリヴァイアサンと軌道保安部OSDが、要塞への道を切り拓いてご覧に入れましょう。
 City 15	シティ15
 Lightning Reach	ライトニング・リーチ
@@ -1674,7 +1674,7 @@ ACH_TRAINING_DRILLS_DESC	オフラインのスカーミッシュ・マッチで�
 ACH_PERFECTIONIST	完璧主義
 ACH_PERFECTIONIST_DESC	ヴァリアブルアーマーを1機も失わずにキャンペーンミッションを1つクリアする
 ACH_TURNING_THE_TIDE	形勢逆転
-ACH_TURNING_THE_TIDE_DESC	初めてコマンダーパワーを使用する
+ACH_TURNING_THE_TIDE_DESC	初めてコマンダースキルを使用する
 ACH_BRING_THE_BIG_GUNS	これが切り札
 ACH_BRING_THE_BIG_GUNS_DESC	コマンダーの専用ヴァリアブルアーマーを初めて配備する
 ACH_PERSPECTIVE	それぞれの視点
@@ -1683,7 +1683,7 @@ ACH_MAP_CRAFTER	マップクラフター
 ACH_MAP_CRAFTER_DESC	カスタム・マルチプレイヤーマップを作成する
 ACH_AREA_OF_EFFECT	マップ兵器
 ACH_AREA_OF_EFFECT_DESC	1回の攻撃を3体以上の敵機に命中させる
-CREDITS	Credits
+CREDITS	スタッフ\nクレジット
 CREDITS_RDG	WARBORN is a Raredrop Games production
 CREDITS_PROGRAMMING_AND_GAME_DESIGN	Programming & Game Design
 CREDITS_ART_AND_ANIMATION	Art & Animation
@@ -1740,8 +1740,8 @@ ACH_SPEC_OP_DESC	イゾルの最初のミッションをクリアする
 ACH_OVERWHELMING_FORCE	圧倒する力
 ACH_OVERWHELMING_FORCE_DESC	15機以上のヴァリアブル・アーマーを配備し、キャンペーンミッションをクリアする
 ACH_WARBORN	Warborn
-ACH_WARBORN_DESC	他の全てのトロフィーを獲得する。
-LAST_SAVE	最終セーブ
+ACH_WARBORN_DESC	他のすべてのトロフィーを獲得する。
+LAST_SAVE	セーブ日時
 PLAY_TIME	プレイ時間
 SAVE_OVERWRITE_CONFIRM	既存のセーブデータを上書きしますか？
 CHECKPOINT_SAVE_OVERWRITE_CONFIRM	既存のチェックポイントデータがあります。\nチェックポイントを上書きしますか？
@@ -1757,9 +1757,9 @@ CONTROLLER_DISCONNECTED	コントローラーが切断されました。\n続け
 XBOX_SIGN_IN_STATE_CHANGE	サインイン状態が変更されました。\nタイトル画面に戻ります。
 SAVE_CHANGES_TO_MAP	続行する前に、現在のマップへの変更を保存しますか?
 WIRELESS_CONTROLLER_DISCONNECTED	ワイヤレスコントローラーを再接続してください。
-CONFIRMATION_CHECK	本当に続行しますか？
-CONFIRMATION_CHECK_SAVE_DATA_CHANGES	本当に続行しますか？\nセーブしていない変更は失われます。
-CONFIRMATION_CHECK_SAVE_DATA_PROGRESS	本当に続行しますか？\nセーブしていない進行状況は失われます。
+CONFIRMATION_CHECK	操作を続行しますか？
+CONFIRMATION_CHECK_SAVE_DATA_CHANGES	操作を続行しますか？\nセーブしていない変更は失われます。
+CONFIRMATION_CHECK_SAVE_DATA_PROGRESS	操作を続行しますか？\nセーブしていない進行状況は失われます。
 SWITCH_USER	ユーザー切り替え
 INVALID_MAP_NAME	有効なマップ名を入力してください。
 QUIT_CHECK	ゲームを終了しますか？
@@ -1776,7 +1776,7 @@ REGION_JP	日本
 OPTION_TITLE_VOICE_CHAT	ボイスチャット
 OPTION_TITLE_VOICE_CHAT_MUTE	ミュート
 OPTION_TITLE_CROSS_PLATFORM_MULTIPLAYER	クロスプレイ
-CROSS_PLATFORM_MULTIPLAYER_ALL	全て
+CROSS_PLATFORM_MULTIPLAYER_ALL	すべて
 CROSS_PLATFORM_MULTIPLAYER_NOTICE	オンラインマルチプレイでは、クロスプレイを有効にできます。
 CROSS_PLATFORM_MULTIPLAYER_OPTIONS_NOTICE	"オプション" メニューから、どのプラットフォームでオンラインマルチプレイを有効にするかを選ぶことができます。
 VIEW_OPPONENT_PROFILE	相手のプロフィールを見る
@@ -1794,4 +1794,4 @@ MAELSTROM_DESC_SHORT	メイルストロム: 独自設計の第2世代型ヴァ�
 BULWARK_DESC_SHORT	ブルワーク: 独自設計の第2世代型ヴァリアブルアーマー。オーリエル・クルコフの専用機。
 ARBITER_DESC_SHORT	アービター: 独自設計の第2世代型ヴァリアブルアーマー。イゾル・ルクマーンの専用機。
 CONSOLE_VIBRATION	振動
-HELP_SHOW_UNIT_MOVEMENT	ユニットの移動を描写する
+HELP_SHOW_UNIT_MOVEMENT	移動範囲を表示
