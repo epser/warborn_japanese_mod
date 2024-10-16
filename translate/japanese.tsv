@@ -153,10 +153,10 @@ READY_AGAIN_IN_NUM_TURNS	残り<color={0}>{1}ターン</color>
 VICTORY	勝利
 DEFEAT	敗北
 NEXT	次へ
-MISSION_COMPLETE	ミッション完了
-MISSION_FAILED	ミッション失敗
+MISSION_COMPLETE	MISSION COMPLETE
+MISSION_FAILED	MISSION FAILED
 COMPLETE	完了
-MISSION_BRIEFING	ミッション説明
+MISSION_BRIEFING	MISSION BRIEFING
 LOCATION	配置
 ENEMY_FORCES	敵軍
 CURRENT_OBJECTIVE	作戦目標
@@ -168,9 +168,9 @@ OBJECTIVE_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地をすべて占領する�
 OBJECTIVE_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべて奪われる。
 OBJECTIVE_ALL_UNITS_VICTORY_CONDITION	敵ユニットをすべて撃破する。
 OBJECTIVE_ALL_UNITS_DEFEAT_CONDITION	味方ユニットの全滅。
-OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地をすべて占領、または敵ユニットをすべて撃破する。
-OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべて奪われる、または味方ユニットの全滅。
-OBJECTIVE_ALL_UNITS_OR_REFINERIES_DEFEAT_CONDITION	エイオナイト精製所をすべて奪われる、または味方ユニットの全滅。
+OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_VICTORY_CONDITION	敵の前哨基地をすべて占領、\nまたは敵ユニットをすべて撃破する。
+OBJECTIVE_ALL_UNITS_OR_OUTPOSTS_DEFEAT_CONDITION	味方の前哨基地をすべて奪われる、\nまたは味方ユニットの全滅。
+OBJECTIVE_ALL_UNITS_OR_REFINERIES_DEFEAT_CONDITION	エイオナイト精製所をすべて奪われる、\nまたは味方ユニットの全滅。
 OBJECTIVE_ALL_CAPTURE_CAPABLE_UNITS_DEFEAT_CONDITION	占領スキルを持つ味方ユニットの全滅。
 RESULTS_TOTAL_TURNS	合計ターン数:
 RESULTS_UNITS_DEPLOYED	配備したユニット:
@@ -189,7 +189,7 @@ HELP_SELECT_DESTINATION	移動先の指定
 HELP_SELECT_TARGET	ターゲットの指定
 HELP_CHOOSE_REINFORCEMENT_TO_DEPLOY	強化先の指定
 HELP_SELECT_DEPLOYMENT_LOCATION	配備先の指定
-ALL_UNIT_AND_DEPLOYMENT_ACTIONS_COMPLETE_END_TURN	すべてのユニットと前哨基地の行動が終了しました。\n\nターンを終了しますか？
+ALL_UNIT_AND_DEPLOYMENT_ACTIONS_COMPLETE_END_TURN	すべてのユニットと前哨基地が行動しました。\n\nターンを終了しますか？
 NOT_APPLICABLE	N/A
 COMMANDER	コマンダー
 LUELLA_AUGSTEIN	ルエラ・アウグシュタイン
@@ -353,7 +353,7 @@ AURIELLE_COMMANDER_SPECIALITY	修理および戦闘支援
 AURIELLE_COMMANDER_POWER_NAME	重工業の威力
 AURIELLE_COMMANDER_POWER_DESC	重工業の威力が有効な間、味方ユニットを修復するスキルの効果が{0}%上昇し、また対象に自動修復を与える効果を持つ。
 LYSANDER_COMMANDER_POWER_NAME	アクシオム・システム
-LYSANDER_COMMANDER_POWER_DESC	アクシオム・システムが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、最大射程が2以上の味方スキルの最大射程が{1}上昇する。さらにすべての味方ユニットの攻撃ダメージが{2}%上昇する。
+LYSANDER_COMMANDER_POWER_DESC	アクシオム・システムが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、射程2以上の味方スキルの最大射程が{1}上昇する。さらにすべての味方ユニットの攻撃ダメージが{2}%上昇する。
 CERVANTES_COMMANDER_POWER_NAME	海賊の災い
 CERVANTES_COMMANDER_POWER_DESC	海賊の災いが有効な間、ステータス付与を持たない味方攻撃スキルは、ウィルスを付与する効果を持つ。
 NO_TRAITS	このコマンダーには特性がありません。
@@ -416,7 +416,7 @@ HEX_LAUNCHER	HEXランチャー
 NANITE_REPAIR_DRONES	ナノリペア・ドローン
 PRECISION_RAIL_RIFLE	高精度レール・ライフル
 TWIN_ENERGY_CANNONS	ツイン・エネルギー・キャノン
-IGNORES_LOS_AND_COVER	射線は不要。さらに地形のカバー効果を無視する。
+IGNORES_LOS_AND_COVER	射線は不要。地形のカバー効果を無視する。
 IGNORES_LOS	射線は不要。
 IGNORES_COVER	地形のカバー効果を無視する。
 SKILL_DESC_TURN	ターン
@@ -597,12 +597,12 @@ LUELLA_AUGSTEIN_POWER_4	相手を侮ってたかもしれないな。でも、�
 LUELLA_AUGSTEIN_DEPLOY_1	ようやく出番か！　ルエラ・アウグシュタインとディアティ、出るよ！
 LUELLA_AUGSTEIN_DEPLOY_2	兵装セット完了。さあ来い！　ルエラ・アウグシュタイン、ディアティで発進！
 LUELLA_AUGSTEIN_REPAIR	ダメージを受けすぎた！　修理のために離脱するよ。
-IZOL_LOKMAN_POWER_1	遊びは終わった。
+IZOL_LOKMAN_POWER_1	遊びはここまでだ。
 IZOL_LOKMAN_POWER_2	断言しよう。貴様に良き結末は来ない。
-IZOL_LOKMAN_POWER_3	見くびっていたが、これ以上はやらせん！
+IZOL_LOKMAN_POWER_3	見くびっていたか……。これ以上はやらせん！
 IZOL_LOKMAN_POWER_4	勝ち名乗りなど、上げさせはしない！
-IZOL_LOKMAN_DEPLOY_1	全システム正常。任務は必ず、私の手で成功させる。イゾル・ルクマーン、アービターで出撃。
-IZOL_LOKMAN_DEPLOY_2	私ひとりでも、勝利を掴んでみせるぞ！　イゾル・ルクマーン、アービター。戦列に参加する。
+IZOL_LOKMAN_DEPLOY_1	全システム正常。任務は必ず、私の手で成功させる。\nイゾル・ルクマーン、アービター、発進する。
+IZOL_LOKMAN_DEPLOY_2	私ひとりでも、勝利を掴んでみせる！\nイゾル・ルクマーン、アービター、合流する。
 IZOL_LOKMAN_REPAIR	このままではアービターを失いかねん。修理のため離脱する。
 VINCENT_UVIIR_POWER_1	こりゃ、マジになる時かな……。
 VINCENT_UVIIR_POWER_2	さーて、ギアを上げていくぞ！
@@ -736,7 +736,7 @@ LAUNCH_MISSION	出撃
 MISSION	ミッション
 MISSION_SITE	ミッションの場所
 MISSIONS	ミッション
-MISSION_SELECT	ミッション選択
+MISSION_SELECT	MISSION SELECT
 MISSION_INFO	ミッション情報
 MAIN_MISSION	メインミッション
 SUB_MISSION	サブミッション
@@ -756,7 +756,7 @@ CAPTURE	占領
 MISSION_IN_PROGRESS	進行中
 WARNING_TRANSMISSION_OVERRIDE	WARNING! TRANSMISSION OVERRIDE!
 OBJECTIVES_UPDATED	作戦目標が更新されました
-HELP_CHECK_OBJECTIVES	コマンダーメニューの "ヘルプ" を選択すると、作戦目標と敗北条件を確認できます。
+HELP_CHECK_OBJECTIVES	コマンダーメニューの "ヘルプ" から、\n作戦目標と敗北条件を確認できます。
 RANK	ランク
 RANK_S	S
 RANK_A	A
@@ -814,12 +814,12 @@ MISSION_LUELLA_00_END_LINE_6	会ったこともない人たちが、あたしの
 MISSION_LUELLA_00_END_LINE_7	そうだったな。たとえローレンとガードが望んでいなかったとしても、お前が自分で選び取った生き方だ。
 MISSION_LUELLA_00_END_LINE_8	聞いてくれ、ルエラ。次のミッションでは、お前にNOMADの指揮をやってもらう。コマンダーとして学んだことを実践してみせろ。
 MISSION_LUELLA_00_END_LINE_9	詳細はお前の端末に送っておいた。準備ができたら、ブリーフィングルームに来い。
-MISSION_LUELLA_01_DEPLOY_HAVOK_OBJECTIVE	前哨基地を選択して配備オプションを開き、"ハボック" を配備する。
+MISSION_LUELLA_01_DEPLOY_HAVOK_OBJECTIVE	前哨基地の配備オプションを開き、\n"ハボック" を配備する。
 MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。彼らはシティ88の同胞を保護しようとしている。その間に我々がサンクタムの攻撃部隊を阻止する、という内容だな。
 MISSION_LUELLA_01_BRIEFING_LINE_2	ライフライン？
 MISSION_LUELLA_01_BRIEFING_LINE_3	反貴族主義を掲げるレジスタンスの、わずかな生き残りさ。\n聖議会サンクタムを民主的な世界政府に置き換えることを求めている。\nネサリスのスペースコロニー共和同盟と同じような形態にな。
 MISSION_LUELLA_01_BRIEFING_LINE_4	そういうのって、サンクタムとしては許さないんでしょ？\n金持ちのエリートがセルリアを支配すべきだって考えていれば、\n民衆のことなんか何とも思ってないんだからさ。
-MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反対の声を武力で黙らせるだろう。\nそのサンクタムの攻撃部隊だが、\nライフラインの構成員を検挙するためにシティ88へと目下移動中だ。
+MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反対の声を武力で黙らせるだろう。\nそのサンクタムの攻撃部隊が、ライフラインの構成員を検挙するため\nシティ88へと目下移動中というわけだ。
 MISSION_LUELLA_01_BRIEFING_LINE_6	攻撃部隊のセルリア軍VAは、西側の2つのポイントから現れると予測される。
 MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。俺は指揮の説明のためにブリッジに上がるが、ルエラ、お前も長々と準備しているヒマは無いぞ。
 MISSION_LUELLA_01_BRIEFING_LINE_8	こっちもいつでもいいよ、サム。やろう！
@@ -1424,17 +1424,17 @@ MISSION_AURIELLE_09_END_LINE_10	オーリエル、お前は私の誇りだ。会
 MISSION_AURIELLE_09_END_LINE_11	今この時をもって、私は社長職を辞する。クルコフ鉱業社のCEOはお前に任せよう。
 MISSION_AURIELLE_09_END_LINE_12	そんな、私……何と言ったらいいか。ありがとうございます、お父様！　クルコフの名に恥じぬよう、全力を尽くします。
 MISSION_AURIELLE_09_END_LINE_13	その心がけがあれば十分だ。さあ、ヘイル3へ帰ろう。話し合うことは沢山あるからな。
-MISSION_AURIELLE_10_BRIEFING_LINE_1	コマンダー・オーリエル！　更なる敵集団の波が向かってきます！
-MISSION_AURIELLE_10_BRIEFING_LINE_2	もう来るのですか？　こちらは立て直したばかりだというのに。
-MISSION_AURIELLE_10_BRIEFING_LINE_3	セルリアとネサリスが自律型VAに戦力を割かれている間に、シャドーウルヴスが "ゾーン" の占拠に動いているようです。
-MISSION_AURIELLE_10_BRIEFING_LINE_4	こちらの艦に真正面からの攻撃はできないと知っているから、VAで小惑星帯を抜けるつもりのようですね。
-MISSION_AURIELLE_10_BRIEFING_LINE_5	採掘ステーションの武装化は、当たりだった！
-MISSION_AURIELLE_10_BRIEFING_LINE_6	ですが遺憾ながら、この長期戦で我が方の兵たちは疲弊しつつあります。
-MISSION_AURIELLE_10_BRIEFING_LINE_7	それでも、敵の戦力は消耗させねばなりません……頑張りましょう！
+MISSION_AURIELLE_10_BRIEFING_LINE_1	オーリエル、敵の増援がまた来るぞ！
+MISSION_AURIELLE_10_BRIEFING_LINE_2	こんなに早く？　こちらは立て直したばかりだというのに。
+MISSION_AURIELLE_10_BRIEFING_LINE_3	セルリアとネサリスが自律型VAに戦力を割かれている隙に、\nシャドーウルヴスがこの "ゾーン" を占拠すべく、動いているようだな。
+MISSION_AURIELLE_10_BRIEFING_LINE_4	こちらの艦に真正面からの攻撃はできないと知っているから、\nVA部隊で小惑星帯を抜けるつもりのようですね。
+MISSION_AURIELLE_10_BRIEFING_LINE_5	採掘ステーションを武装化しておいて、正解だった！
+MISSION_AURIELLE_10_BRIEFING_LINE_6	とはいえ、こんな長期戦になって……。\n兵たちには、多大な負担を強いてしまっています。
+MISSION_AURIELLE_10_BRIEFING_LINE_7	だからこそ敵の戦力を崩さねばならん。ここが正念場なのだ！
 MISSION_AURIELLE_10_START_LINE_1	コロニーへの最後のひと押し、ちょうど間に合ったようだなァ！
-MISSION_AURIELLE_10_START_LINE_2	セルバンテス!?
-MISSION_AURIELLE_10_START_LINE_3	親友のライサンダー・オズウェルがな、息苦しいセルリアの刑務所から出してくれたのよ！　ハハッ、晴れて再び自由の身だ！
-MISSION_AURIELLE_10_START_LINE_4	その恩返しは、オズウェル殿に "ゾーン" を献上することで果たされるんだよォ！
+MISSION_AURIELLE_10_START_LINE_2	セルバンテス・モレイ!?
+MISSION_AURIELLE_10_START_LINE_3	親愛なるライサンダー・オズウェルが、\n息苦しいセルリアの刑務所から解き放ってくれたのよ！\nハハッ、晴れて再び自由の身だ！
+MISSION_AURIELLE_10_START_LINE_4	その恩返しはなァ、オズウェル殿に "ゾーン" を献上することで、果たされるんだよ！
 MISSION_AURIELLE_10_START_LINE_5	クルコフのアーミーがある限り、そんなことはさせません！
 MISSION_AURIELLE_10_END_LINE_1	敵の士気を喪失させられたようですね。シャドーウルヴスの海賊船が後退してゆく。
 MISSION_AURIELLE_10_END_LINE_2	相手が弱体化し、武装化したステーションも機能しているのだから、"ゾーン" は安全だろう。例の要塞を叩きに向かったセルリア軍の戦いに、加わる頃合だ。
@@ -1602,19 +1602,19 @@ MISSION_IZOL_09_END_LINE_6	それを成し遂げた時こそ、この私、ラ�
 MISSION_IZOL_09_END_LINE_7	腐敗せし旧体制の指導者たちよ、抵抗は無意味と理解せよ。
 MISSION_IZOL_09_END_LINE_8	このパラゴンはアクシオム・AIシステムによって、数万からのヴァリアブルアーマーの自律コマンドを一斉にコントロールできる。パイロットを必要せずにだ。
 MISSION_IZOL_09_END_LINE_9	無限の軍勢は、貴殿らの喉元まで迫っている。その事実を受け入れ、我が軍門に下るのだ！
-MISSION_IZOL_10_BRIEFING_LINE_1	議長、周囲の状況は？
+MISSION_IZOL_10_BRIEFING_LINE_1	閣下、周囲の状況は？
 MISSION_IZOL_10_BRIEFING_LINE_2	イゾル！　急いで防衛部隊を指揮してください。
-MISSION_IZOL_10_BRIEFING_LINE_3	あの放送の直後、オズウェルの部隊がこのサンクタム本部を包囲しているのです！
+MISSION_IZOL_10_BRIEFING_LINE_3	あの放送の直後、オズウェルの部隊がこのサンクタム本部を包囲したのです！
 MISSION_IZOL_10_BRIEFING_LINE_4	しかし最大の問題は、オズウェルの宇宙要塞と、VAをコントロールしているという "アクシオム" なるシステムでありましょう。
-MISSION_IZOL_10_BRIEFING_LINE_5	艦隊には要塞攻撃の態勢を整えさせていますから、あなたは、まず本部防衛に集中してください。
-MISSION_IZOL_10_BRIEFING_LINE_6	……あのような宙域に、今までずっと要塞が隠れていたとは。オズウェルめ、どうやって秘密裏に建造を果たしたというの？
+MISSION_IZOL_10_BRIEFING_LINE_5	艦隊には要塞攻撃の態勢を整えさせていますから、まずあなたは本部防衛に集中してください。
+MISSION_IZOL_10_BRIEFING_LINE_6	……あのような宙域に、今までずっと要塞が隠れていた？\nオズウェルめ、どうやって秘密裏に建造を果たしたというの？
 MISSION_IZOL_10_START_LINE_1	サンクタムを落とさせるわけにはいかん！　セルリア全土のため、各員奮闘せよ！
 MISSION_IZOL_10_END_LINE_1	防衛成功だ。本部を包囲していたVAが後退してゆく！
-MISSION_IZOL_10_END_LINE_2	とはいえ、このまま守り続けられるものでもないが……。
-MISSION_IZOL_10_END_LINE_3	いいえ、よく守り通しました、イゾル！　あなたの稼いでくれた時間で、反攻作戦の準備が整いました。
-MISSION_IZOL_10_END_LINE_4	オズウェルは護衛のため、セルリア仕様の戦艦を多数配備しています。
-MISSION_IZOL_10_END_LINE_5	オズウェルの戦力を破り、要塞への道を開くためにも、リヴァイアサンには我々の艦隊に加わってもらいたいのです。
-MISSION_IZOL_10_END_LINE_6	はっ、議長閣下！　我がリヴァイアサンと軌道保安部OSDが、要塞への道を切り拓いてご覧に入れましょう。
+MISSION_IZOL_10_END_LINE_2	とはいえ、このままでは長くはもつまいが……。
+MISSION_IZOL_10_END_LINE_3	いいえ、よく守り通しました、イゾル！\nあなたの稼いでくれた時間で、反攻作戦の準備が整いました。
+MISSION_IZOL_10_END_LINE_4	オズウェルは自らの護衛のため、セルリア仕様の戦艦を多数配備しています。
+MISSION_IZOL_10_END_LINE_5	オズウェルの戦力を破り、要塞への道を開くためにも、\nリヴァイアサンには我々の艦隊に加わってもらいたいのです。
+MISSION_IZOL_10_END_LINE_6	はっ、議長閣下！　我がリヴァイアサンと軌道保安部OSDが、\n要塞への道を切り拓いてご覧に入れましょう。
 City 15	シティ15
 Lightning Reach	ライトニング・リーチ
 Proving Grounds	試験場
