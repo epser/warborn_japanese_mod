@@ -31,6 +31,7 @@ if __name__ == '__main__':
     options = {
         'export': '--export',
         'import': '--import',
+        'raw_json': '--raw_json'
     }
 
     # 引数が足りない場合はエラーを出力して終了
@@ -38,6 +39,7 @@ if __name__ == '__main__':
         # コマンドヘルプ --export or --import
         print("Usage: python json_control.py --export <json_file_name> <tsv_file_name>")
         print("Usage: python json_control.py --import <json_file_name> <tsv_file_name>")
+        print("Usage: python json_control.py --raw_json <json_file_name> <tsv_file_name>")
         sys.exit(1)
 
     # 第1引数がexport: 第2引数のJSONに二重格納されているJSONデータをTSV形式で出力する
@@ -80,3 +82,23 @@ if __name__ == '__main__':
 
         # JSONファイルを上書き
         write_json_file(json_file_name, json_all)
+
+    # 第1引数がraw_json: 第3引数のTSVファイルを単純なJSONとして第2引数のJSONファイルに出力する
+    elif sys.argv[1] == options['raw_json']:
+        json_file_name = sys.argv[2]
+        tsv_file_name = sys.argv[3]
+
+        # TSVファイルを読み込む
+        inner_json = {}
+        with open(tsv_file_name, 'r', encoding='utf-8') as file:
+            # TSVの1行目はヘッダーなのでスキップ
+            file.readline()
+
+            for line in file:
+                # TSVをkey-valueの辞書に変換
+                key, value = line.strip().split("\t")
+                if value is not None:
+                    inner_json[key] = unescape_string(value)
+
+        # JSONファイルを上書き
+        write_json_file(json_file_name, inner_json)
