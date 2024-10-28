@@ -243,8 +243,8 @@ INDEPENDENT_ZONES	独立\nゾーン
 MINING_BELTS	採掘用\n小惑星帯
 ALLIED_UNIT	自軍ユニット
 ENEMY_UNIT	敵軍ユニット
-ALLIED_STRUCTURE	自軍基地
-ENEMY_STRUCTURE	敵軍基地
+ALLIED_STRUCTURE	自軍施設
+ENEMY_STRUCTURE	敵軍施設
 COMMAND	命令
 INSPECT	調査
 DEFENCE	防御値
@@ -336,7 +336,7 @@ AUTOREPAIR_DESC	ターゲットは自身のターン開始時に一定のHPを�
 OVERCHARGED	オーバーチャージ
 OVERCHARGED_DESC	ターゲットの攻撃スキルで与えるダメージが{0}%上昇する。
 ARMOUR_UP	アーマーアップ
-ARMOUR_UP_DESC	対象の物理、エネルギー、爆発の防御値が{0}上昇する。
+ARMOUR_UP_DESC	ターゲットの物理、エネルギー、爆発の防御値が{0}上昇する。
 ACTIVE	アクティブ
 DEPLOYED_UPPER	配備済み
 REPAIRING	{0}ターン後にリペア完了
@@ -351,7 +351,7 @@ IZOL_COMMANDER_POWER_NAME	ファランクス
 IZOL_COMMANDER_POWER_DESC	ファランクスが有効な間、味方ユニットの攻撃ダメージは、攻撃者自身に隣接する味方ユニットごとに{0}%上昇する。
 AURIELLE_COMMANDER_SPECIALITY	修理および戦闘支援
 AURIELLE_COMMANDER_POWER_NAME	重工業の威力
-AURIELLE_COMMANDER_POWER_DESC	重工業の威力が有効な間、味方ユニットを修復するスキルの効果が{0}%上昇し、また対象に自動修復を与える効果を持つ。
+AURIELLE_COMMANDER_POWER_DESC	重工業の威力が有効な間、味方ユニットを修理するスキルの効果が{0}%上昇し、また対象に自動修復を与える効果を持つ。
 LYSANDER_COMMANDER_POWER_NAME	アクシオム・システム
 LYSANDER_COMMANDER_POWER_DESC	アクシオム・システムが有効な間、すべての味方ユニットの移動範囲が{0}上昇し、射程2以上の味方スキルの最大射程が{1}上昇する。さらにすべての味方ユニットの攻撃ダメージが{2}%上昇する。
 CERVANTES_COMMANDER_POWER_NAME	海賊の災い
@@ -844,7 +844,7 @@ MISSION_LUELLA_02_BRIEFING_LINE_4	シティ15の住民としては、スペー�
 MISSION_LUELLA_02_BRIEFING_LINE_5	だがサンクタムは、市民の移住を違法にしているだろう？
 MISSION_LUELLA_02_BRIEFING_LINE_6	あれは、そう、住みやすい場所の人口密集を防ぐって言い分だったな。
 MISSION_LUELLA_02_BRIEFING_LINE_7	移動とか補給ができなければ、ライフラインみたいな抵抗運動も難しくなるよね。
-MISSION_LUELLA_02_BRIEFING_LINE_8	悪いことは更にある。\nセルリア軍は不穏な動きを見逃さないように、予防策を講じているんだ。
+MISSION_LUELLA_02_BRIEFING_LINE_8	その難しさが、依頼に繋がったというわけだ。\nこういった住民の不満には、セルリア軍もとっくに気付いているから、\n脱走への予防策まで講じられている。
 MISSION_LUELLA_02_BRIEFING_LINE_9	それが、このシティ郊外の前哨基地だ。\nシティに関するすべての出入りを監視し、抑止力として機能している。
 MISSION_LUELLA_02_BRIEFING_LINE_10	基地くらい、あたし達なら簡単だよね？\nこのベイグラントから直接VAで降りちゃえばさ！
 MISSION_LUELLA_02_BRIEFING_LINE_11	駄目だ。まず我々は先遣隊を送る。センサーをかいくぐれる小規模の部隊だ。
@@ -856,15 +856,15 @@ MISSION_LUELLA_02_START_LINE_2	コロニーが無かったら、今頃このセ�
 MISSION_LUELLA_02_START_LINE_3	上官殿!?　市街にVAのシグナルを検知しました！
 MISSION_LUELLA_02_START_LINE_4	クソッ、上層部の言っていた、傭兵とかって連中だ！\nどうやってセンサーをすり抜けた？
 MISSION_LUELLA_02_START_LINE_5	部隊は直ちに展開しろ！　前哨基地に近寄らせるな！
-MISSION_LUELLA_02_END_LINE_1	シティ15の人たちの時間は稼いだ。少なくともサンクタムが目をつけるまではね。
+MISSION_LUELLA_02_END_LINE_1	これでシティ15の人たちの時間は稼げた。\n少なくとも、サンクタムの奴らが戻ってくるまではね。
 MISSION_LUELLA_02_END_LINE_2	そろそろセルリアに長居しすぎたかもしれんが、また次の依頼だ。
 MISSION_LUELLA_03_BRIEFING_LINE_1	今回の目標だが、\nセルリア軍の軌道保安部(OSD)が警備する、サンクタムの兵器研究所の破壊となる。\n依頼主は匿名だ。
 MISSION_LUELLA_03_BRIEFING_LINE_2	サンクタムの施設を壊すためってことは、ネサリス軍の誰かが依頼してきたのかな？
-MISSION_LUELLA_03_BRIEFING_LINE_3	結局、裏で戦争は続いてるんだよね。\n地上のセルリアと、コロニーのネサリス。\n停戦しただなんてのは、公式発表でしかないんだ。
-MISSION_LUELLA_03_BRIEFING_LINE_4	同じようなルートで、ネサリスから匿名の任務を請け負ったこともある。\nまあ、よくあることだ。
-MISSION_LUELLA_03_BRIEFING_LINE_5	待ってよ、あんたはネサリスのコロニー同盟では指名手配犯でしょ？\n機密の第2世代ヴァリアブルアーマーを盗み出したっていうのはさ。
+MISSION_LUELLA_03_BRIEFING_LINE_3	地上のセルリアと、コロニーのネサリス。\n停戦しただなんてのは公式発表でしかなくて、結局は裏で戦争が続いてるんだよね。
+MISSION_LUELLA_03_BRIEFING_LINE_4	同じようなルートで、前にもネサリスから匿名の任務を請け負ったことはある。\nまあ、よくあることだ。
+MISSION_LUELLA_03_BRIEFING_LINE_5	待ってよ、あんたはネサリスのコロニー同盟では指名手配犯でしょ？\n機密の第2世代ヴァリアブルアーマーを盗み出したっていうのでさ。
 MISSION_LUELLA_03_BRIEFING_LINE_6	確かに、彼らとは良い関係ではないがな？\n匿名性ってやつは、どちらにも便利に使えるものだろう。
-MISSION_LUELLA_03_BRIEFING_LINE_7	ネサリスは、関与を悟られたくない案件をシャドーネットのボードに流す。\n我々NOMADのような組織が、素性を明かさずにそれを拾う……。
+MISSION_LUELLA_03_BRIEFING_LINE_7	ネサリスは、関与を悟られたくない案件をシャドーネットのボードに流す。\n俺達NOMADのような組織が、素性を明かさずにそれを拾う……。
 MISSION_LUELLA_03_BRIEFING_LINE_8	汚れ仕事のために金を払ってる相手が、重要指名手配犯だなんてね。\nネサリス軍が知ったらどんな顔するかな？
 MISSION_LUELLA_03_BRIEFING_LINE_9	正直、考えたくもないな。
 MISSION_LUELLA_03_START_LINE_1	ちょっと、どういうことさ!?
@@ -1439,7 +1439,7 @@ MISSION_AURIELLE_10_START_LINE_5	クルコフのアーミーがある限り、�
 MISSION_AURIELLE_10_END_LINE_1	敵の士気を喪失させられたようですね。シャドーウルヴスの海賊船が後退してゆく。
 MISSION_AURIELLE_10_END_LINE_2	相手が弱体化し、ステーションの拠点も機能していれば、"ゾーン" は安全だろう。\n例の要塞を叩きに行ったセルリア軍の戦いに加わる頃合だ。
 MISSION_AURIELLE_10_END_LINE_3	セルリア軍に、手を貸せとおっしゃるのですか!?
-MISSION_AURIELLE_10_END_LINE_4	オーリエル、お前も放送を見ただろう。あのような要塞は、星系すべての人々の脅威だ！\n立場の違いを脇に置いて、大義と大局の利のために今は立たねばならん。
+MISSION_AURIELLE_10_END_LINE_4	オーリエル、お前も放送を見ただろう。\nあのような要塞は、星系すべての人々の脅威だ！\n立場の違いを脇に置いて、大義と大局の利のために今は立たねばならん。
 MISSION_AURIELLE_10_END_LINE_5	そのような時なのですね、お父様……。\n分かりました。要塞の圏内に向けて部隊を動かしましょう。
 MISSION_NAME_IZOL_01	監視と洞察
 MISSION_NAME_IZOL_02	アンカー
