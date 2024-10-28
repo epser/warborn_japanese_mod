@@ -385,7 +385,7 @@ DISINTEGRATE_ARMOUR	アーマー分解
 MINE_LAUNCHER	マイン・ランチャー
 EXCAVATOR_ROCKETS	掘削ロケット
 PROXIMITY_MINE	近接信管地雷
-REPAIR_TOOL	リペア・ツール
+REPAIR_TOOL	修理装置
 ENHANCE_ARMOUR	アーマー強化
 OVERCHARGE_REACTOR	オーバーチャージ・リアクター
 FARSIDE_ARTILLERY	ファーサイド専用重火砲
@@ -484,8 +484,8 @@ ROLE_MELEE	[メレー]
 ROLE_COMMANDER	[コマンダー]
 RANGE	範囲
 COST	コスト
-POWER	パワー
-RECHARGE	リチャージ
+POWER	Power
+RECHARGE	Recharge
 TURNS	ターン
 ATTACK_SKILL	攻撃スキル
 SUPPORT_SKILL	サポートスキル
@@ -753,7 +753,7 @@ DIFFICULTY_HARD	Hard
 DIFFICULTY_VERY_HARD	Very Hard
 OBJECTIVE	目標
 CAPTURE	占領
-MISSION_IN_PROGRESS	進行中
+MISSION_IN_PROGRESS	戦闘マップ
 WARNING_TRANSMISSION_OVERRIDE	WARNING! TRANSMISSION OVERRIDE!
 OBJECTIVES_UPDATED	作戦目標が更新されました
 HELP_CHECK_OBJECTIVES	コマンダーメニューの "ヘルプ" から、\n作戦目標と敗北条件を確認できます。
@@ -1428,16 +1428,16 @@ MISSION_AURIELLE_10_BRIEFING_LINE_1	オーリエル、敵の増援がまた来�
 MISSION_AURIELLE_10_BRIEFING_LINE_2	こんなに早く？　こちらは立て直したばかりだというのに。
 MISSION_AURIELLE_10_BRIEFING_LINE_3	セルリアとネサリスが自律型VAに戦力を割かれている隙に、\nシャドーウルヴスがこの "ゾーン" を占拠すべく、動いているようだな。
 MISSION_AURIELLE_10_BRIEFING_LINE_4	こちらの艦に真正面からの攻撃はできないと知っているから、\nVA部隊で小惑星帯を抜けるつもりですね。
-MISSION_AURIELLE_10_BRIEFING_LINE_5	採掘ステーションを武装化しておいて、正解だった！
+MISSION_AURIELLE_10_BRIEFING_LINE_5	採掘ステーションに拠点機能を持たせておいたのは、正解だった！
 MISSION_AURIELLE_10_BRIEFING_LINE_6	でも、こんな長期戦になって……。\n兵たちには、多大な負担を強いてしまっています。
 MISSION_AURIELLE_10_BRIEFING_LINE_7	だからこそ敵の戦力を崩さねばならん。ここが正念場なのだ！
-MISSION_AURIELLE_10_START_LINE_1	コロニーへの最後のひと押し、ちょうど間に合ったようだなァ！
+MISSION_AURIELLE_10_START_LINE_1	どうやら間に合ったようだなァ！\nこの俺様が、てめえらコロニーへの最後のひと押しだぜ！
 MISSION_AURIELLE_10_START_LINE_2	セルバンテス・モレイ!?
 MISSION_AURIELLE_10_START_LINE_3	親愛なるライサンダー・オズウェルが、\n息苦しいセルリアの刑務所から解き放ってくれたのよ！\nハハッ、晴れて再び自由の身だ！
 MISSION_AURIELLE_10_START_LINE_4	その恩返しはなァ、オズウェル殿に "ゾーン" を献上することで、果たされるんだよ！
 MISSION_AURIELLE_10_START_LINE_5	クルコフのアーミーがある限り、そんなことはさせません！
 MISSION_AURIELLE_10_END_LINE_1	敵の士気を喪失させられたようですね。シャドーウルヴスの海賊船が後退してゆく。
-MISSION_AURIELLE_10_END_LINE_2	相手が弱体化し、武装化したステーションも機能していれば、"ゾーン" は安全だろう。\n例の要塞を叩きに行ったセルリア軍の戦いに加わる頃合だ。
+MISSION_AURIELLE_10_END_LINE_2	相手が弱体化し、ステーションの拠点も機能していれば、"ゾーン" は安全だろう。\n例の要塞を叩きに行ったセルリア軍の戦いに加わる頃合だ。
 MISSION_AURIELLE_10_END_LINE_3	セルリア軍に、手を貸せとおっしゃるのですか!?
 MISSION_AURIELLE_10_END_LINE_4	オーリエル、お前も放送を見ただろう。あのような要塞は、星系すべての人々の脅威だ！\n立場の違いを脇に置いて、大義と大局の利のために今は立たねばならん。
 MISSION_AURIELLE_10_END_LINE_5	そのような時なのですね、お父様……。\n分かりました。要塞の圏内に向けて部隊を動かしましょう。
