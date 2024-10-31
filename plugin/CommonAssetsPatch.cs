@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using JapaneseMod.@struct;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,9 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            Plugin.Logger.LogInfo("DefaultFont:");
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && AssetOverwrite.DefaultFont != null)
+            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpDefaultFont != null)
             {
-                Plugin.Logger.LogInfo("Overwrite DefaultFont");
-                __result = AssetOverwrite.DefaultFont;
+                __result = Plugin.Assets.jpDefaultFont;
             }
         }
     }
@@ -29,11 +28,9 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            Plugin.Logger.LogInfo("OutlineFont:");
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && AssetOverwrite.OutlineFont != null)
+            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpDefaultFont != null)
             {
-                Plugin.Logger.LogInfo("Overwrite OutlineFont");
-                __result = AssetOverwrite.OutlineFont;
+                __result = Plugin.Assets.jpDefaultOutlineFont;
             }
         }
     }
@@ -43,11 +40,33 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            Plugin.Logger.LogInfo("AlternateFont:");
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && AssetOverwrite.AlternateFont != null)
+            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpAlternateFont != null)
             {
-                Plugin.Logger.LogInfo("Overwrite AlternateFont");
-                __result = AssetOverwrite.AlternateFont;
+                __result = Plugin.Assets.jpAlternateFont;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(CommonAssets), "AlternateOutlineFont", MethodType.Getter)]
+    public static class AlternateOutlineFontPatch
+    {
+        public static void Postfix(ref TMP_FontAsset __result)
+        {
+            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpAlternateOutlineFont != null)
+            {
+                __result = Plugin.Assets.jpAlternateOutlineFont;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(CommonAssets), "ActionOutlineFont", MethodType.Getter)]
+    public static class ActionOutlineFontPatch
+    {
+        public static void Postfix(ref TMP_FontAsset __result)
+        {
+            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpActionOutlineFont != null)
+            {
+                __result = Plugin.Assets.jpActionOutlineFont;
             }
         }
     }

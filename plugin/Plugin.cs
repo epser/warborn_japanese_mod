@@ -1,6 +1,8 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
+using JapaneseMod.@struct;
 using System.Collections.Generic;
 using TMPro;
 
@@ -11,7 +13,8 @@ namespace JapaneseMod;
 public class Plugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
-    internal static string OverwriteDataPath;
+    internal static ModConfig ConfigStruct;
+    internal static AssetOverwrite Assets;
 
     private void Awake()
     {
@@ -19,14 +22,13 @@ public class Plugin : BaseUnityPlugin
         Logger = base.Logger;
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
-        OverwriteDataPath = $"{BepInEx.Paths.ConfigPath}/{MyPluginInfo.PLUGIN_GUID}";
-
         var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         harmony.PatchAll();
 
-        // フォントの読み込み
-        Logger.LogInfo($"Load font AssetBundle on {OverwriteDataPath}/font");
-        AssetOverwrite.LoadFontAsset($"{OverwriteDataPath}/font");
+        // Load config
+        ConfigStruct = new ModConfig(Config);
 
+        // フォントの読み込み
+        Assets = new AssetOverwrite(ConfigStruct);
     }
 }
