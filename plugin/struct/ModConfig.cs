@@ -60,8 +60,8 @@ namespace JapaneseMod.@struct
             );
 
             useEnglishDesiginingFonts = config.Bind("Design", "UseEnglishDesiginingFonts", false, "Use English designing fonts");
-            modSwitchKey = config.Bind("Key", "ModSwitchKey", new KeyboardShortcut(KeyCode.F5, KeyCode.LeftAlt), "Switch mod key");
-            languageSwitchKey = config.Bind("Key", "LanguageSwitchKey", new KeyboardShortcut(KeyCode.F6, KeyCode.LeftAlt), "Switch language key");
+            modSwitchKey = config.Bind("Key", "ModSwitchKey", new KeyboardShortcut(KeyCode.F5, [KeyCode.LeftAlt]), "Switch mod key");
+            languageSwitchKey = config.Bind("Key", "LanguageSwitchKey", new KeyboardShortcut(KeyCode.F6, [KeyCode.LeftAlt]), "Switch language key");
         }
     }
 }
