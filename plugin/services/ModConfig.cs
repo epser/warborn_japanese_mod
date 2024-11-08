@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace JapaneseMod.@struct
+namespace JapaneseMod.services
 {
     internal class ModConfig
     {

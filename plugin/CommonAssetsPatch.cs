@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using JapaneseMod.@struct;
+using JapaneseMod.services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

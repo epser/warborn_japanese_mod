@@ -7,7 +7,7 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 
-namespace JapaneseMod.@struct
+namespace JapaneseMod.services
 {
     internal class AssetOverwrite
     {

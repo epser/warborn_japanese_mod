@@ -26,7 +26,6 @@ namespace JapaneseMod
         }
     }
 
-
     [HarmonyPatch(typeof(LocalizationManager), "LoadStringsForLocale")]
     public static class LoadStringsForLocalePatch
     {
@@ -72,6 +71,12 @@ namespace JapaneseMod
             return true; // 元の関数を実行
         }
 
+        // パッチから付け足したLanguageChangedイベント
+        public static void Postfix()
+        {
+            Plugin.EventPool.LanguageChanged();
+        }
+
         // jsonを辞書に展開
         public static Dictionary<string, string> LoadJson(TextAsset json)
         {
@@ -89,6 +94,7 @@ namespace JapaneseMod
     //[HarmonyPatch(typeof(LocalizationManager), "GetLocalizedString")]
     //public static class GetLocalizedStringPatch
     //{
+
     //}
 
 }

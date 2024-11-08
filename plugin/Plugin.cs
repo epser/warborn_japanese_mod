@@ -1,7 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using JapaneseMod.@struct;
+using JapaneseMod.services;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -19,9 +19,10 @@ public class Plugin : BaseUnityPlugin
     internal static new ManualLogSource Logger;
     internal static ModConfig ConfigStruct;
     internal static AssetOverwrite Assets;
-    internal static Dictionary<string, Dictionary<string, string>> StoredLanguageStrings;
-    internal static Dictionary<string, string> StoredLocalizedStrings;
+    internal static Dictionary<string, Dictionary<string, string>> StoredLanguageStrings = [];
+    internal static Dictionary<string, string> StoredLocalizedStrings = [];
     internal static bool IsPatchEnabled = true;
+    internal static EventPool EventPool = new();
 
     // private
     private IInputSystem Input;
@@ -42,17 +43,11 @@ public class Plugin : BaseUnityPlugin
         var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         harmony.PatchAll();
 
-        // Load config
         ConfigStruct = new ModConfig(Config);
-
-        // フォントの読み込み
         Assets = new AssetOverwrite(ConfigStruct);
 
         // Input system
         Input = UnityInput.Current;
-
-        StoredLanguageStrings = new Dictionary<string, Dictionary<string, string>>();
-        StoredLocalizedStrings = new Dictionary<string, string>();
     }
 
     /**
