@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using Warborn;
 
@@ -21,6 +22,7 @@ public class Plugin : BaseUnityPlugin
     internal static AssetOverwrite Assets;
     internal static Dictionary<string, Dictionary<string, string>> StoredLanguageStrings = [];
     internal static Dictionary<string, string> StoredLocalizedStrings = [];
+    internal static Dictionary<string, TMP_FontAsset> StoredLocalizedFonts = [];
     internal static bool IsPatchEnabled = true;
     internal static EventPool EventPool = new();
 

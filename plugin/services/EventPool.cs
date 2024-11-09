@@ -23,19 +23,33 @@ namespace JapaneseMod.services
             registeredViews.Add(new WeakReference<View>(view));
         }
 
+        internal void RemoveLanguageChangedHandler(View view)
+        {
+            languageChangedHandlers.Remove(view);
+            registeredViews.RemoveAll(weakRef => !weakRef.TryGetTarget(out var target) || target == view);
+        }
+
         internal void LanguageChanged()
         {
-            // ハンドラを走査し、生きているビューのみを残す
+            // 生存中のView
             var liveViews = new List<WeakReference<View>>();
+            // 呼び出しをシンプルにするためにハンドラをリスト化
+            var handlersToInvoke = new List<LocalizationManager.LanguageChangedHandler>();
+
             foreach (var weakRef in registeredViews)
             {
                 if (weakRef.TryGetTarget(out var view) && view != null && languageChangedHandlers.TryGetValue(view, out var handler))
                 {
-                    handler?.Invoke();
+                    handlersToInvoke.Add(handler);
                     liveViews.Add(weakRef);
                 }
             }
             registeredViews = liveViews;
+
+            foreach (var handler in handlersToInvoke)
+            {
+                handler?.Invoke();
+            }
         }
 
     }
