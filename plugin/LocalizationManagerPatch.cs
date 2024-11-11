@@ -12,17 +12,17 @@ using Newtonsoft.Json;
 using System.Collections;
 using TMPro;
 
-
 namespace JapaneseMod
 {
-
     [HarmonyPatch(typeof(LocalizationManager), MethodType.Constructor)]
     public static class LocalizationManagerConstructorPatch
     {
         public static void Postfix(LocalizationManager __instance)
         {
             Plugin.Logger.LogInfo("LocalizationManager constructor is called!");
-            Plugin.LanguageManagerReference = __instance;
+            Plugin.LocalizationManagerReference = __instance;
+            Plugin.BootAssetsReference = Game.BootAssets;
+            Plugin.Assets.LoadFontAssets();
         }
     }
 
@@ -39,7 +39,7 @@ namespace JapaneseMod
             {
                 text = "en-GB";
             }
-            if (text != __instance.CurrentLanguageKey)
+            if (text == "ja-JP" && text != __instance.CurrentLanguageKey)
             {
                 Plugin.Logger.LogInfo($"Loading strings for locale {text}");
                 // プラグインPATH/{MyPluginInfo.PLUGIN_GUID}/{text}.json が存在するか確認。存在するならTextAssetとしてロード
@@ -51,6 +51,7 @@ namespace JapaneseMod
                     if (loadedAsset != null)
                     {
                         ___LocalizedStrings = JsonConvert.DeserializeObject<Dictionary<string, string>>(loadedAsset.text);
+                        Plugin.StoredLanguageStrings["ja-JP-MOD"] = new Dictionary<string, string>(___LocalizedStrings);
                         Traverse.Create(__instance).Property("CurrentLanguageKey").SetValue(text);
                         if (!silent && ___LanguageChanged != null)
                         {
@@ -88,13 +89,52 @@ namespace JapaneseMod
         }
     }
 
-    ///**
-    // * GetLocalizedStringのパッチ
-    // */
-    //[HarmonyPatch(typeof(LocalizationManager), "GetLocalizedString")]
-    //public static class GetLocalizedStringPatch
-    //{
+    /**
+     * GetLocalizedStringのパッチ
+     */
+    [HarmonyPatch(typeof(LocalizationManager), "GetLocalizedString")]
+    public static class GetLocalizedStringPatch
+    {
+        // JSONでなく即時ローカライズ文字列を返却するシンボルのリスト
+        // TODO: 外部データに持つ
+        public static List<string> ImmediateLocalizedSymbols = new List<string>
+        {
+            LocaleKeys.HP,
+            LocaleKeys.SP,
+            LocaleKeys.EDIT,
+            LocaleKeys.CAMPAIGN,
+            LocaleKeys.MULTIPLAYER,
+//            LocaleKeys.CONFIRM,
+            LocaleKeys.RESTORE_DEFAULTS,
+            LocaleKeys.CREDITS,
+            LocaleKeys.CHANGE_SELECTION,
+            LocaleKeys.BACK,
+            LocaleKeys.SERVER_REGION
+        };
 
-    //}
+        // Prefix
+        // なんとここではローカライズしない。
+        // {"text"; key, "args": formatArgs()}
+        // 形式のJSONを作成し、string型で返却する。keyには受け取ったシンボルがそのまま入る
+        // 後工程でデシリアライズし、ローカライズを行う
+        public static bool Prefix(ref string key, ref string __result, params object[] formatArgs)
+        {
+            Plugin.Logger.LogInfo("LocalizationManager.GetLocalizedString is called!");
+
+            // 即時ローカライズ対象のシンボルの場合、元メソッドを実行
+            //if (ImmediateLocalizedSymbols.Contains(key))
+            //{
+            //    return true;
+            //}
+
+            var jsonDict = new Dictionary<string, object>
+            {
+                { "text", key },
+                { "args", formatArgs }
+            };
+            __result = JsonConvert.SerializeObject(jsonDict);
+            return false;
+        }
+    }
 
 }

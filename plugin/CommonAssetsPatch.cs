@@ -16,9 +16,14 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpDefaultFont != null)
+            if (Game.Locale == null)
             {
-                __result = Plugin.Assets.jpDefaultFont;
+                return;
+            }
+
+            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.ContainsKey(Plugin.LANGUAGE_JA_JP_MOD))
+            {
+                __result = Plugin.Assets.StoredLanguageFonts[Plugin.LANGUAGE_JA_JP_MOD].DefaultFont;
             }
         }
     }
@@ -28,9 +33,14 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpDefaultFont != null)
+            if (Game.Locale == null)
             {
-                __result = Plugin.Assets.jpDefaultOutlineFont;
+                return;
+            }
+
+            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.ContainsKey(Plugin.LANGUAGE_JA_JP_MOD))
+            {
+                __result = Plugin.Assets.StoredLanguageFonts[Plugin.LANGUAGE_JA_JP_MOD].DefaultOutlineFont;
             }
         }
     }
@@ -40,9 +50,14 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpAlternateFont != null)
+            if (Game.Locale == null)
             {
-                __result = Plugin.Assets.jpAlternateFont;
+                return;
+            }
+
+            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.ContainsKey(Plugin.LANGUAGE_JA_JP_MOD))
+            {
+                __result = Plugin.Assets.StoredLanguageFonts[Plugin.LANGUAGE_JA_JP_MOD].AlternateFont;
             }
         }
     }
@@ -52,9 +67,14 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpAlternateOutlineFont != null)
+            if (Game.Locale == null)
             {
-                __result = Plugin.Assets.jpAlternateOutlineFont;
+                return;
+            }
+
+            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.ContainsKey(Plugin.LANGUAGE_JA_JP_MOD))
+            {
+                __result = Plugin.Assets.StoredLanguageFonts[Plugin.LANGUAGE_JA_JP_MOD].AlternateOutlineFont;
             }
         }
     }
@@ -64,9 +84,14 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale != null && Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.Assets.jpActionOutlineFont != null)
+            if (Game.Locale == null)
             {
-                __result = Plugin.Assets.jpActionOutlineFont;
+                return;
+            }
+
+            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.ContainsKey(Plugin.LANGUAGE_JA_JP_MOD))
+            {
+                __result = Plugin.Assets.StoredLanguageFonts[Plugin.LANGUAGE_JA_JP_MOD].ActionOutlineFont;
             }
         }
     }
