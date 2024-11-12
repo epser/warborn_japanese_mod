@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JapaneseMod.structs
 {
-    public class InternalJsonReaderStruct
+    internal class InternalJsonReaderStruct
     {
         public string text;
         public string TEXT;

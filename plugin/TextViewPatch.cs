@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Warborn;
 using TMPro;
+using JapaneseMod.structs;
+using JapaneseMod.services;
 
 namespace JapaneseMod
 {
@@ -15,12 +17,27 @@ namespace JapaneseMod
     [HarmonyPatch(typeof(TextView), "Awake")]
     public static class TextViewAwakePatch
     {
-        public static void Postfix(ref TextView __instance)
-        {
-            TMP_FontAsset font = __instance.Text.font;
-            
+        //public static void Postfix(ref TextView __instance)
+        //{
+        //    TMP_FontAsset currentFont = __instance.Text.font;
 
-        }
+        //    // 現在のフォント種別を比較で確定させる
+        //    FontType type = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Game.Locale.CurrentLanguageKey && font.Font == currentFont).FirstOrDefault().Type;
+
+        //    // actionクロージャを変数に入れる
+        //    var instance = __instance;
+        //    Action action = () =>
+        //    {
+        //        // フォントを取得設定
+        //        TMP_FontAsset font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Game.Locale.CurrentLanguageKey && font.Type == type).FirstOrDefault().Font;
+        //        if (font == null)
+        //        {
+        //            return;
+        //        }
+        //        instance.Text.font = font;
+        //    };
+        //    Plugin.EventPool.AddLanguageChangedHandler(__instance, new LocalizationManager.LanguageChangedHandler(action));
+        //}
     }
 
     // TextView.ConfigureTextのパッチ
