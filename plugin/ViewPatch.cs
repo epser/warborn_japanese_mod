@@ -25,9 +25,6 @@ namespace JapaneseMod
             {
                 return;
             }
-            Plugin.Logger.LogInfo("continue 1");
-            Plugin.Logger.LogInfo(Game.Locale.CurrentLanguageKey);
-            Plugin.Logger.LogInfo(Plugin.Assets.StoredLanguageFonts.Count);
 
             // Linqで今保持しているフォントと等しいものを探し、Typeを確定させる
             var currentLanguageFontList = Plugin.Assets.StoredLanguageFonts
@@ -45,12 +42,16 @@ namespace JapaneseMod
                 .FirstOrDefault()?.Type ?? null;
             if (type == null) return;
 
-            Plugin.Logger.LogInfo("continue 2 " + type);
-
             // actionクロージャを変数に入れる
             var textView = __result;
             Action action = () =>
             {
+                var originalText = "";
+                if (TMPTextOriginalStrings.OriginalStrings.TryGetValue(textView.Text, out originalText))
+                {
+                    textView.Text.text = originalText;
+                }
+
                 var fonts = Plugin.Assets.StoredLanguageFonts
                     .Where(fontStruct => fontStruct.LanguageCode == Game.Locale.CurrentLanguageKey && fontStruct.Type == type);
                 if (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP)
@@ -68,4 +69,5 @@ namespace JapaneseMod
             Plugin.EventPool.AddLanguageChangedHandler(textView, new LocalizationManager.LanguageChangedHandler(action));
         }
     }
+
 }

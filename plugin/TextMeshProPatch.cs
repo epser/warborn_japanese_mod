@@ -2,16 +2,23 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 
 namespace JapaneseMod
 {
+    public static class TMPTextOriginalStrings
+    {
+        public static ConditionalWeakTable<TMP_Text, string> OriginalStrings = new ConditionalWeakTable<TMP_Text, string>();
+    }
+
     [HarmonyPatch(typeof(TMP_Text), "text", MethodType.Setter)]
     public static class TextMeshProTextPropertyPatch
     {
-        // Prefixで引数textを変更する
         public static void Prefix(ref TMP_Text __instance, ref string value)
         {
+            TMPTextOriginalStrings.OriginalStrings.Remove(__instance);
+            TMPTextOriginalStrings.OriginalStrings.Add(__instance, value);
             value = Plugin.DesilializeLocalizedSymbolJson(value);
         }
     }
@@ -21,14 +28,14 @@ namespace JapaneseMod
     {
         [HarmonyPrefix]
         [HarmonyPatch(new Type[] { typeof(string) })]
-        public static void PrefixText(ref string text)
+        public static void PrefixA(ref string text)
         {
             text = Plugin.DesilializeLocalizedSymbolJson(text);
         }
 
         [HarmonyPrefix]
         [HarmonyPatch(new Type[] { typeof(string), typeof(float), typeof(float) })]
-        public static void PrefixTextAndFloat(ref string text)
+        public static void PrefixB(ref string text)
         {
             text = Plugin.DesilializeLocalizedSymbolJson(text);
         }
