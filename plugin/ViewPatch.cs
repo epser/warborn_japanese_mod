@@ -1,14 +1,8 @@
 ﻿using HarmonyLib;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Warborn;
 using TMPro;
-using JapaneseMod.structs;
-using JapaneseMod.services;
 using UnityEngine;
 
 namespace JapaneseMod
@@ -20,7 +14,6 @@ namespace JapaneseMod
     {
         public static void Postfix(ref View __instance, ref TextView __result, string name, string text, TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment)
         {
-            Plugin.Logger.LogInfo("AddNewChildTextView is called!(post) " + text);
             if (font == null || Plugin.Assets.StoredLanguageFonts == null)
             {
                 return;
@@ -58,13 +51,11 @@ namespace JapaneseMod
                 {
                     fonts = fonts.Where(fontStruct => fontStruct.PatchMode == Plugin.IsPatchEnabled);
                 }
-                if (fonts == null)
+                var font = fonts?.FirstOrDefault()?.Font ?? null;
+                if (font != null)
                 {
-                    return;
+                    textView.Text.font = font;
                 }
-                var font = fonts.FirstOrDefault()?.Font ?? null;
-                if (font == null) return;
-                textView.Text.font = font;
             };
             Plugin.EventPool.AddLanguageChangedHandler(textView, new LocalizationManager.LanguageChangedHandler(action));
         }

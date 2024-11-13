@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using Warborn;
 
@@ -112,10 +112,41 @@ public class Plugin : BaseUnityPlugin
         }
     }
 
+    private static readonly Regex JsonPattern = new Regex(
+        @"\{(?:[^{}]|(?<Open>\{)|(?<Close-Open>\}))+(?(Open)(?!))\}",
+        RegexOptions.Compiled
+    );
+
+
+    /**
+     * JSON混じりの文字列をデシリアライズしてローカライズされた文字列を返す
+     * 文字列にはLocalizeSymbolJsonStructのJSONが複数個含まれていることを想定
+     */
     internal static string DesilializeLocalizedSymbolJson(string value)
     {
-        Plugin.Logger.LogInfo("DesilializeLocalizedSymbolJson is called! " + value);
+        if (value == null)
+        {
+            return value;
+        }
 
+        var matches = JsonPattern.Matches(value);
+        if (matches.Count == 0)
+        {
+            return value;
+        }
+
+        var result = value;
+        foreach (Match match in matches)
+        {
+            var localized = DesilializeLocalizedSymbolJsonInternal(match.Value);
+            result = result.Replace(match.Value, localized);
+        }
+
+        return result;
+    }
+
+    private static string DesilializeLocalizedSymbolJsonInternal(string value)
+    {
         // まず1文字目を見て簡易判定したほうが安いか？　と思って入れる
         if (value == null || value.Length < 1 || value[0] != '{')
         {
@@ -123,19 +154,19 @@ public class Plugin : BaseUnityPlugin
         }
 
         // JSONでパースしてみて、違うならそのまま返却
-        var parsed = new InternalJsonReaderStruct();
+        var parsed = new LocalizeSymbolJsonStruct();
         try
         {
-            parsed = JsonConvert.DeserializeObject<InternalJsonReaderStruct>(value);
+            parsed = JsonConvert.DeserializeObject<LocalizeSymbolJsonStruct>(value);
             if (parsed == null)
             {
-                Plugin.Logger.LogInfo("failed parse");
+                Plugin.Logger.LogWarning("failed parse: " + value);
                 return value;
             }
         }
         catch (Exception)
         {
-            Plugin.Logger.LogInfo("failed parse");
+            Plugin.Logger.LogInfo("failed parse" + value);
             return value;
         }
 
@@ -152,7 +183,6 @@ public class Plugin : BaseUnityPlugin
         {
             return value;
         }
-        Plugin.Logger.LogInfo("arg:" + args);
 
         var passArgs = new List<object>();
         // args(フォーマット文字列)が1個以上あればデコードする
@@ -160,12 +190,10 @@ public class Plugin : BaseUnityPlugin
         {
             foreach (var arg in args)
             {
-                passArgs.Add(arg);
-                Plugin.Logger.LogInfo("parseArgs:" + arg.ToString());
+                passArgs.Add(DesilializeLocalizedSymbolJson(arg));
             }
         }
 
-        Plugin.Logger.LogInfo("set localize string");
         if (capitalized)
         {
             return GetLocalizedStringOriginal(localeKey, passArgs.ToArray()).ToUpper();
@@ -210,7 +238,6 @@ public class Plugin : BaseUnityPlugin
         }
         if (localizedStrings.ContainsKey(key))
         {
-            Plugin.Logger.LogInfo("LocalizedStrings contains key: " + key);
             string text = localizedStrings[key];
             if (formatArgs != null && formatArgs.Length != 0)
             {

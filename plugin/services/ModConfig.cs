@@ -1,11 +1,4 @@
-﻿using BepInEx;
-using BepInEx.Configuration;
-using Mono.Cecil;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BepInEx.Configuration;
 using UnityEngine;
 
 namespace JapaneseMod.services

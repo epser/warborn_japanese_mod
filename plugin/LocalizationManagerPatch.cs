@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
 using Warborn;
-using static System.Net.Mime.MediaTypeNames;
-using BepInEx;
 using Newtonsoft.Json;
-using System.Collections;
-using TMPro;
 
 namespace JapaneseMod
 {
@@ -95,38 +87,13 @@ namespace JapaneseMod
     [HarmonyPatch(typeof(LocalizationManager), "GetLocalizedString")]
     public static class GetLocalizedStringPatch
     {
-        // JSONでなく即時ローカライズ文字列を返却するシンボルのリスト
-        // TODO: 外部データに持つ
-        public static List<string> ImmediateLocalizedSymbols = new List<string>
-        {
-            LocaleKeys.HP,
-            LocaleKeys.SP,
-            LocaleKeys.EDIT,
-            LocaleKeys.CAMPAIGN,
-            LocaleKeys.MULTIPLAYER,
-//            LocaleKeys.CONFIRM,
-            LocaleKeys.RESTORE_DEFAULTS,
-            LocaleKeys.CREDITS,
-            LocaleKeys.CHANGE_SELECTION,
-            LocaleKeys.BACK,
-            LocaleKeys.SERVER_REGION
-        };
-
         // Prefix
-        // なんとここではローカライズしない。
+        // ここではローカライズしない。
         // {"text"; key, "args": formatArgs()}
         // 形式のJSONを作成し、string型で返却する。keyには受け取ったシンボルがそのまま入る
         // 後工程でデシリアライズし、ローカライズを行う
-        public static bool Prefix(ref string key, ref string __result, params object[] formatArgs)
+        public static bool Prefix(ref string key, ref string __result, ref object[] formatArgs)
         {
-            Plugin.Logger.LogInfo("LocalizationManager.GetLocalizedString is called!");
-
-            // 即時ローカライズ対象のシンボルの場合、元メソッドを実行
-            //if (ImmediateLocalizedSymbols.Contains(key))
-            //{
-            //    return true;
-            //}
-
             var jsonDict = new Dictionary<string, object>
             {
                 { "text", key },

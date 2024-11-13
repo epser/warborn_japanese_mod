@@ -1,13 +1,7 @@
 ﻿using HarmonyLib;
 using InControl;
-using JapaneseMod.services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using TMPro;
 using Warborn;
 
 namespace JapaneseMod
@@ -43,7 +37,7 @@ namespace JapaneseMod
         public static void Prefix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, out string __state)
         {
             // コルーチンで本文を1文字ずつ出してるので、本文のローカライズ変換はここでやる必要がある
-            Plugin.Logger.LogInfo("UpdateDialogueText is called!(pre)");
+            Plugin.Logger.LogInfo("UpdateDialogueText is called!");
             Plugin.EventPool.RemoveLanguageChangedHandler(__instance);
 
             __state = text; // 本文を保存
@@ -52,8 +46,6 @@ namespace JapaneseMod
 
         public static void Postfix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, string __state)
         {
-            Plugin.Logger.LogInfo("UpdateDialogueText is called!(post)");
-
             // current language
             var currentLanguage = Plugin.LocalizationManagerReference.CurrentLanguageKey;
             // Mod mode
