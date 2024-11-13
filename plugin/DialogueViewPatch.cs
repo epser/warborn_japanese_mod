@@ -72,6 +72,7 @@ namespace JapaneseMod
                 var displayingControllerActions = Traverse.Create(instance).Field("displayingControllerActions").GetValue<bool>();
                 var actionPrompts = Traverse.Create(instance).Field("actionPrompts").GetValue<Dictionary<InputControlType, string>>();
 
+                // TODO: UpdateActionPrompts自身が自分を呼ぶようになったので、ここが必要かどうかは確認する
                 if (displayingControllerActions)
                 {
                     instance.ControllerActionsStackingView.UpdateActionPrompts(actionPrompts, false, true, 0f);
