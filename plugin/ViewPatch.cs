@@ -7,6 +7,15 @@ using UnityEngine;
 
 namespace JapaneseMod
 {
+    public static class ViewPatchVariables
+    {
+        // ビュー名をみて固定フォントを決める
+        public static string[] FixedFontViewNames = new string[]
+        {
+            "Lyrics"
+        };
+    }
+
     // TextView.Awakeのパッチ
     [HarmonyPatch(typeof(View), "AddNewChildTextView")]
     // 元実装: public TextView AddNewChildTextView(string name, string text, TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment)
@@ -45,6 +54,10 @@ namespace JapaneseMod
                     textView.Text.text = originalText;
                 }
 
+                if (ViewPatchVariables.FixedFontViewNames.Contains(textView.name))
+                {
+                    return;
+                }
                 var fonts = Plugin.Assets.StoredLanguageFonts
                     .Where(fontStruct => fontStruct.LanguageCode == Game.Locale.CurrentLanguageKey && fontStruct.Type == type);
                 if (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP)
