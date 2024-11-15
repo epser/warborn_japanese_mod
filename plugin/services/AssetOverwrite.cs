@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using JapaneseMod.structs;
+using System.Linq;
 
 namespace JapaneseMod.services
 {
@@ -136,6 +137,18 @@ namespace JapaneseMod.services
             Plugin.Logger.LogInfo($"Loaded font asset: {fontName}");
             return font;
         }
+
+        // fontstructの各要素を引数にした検索
+        internal List<FontStruct> FindFontStructs(TMP_FontAsset font = null, string languageCode = null, FontType? type = null, bool? patchMode = false)
+        {
+            return StoredLanguageFonts
+                .Where(fontStruct => font == null || (fontStruct.Font.hashCode == font.hashCode && fontStruct.Font.materialHashCode == font.materialHashCode))
+                .Where(fontStruct => fontStruct.LanguageCode == languageCode || languageCode == null)
+                .Where(fontStruct => fontStruct.Type == type || type == null)
+                .Where(fontStruct => fontStruct.PatchMode == patchMode || patchMode == null)
+                .ToList();
+        }
+
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace JapaneseMod.structs
 {
-    internal class LocalizeSymbolJsonStruct
+    public class LocalizeSymbolJsonStruct
     {
         public string text;
         public string TEXT;

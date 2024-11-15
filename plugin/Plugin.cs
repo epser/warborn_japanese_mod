@@ -122,7 +122,7 @@ public class Plugin : BaseUnityPlugin
      * JSON混じりの文字列をデシリアライズしてローカライズされた文字列を返す
      * 文字列にはLocalizeSymbolJsonStructのJSONが複数個含まれていることを想定
      */
-    internal static string DesilializeLocalizedSymbolJson(string value)
+    public static string DesilializeLocalizedSymbolJson(string value)
     {
         if (value == null)
         {
@@ -143,6 +143,22 @@ public class Plugin : BaseUnityPlugin
         }
 
         return result;
+    }
+
+    public static LocalizeSymbolJsonStruct DesilializeSingleLocalizedSymbolJson(string value)
+    {
+        try {
+            var parsed = JsonConvert.DeserializeObject<LocalizeSymbolJsonStruct>(value);
+            if (parsed == null)
+            {
+                return null;
+            }
+            return parsed;        
+        }
+        catch (Exception)
+        {
+            return null;
+        }
     }
 
     private static string DesilializeLocalizedSymbolJsonInternal(string value)
@@ -166,7 +182,6 @@ public class Plugin : BaseUnityPlugin
         }
         catch (Exception)
         {
-            Plugin.Logger.LogInfo("failed parse" + value);
             return value;
         }
 
