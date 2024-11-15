@@ -131,7 +131,7 @@ namespace JapaneseMod
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("Uphold our name");
                 CreditsViewPatchVariables.CommonLyrics.ConfigureText("");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("誰もが");
-                yield return new WaitForSeconds(5.5f);
+                yield return new WaitForSeconds(5.8f);
 
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("From dawn to dusk");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("黄昏");
@@ -143,7 +143,7 @@ namespace JapaneseMod
 
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("We're credulous");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("染めてく");
-                yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(3.7f);
 
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("Walking on coals    The fire in your eyes");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("灼熱の道　燃える瞳");
