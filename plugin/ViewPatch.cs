@@ -38,6 +38,11 @@ namespace JapaneseMod
                 childViewName = "VersionText",
                 englishFontType = FontType.Alternate,
             },
+            new TextViewFontManipulationStruct()
+            {
+                languageSymbolRegex = new Regex(@"^LANG_.+$"),
+                ignoreLanguageChangedEvent = true,
+            },
         ];
 
         public static IEnumerable<TextViewFontManipulationStruct> FindFontManipulationConditions(
@@ -51,9 +56,9 @@ namespace JapaneseMod
             string languageSymbol = localizeSymbolJsonStruct?.text ?? localizeSymbolJsonStruct?.TEXT ?? null;
 
             return TextViewFontManipulationStructs
-                .Where(v => v.parentViewName == parentViewName || parentViewName == null)
-                .Where(v => v.childViewName == childViewName || childViewName == null)
-                .Where(v => (v.languageSymbolRegex == null && v.languageSymbolString == null) || v.languageSymbolRegex?.IsMatch(languageSymbol) == true || v.languageSymbolString == languageSymbol || languageSymbol == null)
+                .Where(v => v.parentViewName == parentViewName || v.parentViewName == null || parentViewName == null)
+                .Where(v => v.childViewName == childViewName || v.childViewName == null || childViewName == null)
+                .Where(v => (v.languageSymbolRegex == null && v.languageSymbolString == null) || languageSymbol == null || v.languageSymbolRegex?.IsMatch(languageSymbol) == true || v.languageSymbolString == languageSymbol)
                 .Where(v => v.ignoreLanguageChangedEvent == ignoreLanguageChangedEvent || ignoreLanguageChangedEvent == null)
                 .Where(v => (v.englishFontType != null && fixEnglishFont == true) || fixEnglishFont == null);
         }
