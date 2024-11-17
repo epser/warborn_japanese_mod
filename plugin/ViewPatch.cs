@@ -69,10 +69,16 @@ namespace JapaneseMod
     // 元実装: public TextView AddNewChildTextView(string name, string text, TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment)
     public static class AddNewChildTextViewPatch
     {
-        public static void Prefix(ref View __instance, ref string name, ref string text, ref TMP_FontAsset font)
+        public static void Prefix(ref View __instance, ref string name, ref string text, ref TMP_FontAsset font, out TMP_FontAsset __state)
         {
+            // オリジナルのフォント
+            __state = font;
+
             // パッチ非有効時に英語フォントに固定すると文字化けするので早めに抜ける
-            if (!Plugin.IsPatchEnabled) return;
+            if (!Plugin.IsPatchEnabled || Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
+            {
+                return;
+            }
 
             // 英語に固定すべきフォントかを判定
             var fixEnglishFont = TextViewFontManipulator.FindFontManipulationConditions(__instance.name, name, Plugin.DesilializeSingleLocalizedSymbolJson(text), true, true).FirstOrDefault();
@@ -96,9 +102,9 @@ namespace JapaneseMod
             font = fixedFont;
         }
 
-        public static void Postfix(ref View __instance, ref TextView __result, string name, string text, ref TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment)
+        public static void Postfix(ref View __instance, ref TextView __result, string name, string text, ref TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment, TMP_FontAsset __state)
         {
-            if (font == null || Plugin.Assets.StoredLanguageFonts == null)
+            if (font == null || Plugin.Assets.StoredLanguageFonts == null || (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB))
             {
                 return;
             }
@@ -113,14 +119,15 @@ namespace JapaneseMod
                 true
             ).FirstOrDefault()?.englishFontType ?? null;
 
-            if(fontType == null)
+            // 本来その場所に貼られてるフォントを見る
+            if (Enum.TryParse<FontType>(__state.creationSettings.sourceFontFileName, out FontType parsedFontType))
             {
-                fontType = Plugin.Assets.FindFontStructs(
-                    font,
-                    null,
-                    null,
-                    null
-                ).FirstOrDefault()?.Type ?? null;
+                fontType = parsedFontType;
+            }
+            else
+            {
+                // パースに失敗した場合はnullのままにする
+                fontType = null;
             }
 
             // actionクロージャを変数に入れる
@@ -129,6 +136,11 @@ namespace JapaneseMod
             var textViewName = name;
             Action action = () =>
             {
+                if(Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB)
+                {
+                    return;
+                }
+
                 string originalText = "";
                 if (TMPTextOriginalStrings.OriginalStrings.TryGetValue(textView.Text, out originalText))
                 {
@@ -139,12 +151,10 @@ namespace JapaneseMod
                 // をしない条件を検索
                 if (fontType == null)
                 {
-                    Plugin.Logger.LogInfo($"Is ignore font changed. Missing Type");
                     return;
                 }
                 if (TextViewFontManipulator.FindFontManipulationConditions(parent.name, textView.name, Plugin.DesilializeSingleLocalizedSymbolJson(originalText), true, null).Count() > 0)
                 {
-                    Plugin.Logger.LogInfo($"Is ignore font changed. Found condition.");
                     return;
                 }
 

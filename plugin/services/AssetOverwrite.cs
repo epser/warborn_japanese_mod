@@ -34,89 +34,136 @@ namespace JapaneseMod.services
             }
             Plugin.Logger.LogInfo($"Loaded AssetBundle: {path}");
 
-
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.DefaultFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.DefaultFont),
+                    FontType.Default
+                ),
                 FontType.Default,
                 Plugin.LANGUAGE_EN_GB
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.DefaultOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.DefaultOutlineFont),
+                    FontType.DefaultOutline
+                ),
                 FontType.DefaultOutline,
                 Plugin.LANGUAGE_EN_GB
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.AlternateFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.AlternateFont),
+                    FontType.Alternate
+                ),
                 FontType.Alternate,
                 Plugin.LANGUAGE_EN_GB
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.AlternateOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.AlternateOutlineFont),
+                    FontType.AlternateOutline
+                ),
                 FontType.AlternateOutline,
                 Plugin.LANGUAGE_EN_GB
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.ActionOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.AlternateOutlineFont),
+                    FontType.ActionOutline
+                ),
                 FontType.ActionOutline,
                 Plugin.LANGUAGE_EN_GB
             ));
 
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.JPDefaultFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.JPDefaultFont),
+                    FontType.Default
+                ),
                 FontType.Default,
                 Plugin.LANGUAGE_JA_JP
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.JPDefaultOutlineFont),
+                    FontType.DefaultOutline
+                ),
                 FontType.DefaultOutline,
                 Plugin.LANGUAGE_JA_JP
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.JPDefaultFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.JPDefaultFont),
+                    FontType.Alternate
+                ),
                 FontType.Alternate,
                 Plugin.LANGUAGE_JA_JP
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.JPDefaultOutlineFont),
+                    FontType.AlternateOutline
+                ),
                 FontType.AlternateOutline,
                 Plugin.LANGUAGE_JA_JP
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    Object.Instantiate(Plugin.BootAssetsReference.JPDefaultOutlineFont),
+                    FontType.ActionOutline
+                ),
                 FontType.ActionOutline,
                 Plugin.LANGUAGE_JA_JP
             ));
 
             StoredLanguageFonts.Add(new FontStruct(
-                LoadFromAsset(bundle, config.jpDefaultFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultFont,
+                SetFontType(
+                    LoadFromAsset(bundle, config.jpDefaultFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultFont,
+                    FontType.Default
+                ),
                 FontType.Default,
                 Plugin.LANGUAGE_JA_JP,
                 true
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                LoadFromAsset(bundle, config.jpDefaultOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    LoadFromAsset(bundle, config.jpDefaultOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                    FontType.DefaultOutline
+                ),
                 FontType.DefaultOutline,
                 Plugin.LANGUAGE_JA_JP,
                 true
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                LoadFromAsset(bundle, config.jpAlternateFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultFont,
+                SetFontType(
+                    LoadFromAsset(bundle, config.jpAlternateFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultFont,
+                    FontType.Alternate
+                ),
                 FontType.Alternate,
                 Plugin.LANGUAGE_JA_JP,
                 true
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                LoadFromAsset(bundle, config.jpAlternateOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    LoadFromAsset(bundle, config.jpAlternateOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                    FontType.AlternateOutline
+                ),
                 FontType.AlternateOutline,
                 Plugin.LANGUAGE_JA_JP,
                 true
             ));
             StoredLanguageFonts.Add(new FontStruct(
-                LoadFromAsset(bundle, config.jpActionOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                SetFontType(
+                    LoadFromAsset(bundle, config.jpActionOutlineFontName.Value) ?? Plugin.BootAssetsReference.JPDefaultOutlineFont,
+                    FontType.ActionOutline
+                ),
                 FontType.ActionOutline,
                 Plugin.LANGUAGE_JA_JP,
                 true
             ));
+
+            // AssetBundleの解放
+            bundle.Unload(false);
         }
 
         private TMP_FontAsset LoadFromAsset(AssetBundle bundle, string fontName)
@@ -135,6 +182,16 @@ namespace JapaneseMod.services
             }
 
             Plugin.Logger.LogInfo($"Loaded font asset: {fontName}");
+            return font;
+        }
+
+        private TMP_FontAsset SetFontType(TMP_FontAsset font, FontType type)
+        {
+            var settings = font.creationSettings;
+            Plugin.Logger.LogInfo($"Set font type from: {settings.sourceFontFileName}");
+            Plugin.Logger.LogInfo($"Set font type to: {type}");
+            settings.sourceFontFileName = type.ToString();
+            font.creationSettings = settings;
             return font;
         }
 

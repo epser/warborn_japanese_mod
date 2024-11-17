@@ -153,7 +153,7 @@ public class Plugin : BaseUnityPlugin
             {
                 return null;
             }
-            return parsed;        
+            return parsed;
         }
         catch (Exception)
         {

@@ -12,21 +12,22 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale == null)
+            if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
             {
                 return;
             }
 
-            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.Count() > 0)
+            var font = Plugin.Assets.FindFontStructs(
+                null,
+                Game.Locale.CurrentLanguageKey,
+                FontType.Default,
+                (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP && Plugin.IsPatchEnabled)
+            ).FirstOrDefault()?.Font ?? null;
+            if (font == null)
             {
-                // Collection<FontStruct>なので、そのように絞る
-                var font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Plugin.LANGUAGE_JA_JP && font.Type == FontType.Default && font.PatchMode).FirstOrDefault().Font;
-                if (font == null)
-                {
-                    return;
-                }
-                __result = font;
+                return;
             }
+            __result = font;
         }
     }
 
@@ -35,20 +36,22 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale == null)
+            if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
             {
                 return;
             }
 
-            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.Count() > 0)
+            var font = Plugin.Assets.FindFontStructs(
+                null,
+                Game.Locale.CurrentLanguageKey,
+                FontType.DefaultOutline,
+                (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP && Plugin.IsPatchEnabled)
+            ).FirstOrDefault()?.Font ?? null;
+            if (font == null)
             {
-                var font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Plugin.LANGUAGE_JA_JP && font.Type == FontType.DefaultOutline && font.PatchMode).FirstOrDefault().Font;
-                if (font == null)
-                {
-                    return;
-                }
-                __result = font;
+                return;
             }
+            __result = font;
         }
     }
 
@@ -57,20 +60,22 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale == null)
+            if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
             {
                 return;
             }
 
-            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.Count() > 0)
+            var font = Plugin.Assets.FindFontStructs(
+                null,
+                Game.Locale.CurrentLanguageKey,
+                FontType.Alternate,
+                (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP && Plugin.IsPatchEnabled)
+            ).FirstOrDefault()?.Font ?? null;
+            if (font == null)
             {
-                var font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Plugin.LANGUAGE_JA_JP && font.Type == FontType.Alternate && font.PatchMode).FirstOrDefault().Font;
-                if (font == null)
-                {
-                    return;
-                }
-                __result = font;
+                return;
             }
+            __result = font;
         }
     }
 
@@ -79,20 +84,22 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale == null)
+            if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
             {
                 return;
             }
 
-            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.Count() > 0)
+            var font = Plugin.Assets.FindFontStructs(
+                null,
+                Game.Locale.CurrentLanguageKey,
+                FontType.AlternateOutline,
+                (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP && Plugin.IsPatchEnabled)
+            ).FirstOrDefault()?.Font ?? null;
+            if (font == null)
             {
-                var font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Plugin.LANGUAGE_JA_JP && font.Type == FontType.AlternateOutline && font.PatchMode).FirstOrDefault().Font;
-                if (font == null)
-                {
-                    return;
-                }
-                __result = font;
+                return;
             }
+            __result = font;
         }
     }
 
@@ -101,20 +108,22 @@ namespace JapaneseMod
     {
         public static void Postfix(ref TMP_FontAsset __result)
         {
-            if (Game.Locale == null)
+            if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
             {
                 return;
             }
 
-            if (Game.Locale.CurrentLanguageKey == "ja-JP" && Plugin.IsPatchEnabled && Plugin.Assets.StoredLanguageFonts.Count() > 0)
+            var font = Plugin.Assets.FindFontStructs(
+                null,
+                Game.Locale.CurrentLanguageKey,
+                FontType.ActionOutline,
+                (Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP && Plugin.IsPatchEnabled)
+            ).FirstOrDefault()?.Font ?? null;
+            if (font == null)
             {
-                var font = Plugin.Assets.StoredLanguageFonts.Where(font => font.LanguageCode == Plugin.LANGUAGE_JA_JP && font.Type == FontType.ActionOutline && font.PatchMode).FirstOrDefault().Font;
-                if (font == null)
-                {
-                    return;
-                }
-                __result = font;
+                return;
             }
+            __result = font;
         }
     }
 }
