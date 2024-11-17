@@ -22,26 +22,81 @@ namespace JapaneseMod
 
     internal static class TextViewFontManipulator
     {
-        // TODO データは外に出す
+        // TODO データは外に出すかも
         public static TextViewFontManipulationStruct[] TextViewFontManipulationStructs =
         [
+            // クレジットに追加した歌詞パーツ
             new TextViewFontManipulationStruct()
             {
                 parentViewName = "CreditsView",
                 childViewName = "Lyrics",
-                ignoreLanguageChangedEvent = true, // 直接フォントを指定して完全固定にしたい場合のみtrue
+                ignoreLanguageChangedEvent = true, // 直接フォントを指定して言語問わず完全固定にしたい場合のみtrue
             },
 
+            // タイトル右上のバージョン表示
             new TextViewFontManipulationStruct()
             {
                 parentViewName = "BackgroundImageBottom",
                 childViewName = "VersionText",
-                englishFontType = FontType.Alternate,
+                englishFontType = FontType.Alternate, // パッチモードで英語フォントを使う場合のみtrue
             },
+
+            // 設定画面の言語プルダウン
             new TextViewFontManipulationStruct()
             {
                 languageSymbolRegex = new Regex(@"^LANG_.+$"),
                 ignoreLanguageChangedEvent = true,
+            },
+
+            // タイトル画面の「PRESS ANY BUTTON」
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "PressButtonToStartText",
+                englishFontType = FontType.Default,
+            },
+
+            // コマンダーパワー タイトル
+            new TextViewFontManipulationStruct()
+            {
+                languageSymbolString = "CP",
+                englishFontType = FontType.Default,
+            },
+
+            // SP タイトル
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "SPTitleText",
+                englishFontType = FontType.Default,
+            },
+
+            // マップ左上のSP数値
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "LocalPlayerStatus",
+                childViewName = "ValueText",
+                englishFontType = FontType.Default,
+            },
+
+            // マップ右上の数値
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "RemotePlayerStatus",
+                childViewName = "ValueText",
+                englishFontType = FontType.Default,
+            },
+
+            // マップ左上のPLAYER_TURN
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "PlayerTurnIndicatorText",
+                englishFontType = FontType.Default,
+            },
+            // 移動やターゲット指定で画面中央上に出てくるPLAYER_TURN
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "HelpMessage",
+                childViewName = "TitleText",
+                englishFontType = FontType.Default,
             },
         ];
 
@@ -53,7 +108,7 @@ namespace JapaneseMod
             bool? fixEnglishFont = null
         )
         {
-            string languageSymbol = localizeSymbolJsonStruct?.text ?? localizeSymbolJsonStruct?.TEXT ?? null;
+            string languageSymbol = localizeSymbolJsonStruct?.text ?? localizeSymbolJsonStruct?.TEXT ?? "";
 
             return TextViewFontManipulationStructs
                 .Where(v => v.parentViewName == parentViewName || v.parentViewName == null || parentViewName == null)
@@ -81,10 +136,20 @@ namespace JapaneseMod
             }
 
             // 英語に固定すべきフォントかを判定
-            var fixEnglishFont = TextViewFontManipulator.FindFontManipulationConditions(__instance.name, name, Plugin.DesilializeSingleLocalizedSymbolJson(text), true, true).FirstOrDefault();
+            var fixEnglishFont = TextViewFontManipulator.FindFontManipulationConditions(
+                __instance.name,
+                name,
+                Plugin.DesilializeSingleLocalizedSymbolJson(text),
+                null,
+                true
+            ).FirstOrDefault();
+
             if (fixEnglishFont == null)
             {
                 return;
+            } else
+            {
+                Plugin.Logger.LogInfo($"FixedFont Detected: {__instance.name}->{name}, {text}, {fixEnglishFont.childViewName ?? ""}/{fixEnglishFont.languageSymbolString ?? ""}/{fixEnglishFont.languageSymbolRegex?.ToString() ?? ""}");
             }
 
             // (StoredFontには日本語2種と英語しかいないので、ほかの言語では最後までいかないはず)
@@ -115,7 +180,7 @@ namespace JapaneseMod
                 __instance.name,
                 name,
                 Plugin.DesilializeSingleLocalizedSymbolJson(text),
-                true,
+                null,
                 true
             ).FirstOrDefault()?.englishFontType ?? null;
 
