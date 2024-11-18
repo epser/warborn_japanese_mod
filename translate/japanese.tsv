@@ -757,7 +757,7 @@ MISSION_IN_PROGRESS	戦闘マップ
 WARNING_TRANSMISSION_OVERRIDE	WARNING! TRANSMISSION OVERRIDE!
 OBJECTIVES_UPDATED	作戦目標が更新されました
 HELP_CHECK_OBJECTIVES	コマンダーメニューの "ヘルプ" から、\n作戦目標と敗北条件を確認できます。
-RANK	ランク
+RANK	RANK
 RANK_S	S
 RANK_A	A
 RANK_B	B
@@ -815,19 +815,19 @@ MISSION_LUELLA_00_END_LINE_7	そうだったな。\nローレンとガードが�
 MISSION_LUELLA_00_END_LINE_8	聞いてくれ、ルエラ。次のミッションでは、お前にNOMADの指揮をやってもらう。\nコマンダーとして学んだことを実践してみせろ。
 MISSION_LUELLA_00_END_LINE_9	詳細はお前の端末に送っておいた。\n準備ができたら、ブリーフィングルームに来い。
 MISSION_LUELLA_01_DEPLOY_HAVOK_OBJECTIVE	前哨基地の配備オプションを開き、\n"ハボック" を配備する。
-MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。彼らはシティ88の同胞を保護しようとしている。\nその間に我々がサンクタムの攻撃部隊を阻止する、という内容だな。
+MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。彼らはシティ88の同胞を保護しようとしている。\nその間、我々にサンクタムの攻撃部隊を阻止してほしい、とのことだ。
 MISSION_LUELLA_01_BRIEFING_LINE_2	ライフラインって？
-MISSION_LUELLA_01_BRIEFING_LINE_3	反貴族主義レジスタンスの、わずかな生き残りさ。惑星セルリアの統治機構である\nサンクタム貴族院を、民主的な世界政府に置き換えることを求めている。\nネサリスのスペースコロニー共和同盟と同じような形態にな。
+MISSION_LUELLA_01_BRIEFING_LINE_3	今も活動している反貴族主義レジスタンスの一つだ。惑星セルリアを統治している\n中央府サンクタムを、民主的な世界政府に置き換えることを求めている。\nネサリスのスペースコロニー共和同盟と同じような形態にな。
 MISSION_LUELLA_01_BRIEFING_LINE_4	サンクタムって、聖域とか、聖なる議会とかって意味でしょ？\n金持ちの貴族がセルリアを支配すべきなんて、そういう特権意識を持った連中なら、\n民衆のためにそれを手放せだなんて言いぶんは、認めないって分かるよ。
 MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反抗の声を武力で黙らせるだろう。\nそのサンクタムの攻撃部隊が、ライフラインの構成員を検挙するため\nシティ88へと目下移動中というわけだ。
 MISSION_LUELLA_01_BRIEFING_LINE_6	攻撃部隊のセルリア軍VAは、西側の2つのポイントから現れると予測される。
-MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。俺は指揮の説明のためにブリッジに上がるが、\nルエラ、お前も長々と準備しているヒマは無いぞ。
-MISSION_LUELLA_01_BRIEFING_LINE_8	こっちもいつでもいいよ、サム。やろう！
+MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。\n少々のアドバイスはしてやれるが、あまり時間はないぞ。
+MISSION_LUELLA_01_BRIEFING_LINE_8	こっちはいつでもいいよ、サム。やろう！
 MISSION_LUELLA_01_START_LINE_1	よし、ルエラ。仕事にかかるぞ。
 MISSION_LUELLA_01_START_LINE_2	ライフラインがシティに前哨基地を用意してくれているな。\nこれを使えば、俺たちの船 "ベイグラント" から新しく部隊を呼ぶことができる。
 MISSION_LUELLA_01_START_LINE_3	前哨基地を選択し、配備メニューから "ハボック" を呼び出してみろ。
 MISSION_LUELLA_01_START_LINE_4	いいぞ！　しかも、ここは地の利もある。
-MISSION_LUELLA_01_START_LINE_5	この手の建造物は部隊の移動を遅らせてしまうが、身を守るのにも役立つんだ。民間人はライフラインが避難させたから、街の構造はうまく使っていけ。
+MISSION_LUELLA_01_START_LINE_5	こうした建造物は部隊の移動を遅らせてしまうが、身を守るのにも役立つんだ。\n民間人はライフラインが避難させたから、街の構造はうまく使っていけ。
 MISSION_LUELLA_01_START_LINE_6	残りの戦力、我々NOMADの初期対応チームも到着する頃だ。
 MISSION_LUELLA_01_START_LINE_7	前哨基地から増援を配備すると、戦略ポイント(SP)が消費されることに注意しろ。
 MISSION_LUELLA_01_START_LINE_8	占領したエイオナイト精製所は、各ターンの開始時にSPを生成してくれる。
@@ -862,7 +862,7 @@ MISSION_LUELLA_03_BRIEFING_LINE_1	今回の目標だが、\nセルリア軍の�
 MISSION_LUELLA_03_BRIEFING_LINE_2	サンクタムの施設を壊すためってことは、ネサリス軍の誰かが依頼してきたのかな？
 MISSION_LUELLA_03_BRIEFING_LINE_3	地上のセルリアと、コロニーのネサリス。\n停戦しただなんてのは公式発表でしかなくて、結局は裏で戦争が続いてるんだよね。
 MISSION_LUELLA_03_BRIEFING_LINE_4	同じようなルートで、前にもネサリスから匿名の任務を請け負ったことはある。\nまあ、よくあることだ。
-MISSION_LUELLA_03_BRIEFING_LINE_5	待ってよ、あんたはネサリスのコロニー同盟では指名手配犯でしょ？\n機密の第2世代ヴァリアブルアーマーを盗み出したっていうのでさ。
+MISSION_LUELLA_03_BRIEFING_LINE_5	待ってよ、あんたはネサリスのコロニー同盟では指名手配犯じゃなかった？\n機密の第2世代ヴァリアブルアーマーを盗み出したっていうのでさ。
 MISSION_LUELLA_03_BRIEFING_LINE_6	確かに、彼らとは良い関係ではないがな？\n匿名性ってやつは、どちらにも便利に使える言葉だろうが。
 MISSION_LUELLA_03_BRIEFING_LINE_7	ネサリスは、関与を悟られたくない案件をシャドーネットのボードに流す。\n俺達NOMADのような組織が、素性を明かさずにそれを拾う……。
 MISSION_LUELLA_03_BRIEFING_LINE_8	汚れ仕事のために金を払ってる相手が、重要指名手配犯だなんてね。\nネサリス軍が知ったらどんな顔するかな？
@@ -913,7 +913,7 @@ MISSION_LUELLA_05_END_LINE_3	侮っていたよ。貴様、DUSKエンハンス�
 MISSION_LUELLA_05_END_LINE_4	戦場の隅々まで見渡せる高度な認識能力と、並外れた操縦反射神経……。\n普通の人間では及びもつかん性能だ。
 MISSION_LUELLA_05_END_LINE_5	あたしのことで、知った風な言い方はやめろ！
 MISSION_LUELLA_05_END_LINE_6	知っているとも。DUSK強化が何を意味するか、何に耐えねばならないか。\nかつてのソブリン戦争にもそのような兵士は居た。
-MISSION_LUELLA_05_END_LINE_7	貴様らの悪名はセルリアに轟いているぞ。\n警告しておいてやろう。今や貴族院サンクタムも注目しつつあるとな。
+MISSION_LUELLA_05_END_LINE_7	貴様らの悪名はセルリアに轟いているぞ。\n警告しておいてやろう。今や中央、サンクタムも注目しつつあるとな。
 MISSION_LUELLA_05_END_LINE_8	サム、今の聞いた？
 MISSION_LUELLA_05_END_LINE_9	ああ。本艦は速やかにセルリアの宙域を離脱し、"ゾーン" に向かう。\nしばらくは身を潜めねばならん！
 MISSION_LUELLA_05_END_LINE_10	各員、出航準備。
