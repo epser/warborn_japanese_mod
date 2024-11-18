@@ -203,6 +203,14 @@ namespace JapaneseMod
                 childViewName = "RankText",
                 englishFontType = FontType.Default,
             },
+
+            // HP
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "HPBarView",
+                childViewName = "HitPointsValueText",
+                englishFontType = FontType.Default,
+            },
         ];
 
         public static IEnumerable<TextViewFontManipulationStruct> FindFontManipulationConditions(
