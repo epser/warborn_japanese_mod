@@ -16,8 +16,8 @@ namespace JapaneseMod
         public string childViewName = null;
         public string languageSymbolString = null;
         public Regex languageSymbolRegex = null;
-        public bool ignoreLanguageChangedEvent = false;
-        public FontType? englishFontType = null;
+        public bool ignoreLanguageChangedEvent = false; // 直接フォントを指定して言語問わず完全固定にしたい場合のみtrue (例: クレジットの歌詞) 英字フォント指定と混ぜるとバグる
+        public FontType? englishFontType = null; // パッチモードで英語フォントを使う場合のみtrue
     }
 
     internal static class TextViewFontManipulator
@@ -30,7 +30,7 @@ namespace JapaneseMod
             {
                 parentViewName = "CreditsView",
                 childViewName = "Lyrics",
-                ignoreLanguageChangedEvent = true, // 直接フォントを指定して言語問わず完全固定にしたい場合のみtrue
+                ignoreLanguageChangedEvent = true,
             },
 
             // タイトル右上のバージョン表示
@@ -38,7 +38,7 @@ namespace JapaneseMod
             {
                 parentViewName = "BackgroundImageBottom",
                 childViewName = "VersionText",
-                englishFontType = FontType.Alternate, // パッチモードで英語フォントを使う場合のみtrue
+                englishFontType = FontType.Alternate,
             },
 
             // 設定画面の言語プルダウン
@@ -168,6 +168,41 @@ namespace JapaneseMod
                 englishFontType = FontType.Default,
             },
 
+            // ミッション選択画面クリアランク
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "OverallRanking",
+                childViewName = "TitleText",
+                englishFontType = FontType.Alternate,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "OverallRanking",
+                childViewName = "RankingText",
+                englishFontType = FontType.Default,
+            },
+
+            // リザルト画面クリアランク
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "RankingView",
+                childViewName = "TitleText",
+                englishFontType = FontType.Alternate,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "RankingView",
+                childViewName = "RankingText",
+                englishFontType = FontType.Default,
+            },
+
+            // ミッション選択画面クリアランク(ミッション個別)
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "RankBackgroundImage",
+                childViewName = "RankText",
+                englishFontType = FontType.Default,
+            },
         ];
 
         public static IEnumerable<TextViewFontManipulationStruct> FindFontManipulationConditions(
@@ -194,10 +229,10 @@ namespace JapaneseMod
     // 元実装: public TextView AddNewChildTextView(string name, string text, TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment)
     public static class AddNewChildTextViewPatch
     {
-        public static void Prefix(ref View __instance, ref string name, ref string text, ref TMP_FontAsset font, out TMP_FontAsset __state)
+        public static void Prefix(ref View __instance, ref string name, ref string text, ref TMP_FontAsset font, out object[] __state)
         {
             // オリジナルのフォント
-            __state = font;
+            __state = new object[] { font };
 
             // パッチ非有効時に英語フォントに固定すると文字化けするので早めに抜ける
             if (!Plugin.IsPatchEnabled || Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP)
@@ -205,8 +240,8 @@ namespace JapaneseMod
                 return;
             }
 
-            // 英語に固定すべきフォントかを判定
-            var fixEnglishFont = TextViewFontManipulator.FindFontManipulationConditions(
+            // 英語に固定すべきフォントか、条件を検索する
+            var fixEnglishFontCondition = TextViewFontManipulator.FindFontManipulationConditions(
                 __instance.name,
                 name,
                 Plugin.DesilializeSingleLocalizedSymbolJson(text),
@@ -214,19 +249,20 @@ namespace JapaneseMod
                 true
             ).FirstOrDefault();
 
-            if (fixEnglishFont == null)
+            if (fixEnglishFontCondition == null)
             {
                 return;
-            } else
+            }
+            else
             {
-                Plugin.Logger.LogInfo($"FixedFont Detected: {__instance.name}->{name}, {text}, {fixEnglishFont.childViewName ?? ""}/{fixEnglishFont.languageSymbolString ?? ""}/{fixEnglishFont.languageSymbolRegex?.ToString() ?? ""}");
+                Plugin.Logger.LogInfo($"FixedFont Detected: {__instance.name}->{name}, {text}, {fixEnglishFontCondition.childViewName ?? ""}/{fixEnglishFontCondition.languageSymbolString ?? ""}/{fixEnglishFontCondition.languageSymbolRegex?.ToString() ?? ""}");
             }
 
             // (StoredFontには日本語2種と英語しかいないので、ほかの言語では最後までいかないはず)
             var fixedFont = Plugin.Assets.FindFontStructs(
                 null,
                 Plugin.LANGUAGE_EN_GB,
-                fixEnglishFont.englishFontType,
+                fixEnglishFontCondition.englishFontType,
                 null
             ).FirstOrDefault()?.Font ?? null;
             if (fixedFont == null)
@@ -237,8 +273,10 @@ namespace JapaneseMod
             font = fixedFont;
         }
 
-        public static void Postfix(ref View __instance, ref TextView __result, string name, string text, ref TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment, TMP_FontAsset __state)
+        public static void Postfix(ref View __instance, ref TextView __result, string name, string text, ref TMP_FontAsset font, int fontSize, Color textColour, TextAlignmentOptions textAlignment, object[] __state)
         {
+            var originalFont = __state[0] as TMP_FontAsset;
+
             if (font == null || Plugin.Assets.StoredLanguageFonts == null || (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB))
             {
                 return;
@@ -254,8 +292,8 @@ namespace JapaneseMod
                 true
             ).FirstOrDefault()?.englishFontType ?? null;
 
-            // 本来その場所に貼られてるフォントを見る
-            if (Enum.TryParse<FontType>(__state.creationSettings.sourceFontFileName, out FontType parsedFontType))
+            // 本来その場所に貼られてるフォントを見る(未使用のsourceFontFileNameカラムの悪用)
+            if (Enum.TryParse<FontType>(originalFont.creationSettings.sourceFontFileName, out FontType parsedFontType))
             {
                 fontType = parsedFontType;
             }
