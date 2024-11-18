@@ -85,19 +85,89 @@ namespace JapaneseMod
                 englishFontType = FontType.Default,
             },
 
+            // 左上のPOWER
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "LocalPlayerStatus",
+                childViewName = "ActivePowerText",
+                englishFontType = FontType.DefaultOutline,
+            },
+
+            // 右上のPOWER
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "RemotePlayerStatus",
+                childViewName = "ActivePowerText",
+                englishFontType = FontType.DefaultOutline,
+            },
+
+
             // マップ左上のPLAYER_TURN
             new TextViewFontManipulationStruct()
             {
                 childViewName = "PlayerTurnIndicatorText",
                 englishFontType = FontType.Default,
             },
-            // 移動やターゲット指定で画面中央上に出てくるPLAYER_TURN
+
+            // 移動やターゲット指定で画面中央上に出てくるPLAYER_TURN/ENEMY_TURN
             new TextViewFontManipulationStruct()
             {
                 parentViewName = "HelpMessage",
                 childViewName = "TitleText",
                 englishFontType = FontType.Default,
             },
+
+            // ブリーフィングとターン開始時の全面バナー
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "BannerMainText",
+                englishFontType = FontType.Default,
+            },
+
+            // ターン開始時のバナーの横の小さい字
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "BannerSubText",
+                englishFontType = FontType.Default,
+            },
+
+            // 配備画面のSP
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "ResourceBalanceView",
+                englishFontType = FontType.Default,
+            },
+
+            // 配備画面の移動力
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "MovementValueText",
+                englishFontType = FontType.Default,
+            },
+
+            // ターン毎のSP供給 +\dSP
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "IncomeText",
+                englishFontType = FontType.Default,
+            },
+
+            // 持っている精製所の数
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "OwnedRefineries",
+                childViewName = "MainText",
+                englishFontType = FontType.Default,
+            },
+
+            // 持っている生産施設の数
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "OwnedOutposts",
+                childViewName = "MainText",
+                englishFontType = FontType.Default,
+            },
+
         ];
 
         public static IEnumerable<TextViewFontManipulationStruct> FindFontManipulationConditions(
@@ -226,7 +296,7 @@ namespace JapaneseMod
                 // 書き換え先フォントの確定
                 TMP_FontAsset rewriteFont = null;
                 FontType? searchType = null;
-                if (Plugin.IsPatchEnabled)
+                if (Plugin.IsPatchEnabled && Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP)
                 {
                     searchType = TextViewFontManipulator.FindFontManipulationConditions(parent.name, textView.name, Plugin.DesilializeSingleLocalizedSymbolJson(originalText), null, true).FirstOrDefault()?.englishFontType;
                     if(searchType != null)
