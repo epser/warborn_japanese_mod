@@ -33,6 +33,26 @@ namespace JapaneseMod
                 ignoreLanguageChangedEvent = true,
             },
 
+            // クレジットテキスト
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "InnerView",
+                childViewName = "titleText",
+                englishFontType = FontType.Alternate,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "InnerView",
+                childViewName = "creditName",
+                englishFontType = FontType.Alternate,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "InnerView",
+                childViewName = "EndText",
+                englishFontType = FontType.Alternate,
+            },
+
             // タイトル右上のバージョン表示
             new TextViewFontManipulationStruct()
             {
