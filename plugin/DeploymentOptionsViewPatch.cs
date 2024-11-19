@@ -37,12 +37,7 @@ namespace JapaneseMod
                     return;
                 }
 
-                font = Plugin.Assets.FindFontStructs(
-                    null,
-                    Game.Locale.CurrentLanguageKey,
-                    FontType.Default
-                ).FirstOrDefault()?.Font ?? null;
-                instance.ResourceBalanceView.Text.font = font;
+                instance.ResourceBalanceView.Text.font = Game.Common.DefaultFont;
             };
         }
     }
