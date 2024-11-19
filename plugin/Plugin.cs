@@ -188,11 +188,13 @@ public class Plugin : BaseUnityPlugin
         var localeKey = parsed.text;
         var args = parsed.args;
         var capitalized = false;
+        var split = parsed.split;
         if (localeKey == null && parsed.TEXT != null && parsed.ARGS != null)
         {
             localeKey = parsed.TEXT;
             args = parsed.ARGS;
             capitalized = true;
+            split = parsed.SPLIT;
         }
         if (localeKey == null)
         {
@@ -209,11 +211,22 @@ public class Plugin : BaseUnityPlugin
             }
         }
 
+        var returnString = GetLocalizedStringOriginal(localeKey, passArgs.ToArray());
         if (capitalized)
         {
-            return GetLocalizedStringOriginal(localeKey, passArgs.ToArray()).ToUpper();
+            returnString = returnString.ToUpper();
         }
-        return GetLocalizedStringOriginal(localeKey, passArgs.ToArray());
+        if (split != null)
+        {
+            var splitted = returnString.Split(new string[]
+            {
+                " ",
+                "・"
+            }, StringSplitOptions.RemoveEmptyEntries);
+            split = Math.Min((int)split, splitted.Length - 1);
+            returnString = splitted[(int)split];
+        }
+        return returnString;
     }
 
     /**

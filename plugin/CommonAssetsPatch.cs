@@ -1,5 +1,8 @@
 ﻿using HarmonyLib;
 using JapaneseMod.structs;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Warborn;
@@ -124,6 +127,56 @@ namespace JapaneseMod
                 return;
             }
             __result = font;
+        }
+    }
+
+    // 元定義 public string[] GetLocalisedNameArrayForCommander(CommanderConfig.Commanders commander)
+    [HarmonyPatch(typeof(CommonAssets), "GetLocalisedNameArrayForCommander")]
+    public static class GetLocalisedNameArrayForCommanderPatch
+    {
+        // CommanderConfigとLocaleKeys.*の対応Dictionary
+        private static readonly Dictionary<CommanderConfig.Commanders, string> LocaleKeyTable = new Dictionary<CommanderConfig.Commanders, string>
+        {
+            { CommanderConfig.Commanders.LuellaAugstein, LocaleKeys.LUELLA_AUGSTEIN },
+            { CommanderConfig.Commanders.VincentUviir, LocaleKeys.VINCENT_UVIIR },
+            { CommanderConfig.Commanders.IzolLokman, LocaleKeys.IZOL_LOKMAN },
+            { CommanderConfig.Commanders.AurielleKrukov, LocaleKeys.AURIELLE_KRUKOV },
+            { CommanderConfig.Commanders.LysanderOswell, LocaleKeys.LYSANDER_OSWELL },
+            { CommanderConfig.Commanders.CervantesMoray, LocaleKeys.CERVANTES_MORAY },
+            { CommanderConfig.Commanders.GenericNOMAD, LocaleKeys.NOMAD_FORCES },
+            { CommanderConfig.Commanders.GenericNethalis, LocaleKeys.NETHALIS_FORCES },
+            { CommanderConfig.Commanders.GenericCerulia, LocaleKeys.CERULIA_FORCES },
+            { CommanderConfig.Commanders.GenericKrukov, LocaleKeys.KRUKOV_FORCES },
+            { CommanderConfig.Commanders.GenericShadowWolves, LocaleKeys.PIRATES },
+            { CommanderConfig.Commanders.GenericLysandersLoyalists, LocaleKeys.LOYALISTS }
+        };
+
+        public static bool Prefix(ref string[] __result, CommanderConfig.Commanders commander)
+        {
+            if (!LocaleKeyTable.ContainsKey(commander))
+            {
+                return true;
+            }
+
+            int splittedCount = Plugin.DesilializeLocalizedSymbolJson(
+                Game.Locale.GetLocalizedString(LocaleKeyTable[commander], Array.Empty<object>())
+            ).Split(new string[]
+            {
+                " ",
+                "・"
+            }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+            __result = new string[splittedCount];
+            for (int i = 0; i < splittedCount; i++)
+            {
+                __result[i] = JsonConvert.SerializeObject(new Dictionary<string, object>
+                {
+                    { "text", LocaleKeyTable[commander] },
+                    { "args", Array.Empty<object>() },
+                    { "split", i }
+                });
+            }
+            return false;
         }
     }
 }
