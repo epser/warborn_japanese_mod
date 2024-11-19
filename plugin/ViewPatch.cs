@@ -116,11 +116,10 @@ namespace JapaneseMod
             // 右上のPOWER
             new TextViewFontManipulationStruct()
             {
-                parentViewName = "RemotePlayerStatus",
+                parentViewName = "Bar",
                 childViewName = "ActivePowerText",
                 englishFontType = FontType.DefaultOutline,
             },
-
 
             // マップ左上のPLAYER_TURN
             new TextViewFontManipulationStruct()
@@ -230,6 +229,13 @@ namespace JapaneseMod
                 parentViewName = "HPBarView",
                 childViewName = "HitPointsValueText",
                 englishFontType = FontType.Default,
+            },
+
+            // 戦闘マップの「クリティカル」表記
+            new TextViewFontManipulationStruct()
+            {
+                childViewName = "CriticalText",
+                englishFontType = FontType.DefaultOutline,
             },
         ];
 
