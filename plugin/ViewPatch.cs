@@ -215,6 +215,40 @@ namespace JapaneseMod
                 englishFontType = FontType.Default,
             },
 
+            // リザルト画面クリアランク 要素別
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "UnitsLostRanking",
+                childViewName = "RankingText",
+                englishFontType = FontType.Default,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "NumberOfTurnsRanking",
+                childViewName = "RankingText",
+                englishFontType = FontType.Default,
+            },
+
+            // リザルト画面 各種数値
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "UnitsDeployed",
+                childViewName = "ValueText",
+                englishFontType = FontType.Default,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "UnitsLost",
+                childViewName = "ValueText",
+                englishFontType = FontType.Default,
+            },
+            new TextViewFontManipulationStruct()
+            {
+                parentViewName = "NumberOfTurns",
+                childViewName = "ValueText",
+                englishFontType = FontType.Default,
+            },
+
             // ミッション選択画面クリアランク(ミッション個別)
             new TextViewFontManipulationStruct()
             {
