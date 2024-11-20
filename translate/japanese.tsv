@@ -272,7 +272,7 @@ BESTOWS	バフ
 SELF	セルフ
 TARGET	ターゲット
 COOLDOWN	クールダウン
-CRITICAL	クリティカル
+CRITICAL	CRITICAL
 DAMAGE_LIGHT	軽度の
 DAMAGE_MEDIUM	中程度の
 DAMAGE_HEAVY	重度の
@@ -341,7 +341,7 @@ ACTIVE	アクティブ
 DEPLOYED_UPPER	配備済み
 REPAIRING	{0}ターン後にリペア完了
 LUELLA_COMMANDER_SPECIALITY	長距離戦闘
-LUELLA_COMMANDER_POWER_NAME	DUSKオーバードライブ
+LUELLA_COMMANDER_POWER_NAME	DUSK オーバードライブ
 LUELLA_COMMANDER_POWER_DESC	DUSKオーバードライブが有効な間、射程2以上の味方スキルの最大射程が{0}上昇する。すべての味方の攻撃スキルの基礎クリティカルヒット率も{1}%に上昇する。
 VINCENT_COMMANDER_SPECIALITY	CQC(Close Quarters Combat)
 VINCENT_COMMANDER_POWER_NAME	マキシマム・アウトプット
@@ -400,7 +400,7 @@ BARRIER	バリア
 FOCUSED_FIRE	集中砲火
 SUPPRESSING_FIRE	制圧射撃
 MICRO_MISSILES	マイクロ・ミサイル
-HYPERVELOCITY_SNIPER_RIFLE	高速狙撃ライフル
+HYPERVELOCITY_SNIPER_RIFLE	高速度狙撃ライフル
 CLOAKING	クローキング
 TARGET_SERVOS	ターゲット: サーボ
 TARGET_OPTICS	ターゲット: 光学系
@@ -743,7 +743,7 @@ SUB_MISSION	サブミッション
 VIEW_MAP	マップ確認
 CHAPTER	チャプター {0}
 CHAPTER_ABBREVIATED	CH. {0}
-FINALE	フィナーレ
+FINALE	Finale
 DIFFICULTY	難易度
 CAMPAIGN_DIFFICULTY	キャンペーンの難易度
 DIFFICULTY_VERY_EASY	Very Easy
@@ -776,20 +776,20 @@ MISSION_NAME_LUELLA_08	ルーエン
 MISSION_NAME_LUELLA_09	ダスク
 MISSION_NAME_LUELLA_10	パラゴン
 MISSION_DESCRIPTION_LUELLA_00	独立傭兵団NOMADは、ヴァリアブルアーマーのエネルギー源であるエイオナイトの探索のため、惑星セルリアに降下していた。
-MISSION_DESCRIPTION_LUELLA_01	ルエラは初めて現場指揮官の役目を任され、都市防衛支援の任務を遂行する。
-MISSION_DESCRIPTION_LUELLA_02	NOMADの受諾したミッションは、あるセルリアの住民たちの移住を支援するものだった。
+MISSION_DESCRIPTION_LUELLA_01	初めて現場指揮官を任されたルエラは、都市防衛支援の任務を遂行する。
+MISSION_DESCRIPTION_LUELLA_02	次にNOMADの受諾したミッションは、セルリアのある都市からの移住を支援するものだった。
 MISSION_DESCRIPTION_LUELLA_03	匿名の依頼に応じたサムは、セルリア軍の施設へNOMADを向かわせる。
 MISSION_DESCRIPTION_LUELLA_04	NOMADの空母、ベイグラントに迫る脅威を防ぐためにルエラは出撃する。
 MISSION_DESCRIPTION_LUELLA_05	囚われた仲間たちを取り戻すため、NOMADは救出作戦を展開する。
-MISSION_DESCRIPTION_LUELLA_06	セルリアの宙域から脱出するNOMADの前に、予期せぬ敵対者が現れる。
+MISSION_DESCRIPTION_LUELLA_06	セルリアの宙域を脱出するNOMADの前に、予期せぬ敵対者が現れる。
 MISSION_DESCRIPTION_LUELLA_07	ルエラは、サムが過去にネサリスのヴァリアブルアーマー技師として働いていた施設を調査せねばならない。
-MISSION_DESCRIPTION_LUELLA_08	サムはルエラを救うため、危険な決断をする。
-MISSION_DESCRIPTION_LUELLA_09	NOMADはルーエンのネサリス軍から逃れるために、戦わねばならない状態にあった。
+MISSION_DESCRIPTION_LUELLA_08	ルエラを救うため、サムは危険な決断に踏み込む。
+MISSION_DESCRIPTION_LUELLA_09	ネサリスの軍がルーエンに集結する。NOMADが逃げ延びるためには、戦わねばならない、
 MISSION_DESCRIPTION_LUELLA_10	宇宙要塞パラゴンを内部から破壊する作戦のため、ルエラはチームを率いる。
 MISSION_LUELLA_00_CAPTURE_OBJECTIVE	"ハボック" または "ノーヴァス" の占領スキルを使い、エイオナイト精製所を占領する。
 MISSION_LUELLA_00_START_LINE_1	よし、改めてコマンダーの命令を確認する。
-MISSION_LUELLA_00_START_LINE_2	今回の目的は、あのエイオナイト精製所の確保だ。\n独立傭兵団の俺達NOMADとしては、エネルギーの補給は必要だからな。
-MISSION_LUELLA_00_START_LINE_3	通信は最小限にしろ。サンクタムの勢力に見つからないよう、事を済ませるぞ。
+MISSION_LUELLA_00_START_LINE_2	今回の目的は、あのエイオナイト精製所の確保だ。\n独立傭兵団のNOMADとしては、エネルギーの補給は必要だからな。
+MISSION_LUELLA_00_START_LINE_3	通信は最小限にしろ。サンクタムの奴らに見つからないよう、事を済ませるぞ。
 MISSION_LUELLA_00_START_LINE_4	各員、行動開始。
 MISSION_LUELLA_00_MID_LINE_1	セルリア軍!?　戦闘は避けられないか。
 MISSION_LUELLA_00_MID_LINE_2	コマンダー、こちらは目標の確保に成功。ですがセルリア軍に捕捉されました。
@@ -800,36 +800,36 @@ MISSION_LUELLA_00_MID_LINE_6	セルリア軍のジャミングに違いない。
 MISSION_LUELLA_00_MID_LINE_7	（カタカタッ……カチッ）
 MISSION_LUELLA_00_MID_LINE_8	よし……サブシステム、オンライン……兵装チェック……。
 MISSION_LUELLA_00_MID_LINE_9	ルエラ、どこだ！　出撃準備はどうした！
-MISSION_LUELLA_00_MID_LINE_10	準備ならできてるよ、サム。いつでも行ける。
+MISSION_LUELLA_00_MID_LINE_10	準備ならとっくにできてるよ、サム。いつでも行ける。
 MISSION_LUELLA_00_MID_LINE_11	ルエラ・アウグシュタイン！　"ディアティ"、降下開始！
 MISSION_LUELLA_00_MID_LINE_12	間に合ったみたいね。みんな、調子は？
 MISSION_LUELLA_00_MID_LINE_13	たった今、最高になったとこだ。\nNOMADのエースパイロットが来てくれたんだものな。
 MISSION_LUELLA_00_MID_LINE_14	OK！　さーて、貴族のイヌどもの腕試しと行くか！
 MISSION_LUELLA_00_END_LINE_1	お前もディアティも、無事でなによりだ。
 MISSION_LUELLA_00_END_LINE_2	そうそう、みんな無事だよ。\nエイオナイトの精製所を確保できたおかげで、燃料も満タン。
-MISSION_LUELLA_00_END_LINE_3	お前はよくやってくれているよ。\nヴァリアブルアーマーのパイロットとしては脅威的なほどだ。
+MISSION_LUELLA_00_END_LINE_3	よくやっているよ、お前は。\nこの数年で、ヴァリアブルアーマーのパイロットとしては脅威的になった。
 MISSION_LUELLA_00_END_LINE_4	うん。あたしのDUSK強化が役に立ってる。父さんと母さんのおかげだ。
 MISSION_LUELLA_00_END_LINE_5	もし二人が生きていたら……\nルエラが俺と傭兵稼業なんぞしているのを、親としてはどう思うかな。
 MISSION_LUELLA_00_END_LINE_6	会ったこともない人たちが、あたしの選択をどう思うかなんて分かんないよ。\n両親のことは、サム、あんたが教えてくれたことしか知らない。
 MISSION_LUELLA_00_END_LINE_7	そうだったな。\nローレンとガードが望んでいなかったとしても、お前が自分で選び取った生き方だ。
 MISSION_LUELLA_00_END_LINE_8	聞いてくれ、ルエラ。次のミッションでは、お前にNOMADの指揮をやってもらう。\nコマンダーとして学んだことを実践してみせろ。
-MISSION_LUELLA_00_END_LINE_9	詳細はお前の端末に送っておいた。\n準備ができたら、ブリーフィングルームに来い。
+MISSION_LUELLA_00_END_LINE_9	詳細はお前の端末に送っておいた。\n準備ができたら、ブリーフィングルームに集合だ。
 MISSION_LUELLA_01_DEPLOY_HAVOK_OBJECTIVE	前哨基地の配備オプションを開き、\n"ハボック" を配備する。
-MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。彼らはシティ88の同胞を保護しようとしている。\nその間、我々にサンクタムの攻撃部隊を阻止してほしい、とのことだ。
+MISSION_LUELLA_01_BRIEFING_LINE_1	"ライフライン" からの直接の依頼だ。\n彼らはシティ88の同胞を保護しようとしている。\nその間、我々にサンクタムの攻撃部隊を阻止してほしい、とのことだ。
 MISSION_LUELLA_01_BRIEFING_LINE_2	ライフラインって？
 MISSION_LUELLA_01_BRIEFING_LINE_3	今も活動している反貴族主義レジスタンスの一つだ。惑星セルリアを統治している\n中央府サンクタムを、民主的な世界政府に置き換えることを求めている。\nネサリスのスペースコロニー共和同盟と同じような形態にな。
 MISSION_LUELLA_01_BRIEFING_LINE_4	サンクタムって、聖域とか、聖なる議会とかって意味でしょ？\n金持ちの貴族がセルリアを支配すべきなんて、そういう特権意識を持った連中なら、\n民衆のためにそれを手放せだなんて言いぶんは、認めないって分かるよ。
 MISSION_LUELLA_01_BRIEFING_LINE_5	そうだ。奴らは反抗の声を武力で黙らせるだろう。\nそのサンクタムの攻撃部隊が、ライフラインの構成員を検挙するため\nシティ88へと目下移動中というわけだ。
 MISSION_LUELLA_01_BRIEFING_LINE_6	攻撃部隊のセルリア軍VAは、西側の2つのポイントから現れると予測される。
-MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。\n少々のアドバイスはしてやれるが、あまり時間はないぞ。
+MISSION_LUELLA_01_BRIEFING_LINE_7	我々が到着するのはシティ88の東側だ。\n少々のアドバイスはしてやれるが、接触まであまり時間はないぞ。
 MISSION_LUELLA_01_BRIEFING_LINE_8	こっちはいつでもいいよ、サム。やろう！
 MISSION_LUELLA_01_START_LINE_1	よし、ルエラ。仕事にかかるぞ。
-MISSION_LUELLA_01_START_LINE_2	ライフラインがシティに前哨基地を用意してくれているな。\nこれを使えば、俺たちの船 "ベイグラント" から新しく部隊を呼ぶことができる。
+MISSION_LUELLA_01_START_LINE_2	ライフラインがシティに前哨基地を用意してくれているな。\nこれを使えば、俺たちの船 "ベイグラント" から部隊を投下できる。
 MISSION_LUELLA_01_START_LINE_3	前哨基地を選択し、配備メニューから "ハボック" を呼び出してみろ。
 MISSION_LUELLA_01_START_LINE_4	いいぞ！　しかも、ここは地の利もある。
-MISSION_LUELLA_01_START_LINE_5	こうした建造物は部隊の移動を遅らせてしまうが、身を守るのにも役立つんだ。\n民間人はライフラインが避難させたから、街の構造はうまく使っていけ。
+MISSION_LUELLA_01_START_LINE_5	こうした建造物は部隊の移動を遅らせてしまうが、\n敵の攻撃から身を守るカバーとしての効果もあるんだ。\n民間人はライフラインが避難させたから、街の構造はうまく使っていけ。
 MISSION_LUELLA_01_START_LINE_6	残りの戦力、我々NOMADの初期対応チームも到着する頃だ。
-MISSION_LUELLA_01_START_LINE_7	前哨基地から増援を配備すると、戦略ポイント(SP)が消費されることに注意しろ。
+MISSION_LUELLA_01_START_LINE_7	前哨基地から増援を配備すると、\n戦略ポイント (SP: Strategy Point) が消費されることに注意しろ。
 MISSION_LUELLA_01_START_LINE_8	占領したエイオナイト精製所は、各ターンの開始時にSPを生成してくれる。
 MISSION_LUELLA_01_START_LINE_9	SPを安定して補充するために、ハボックを精製所に送り込んで占領しておくといい。
 MISSION_LUELLA_01_START_LINE_10	俺からは以上だ、ルエラ。あとは任せるから、今まで学んだことを見せてくれよ。
@@ -874,7 +874,7 @@ MISSION_LUELLA_03_START_LINE_4	気をつけろルエラ。あの識別不明VA�
 MISSION_LUELLA_03_START_LINE_5	俺達が施設攻撃の任務を果たすためには……。\nあの先客が誰にせよ、相手をせねばならんようだ。
 MISSION_LUELLA_03_END_LINE_1	これで最後！\nさて、施設を壊さないと。
 MISSION_LUELLA_03_END_LINE_2	ルエラ、施設はいい。ベイグラントに戻れ！　これはまずいぞ！
-MISSION_LUELLA_03_END_LINE_3	戻ったよサム、何があったの？
+MISSION_LUELLA_03_END_LINE_3	戻ったよサム、状況は？
 MISSION_LUELLA_03_END_LINE_4	ルエラ！　問題発生だ。このベイグラントは今、攻撃態勢の軌道保安部に包囲されている。
 MISSION_LUELLA_04_BRIEFING_LINE_1	ベイグラントへ戻る途中に、敵影は無かったよ。\n奴らの正確な位置は分かってるの？
 MISSION_LUELLA_04_BRIEFING_LINE_2	OSDは集結拠点として、この2つの古い採掘ステーションを使っている。\n小惑星帯に覆われた、索敵の難しいところだ。
@@ -964,7 +964,7 @@ MISSION_LUELLA_07_END_LINE_6	もう時間がない。……間違いのないDUS
 MISSION_LUELLA_08_BRIEFING_LINE_1	目標は、かつてDUSK療法を開発したルーエンの研究施設。\n俺の知る限り、最も確実に抑制剤の手に入る場所だ。
 MISSION_LUELLA_08_BRIEFING_LINE_2	ルーエン？　それって……（ゴホッ）……ネサリスのコロニーじゃないの？
 MISSION_LUELLA_08_BRIEFING_LINE_3	ああ。ソブリン戦争の頃、俺はそこに駐留していたんだ。\nヴァリアブルアーマーの技師をやっていた。
-MISSION_LUELLA_08_BRIEFING_LINE_4	お前の両親に会ったのも、その時だ。\n当時は皆、そこを普通の軍事基地だと思い、疑いもしなかった。\nDUSKとは何なのか、俺達には知るよしもなかった。
+MISSION_LUELLA_08_BRIEFING_LINE_4	お前の両親に会ったのも、その時だ。\n当時は皆、あそこを普通の軍事基地だと思っていて、疑いもしなかった。\nDUSKのこと、それが何なのかも、俺達には知るよしもなかった。
 MISSION_LUELLA_08_BRIEFING_LINE_5	……軍を脱走する時にディアティを持ち逃げして以来、俺はネサリスの指名手配犯だ。\n侵入すれば即座に撃たれるだろうな。
 MISSION_LUELLA_08_BRIEFING_LINE_6	つまり……コロニーへは……強行突入しか……ないってことだ。
 MISSION_LUELLA_08_BRIEFING_LINE_7	その通り。施設への最速ルートは、セクター9の居住区と農業区を突っ切るものだ。
@@ -1008,35 +1008,35 @@ MISSION_LUELLA_09_END_LINE_5	あはっ！　普通の貨物船みたいな見た
 MISSION_LUELLA_09_END_LINE_6	その点、ネサリスの軍艦はクルコフの縄張りでは目立って仕方ない。\nいやー、セコいね。サムは卑怯の名人だね！
 MISSION_LUELLA_09_END_LINE_7	フン、ありがとよ。そら行くぞ！
 MISSION_LUELLA_10_BRIEFING_LINE_1	本当にやるんだね、サム？
-MISSION_LUELLA_10_BRIEFING_LINE_2	ああ。\nネサリス、クルコフ、さらにはサンクタムまでが、要塞の破壊のため力を合わせている。\n俺達NOMADを内部へ突入させるためにな。
+MISSION_LUELLA_10_BRIEFING_LINE_2	ああ。\nネサリス、クルコフ、そしてサンクタムまでが、要塞の破壊のため力を合わせている。\n俺達NOMADを内部へ突入させるためにな。
 MISSION_LUELLA_10_BRIEFING_LINE_3	共通の敵が居れば、団結するだなんてね。こんなこと予想できた？
 MISSION_LUELLA_10_BRIEFING_LINE_4	ソブリン戦争の残虐を繰り返そうとするライサンダー・オズウェルという者は、\nそうまでして阻止せねばならんということだ。\n俺達ひとりひとりの、役目を懸けてな……！
 MISSION_LUELLA_10_BRIEFING_LINE_5	そのあたし達の役目が、\n要塞のエネルギー供給をオーバーロードさせることだっていうの？
-MISSION_LUELLA_10_BRIEFING_LINE_6	そういうことだ。\n構造スキャンの結果、要塞のコアには中央リアクターが確認された。\nそして複数のエイオナイト精製施設が、そこにエネルギーを送っていることも分かった。
-MISSION_LUELLA_10_BRIEFING_LINE_7	これらの精製施設を占領してオーバーロードさせれば、まず中央リアクターが爆発する。\n爆発は連鎖反応を起こし、要塞内に点在するサブリアクターをも、\n巻き添えにして吹っ飛ばしてくれるだろう。
+MISSION_LUELLA_10_BRIEFING_LINE_6	そういうことだ。\n構造スキャンの結果、要塞のコアには中央リアクターが確認されている。\n複数のエイオナイト精製施設が、そこにエネルギーを送っていることも分かった。
+MISSION_LUELLA_10_BRIEFING_LINE_7	周囲の精製施設を確保してオーバーロードさせれば、まず中央リアクターが爆発する。\n爆発は連鎖反応を起こし、要塞内に点在するサブリアクターをも、\n巻き添えにして吹っ飛ばしてくれるだろう。
 MISSION_LUELLA_10_BRIEFING_LINE_8	サムがこの手の専門家なのは、ラッキーだったね？
 MISSION_LUELLA_10_BRIEFING_LINE_9	実際、要塞の設計は既存のネサリスのコロニーとよく似ているんだ。\n中には農業区や居住区まである。
-MISSION_LUELLA_10_BRIEFING_LINE_10	どうやって要塞を建造できたのかも、想像がつくというものだ。\n協力者が居たに違いない……。要塞には奴の信者が暮らし、労働しているのだろうよ。
-MISSION_LUELLA_10_BRIEFING_LINE_11	さてルエラ、時間だ。\nくれぐれも気をつけろよ。オズウェルが他にどんな罠を隠しているか、分からんからな！
+MISSION_LUELLA_10_BRIEFING_LINE_10	そういうものを作ってみせたライサンダーには、協力者が居るってことでしょ。\n要塞に住んで働いてるのだって、あいつの信者に違いないんだ。
+MISSION_LUELLA_10_BRIEFING_LINE_11	さてルエラ、時間だ。くれぐれも気をつけろよ。\nオズウェルが他にどんな罠を隠しているか、分からんからな！
 MISSION_LUELLA_10_BRIEFING_LINE_12	任せてよ。さあ、行くよ！
 MISSION_LUELLA_10_START_LINE_1	これは……コピーだって!?
 MISSION_LUELLA_10_START_LINE_2	その通りだよ。すべての設計データを手に入れるのは、少々骨が折れたがね。
-MISSION_LUELLA_10_START_LINE_3	ニセモノで勝てないからって、数を束ねてきたんだろ！
+MISSION_LUELLA_10_START_LINE_3	ニセモノで勝てないからって、数を束ねてくるなんてさ！
 MISSION_LUELLA_10_START_LINE_4	君のことは知っているぞ、ルエラ・アウグシュタイン。\nよくもパラゴンに侵入できたものだが、第2世代VAを4体同時に相手はできまい！
 MISSION_LUELLA_10_START_LINE_5	DUSKの強化人間であろうが関係ない。貴様らの企ては、ここで終わりだ！
-MISSION_LUELLA_10_END_LINE_1	今だ！　精製施設をオーバーロードさせろ！　ぶっ壊しちまえ！
-MISSION_LUELLA_10_END_LINE_2	貴様ら、何をした!?
+MISSION_LUELLA_10_END_LINE_1	今だ！　精製施設をオーバーロードさせる！\nこんなところは！
+MISSION_LUELLA_10_END_LINE_2	貴様ら、いったい何を!?
 MISSION_LUELLA_10_END_LINE_3	ルエラ急げ！　リアクター本体が爆発する前に脱出するんだ！
 MISSION_LUELLA_10_END_LINE_4	やった！
 MISSION_LUELLA_10_END_LINE_5	よくやった、ルエラ！　お前は今日、多くの命を救ったんだ。
 MISSION_LUELLA_10_END_LINE_6	でも、要塞の中の人たちは？　ライサンダーの信者はどうなったの？
 MISSION_LUELLA_10_END_LINE_7	彼らも、要塞の危機には気付いていたようだな。\n大量の脱出シャトルが飛び出していったのが見えたよ。\nライサンダーの艦隊も退散したとさ。
-MISSION_LUELLA_10_END_LINE_8	自律型VAも機能を停止したようだ。\nリアクターの爆発によってコントロールシステムも破壊されたからな。\n要するに、戦いは終わったってことだ！
+MISSION_LUELLA_10_END_LINE_8	リアクターは、狙い通りに制御システムを巻き込んで爆発してくれた。\n各地の自律型VAは機能を停止したようだ……。\n要するに、ようやく戦いは終わったってことだ、ルエラ！
 MISSION_LUELLA_10_END_LINE_9	これから、ネサリスとセルリア、クルコフはどうするんだろう？\nいがみ合ってた皆が、この戦いでは協力してくれたけどさ。
-MISSION_LUELLA_10_END_LINE_10	特にセルリアとネサリスの抱える問題はまだ多い。\n物事が一夜で変わってくれたりは、しないだろうな。
-MISSION_LUELLA_10_END_LINE_11	それでも、オズウェルやセルバンテスのような奴らに掻き乱されなければ、\nここから信頼を築いて、良い関係というものを目指せるかもしれん。
+MISSION_LUELLA_10_END_LINE_10	セルリアとネサリスの抱える問題はまだ多い。\n物事が一夜で変わってくれたりは、しないだろうな。
+MISSION_LUELLA_10_END_LINE_11	それでもさ、オズウェルとか、セルバンテスみたいな奴らに掻き乱されなければ、\nここからやり直して、いい関係ってのも目指せるかもしれないよね？
 MISSION_LUELLA_10_END_LINE_12	そう思いたいな。でも、ま、とりあえずは……。
-MISSION_LUELLA_10_END_LINE_13	さあ、仕事だ！
+MISSION_LUELLA_10_END_LINE_13	うん、仕事だ！
 MISSION_NAME_VINCENT_01	追跡
 MISSION_NAME_VINCENT_02	決闘
 MISSION_NAME_VINCENT_03	包囲
@@ -1047,16 +1047,16 @@ MISSION_NAME_VINCENT_07	痕跡
 MISSION_NAME_VINCENT_08	要塞
 MISSION_NAME_VINCENT_09	宿敵
 MISSION_NAME_VINCENT_10	不屈
-MISSION_DESCRIPTION_VINCENT_01	ヴィンセントはネサリスのフォワード・スカウト・チームを率いてNOMADを追跡する。
+MISSION_DESCRIPTION_VINCENT_01	ヴィンセントは、ネサリス軍のフォワード・スカウト・チームを率いてNOMADを追跡していた。
 MISSION_DESCRIPTION_VINCENT_02	オーリエル・クルコフは、ヴィンセントが決闘で彼女に勝てば通行を許可するという。
 MISSION_DESCRIPTION_VINCENT_03	アーヴィン提督の緊急指令に応え、ヴィンセントはネサリスのコロニーに急遽帰投する。
 MISSION_DESCRIPTION_VINCENT_04	ヴィンセントは、ネサリスの輸送船をハイジャックしている一団を捜索する。
 MISSION_DESCRIPTION_VINCENT_05	フォワード・スカウト・チームは、消えた輸送船の行方を探るため、敵VAの残骸から発見された座標を辿ってセルリアへと向かう。
 MISSION_DESCRIPTION_VINCENT_06	政治的事情で動けぬヴィンセントに代わって、フォワード・スカウト・チームは軌道上の造船所へと潜入する。
 MISSION_DESCRIPTION_VINCENT_07	ヴィンセントは軌道造船所の行き来に使われたルートを辿り、セルリアの北部に到着する。
-MISSION_DESCRIPTION_VINCENT_08	ヴィンセントはセルバンテスを追って、セルリアの荒野にある海賊の拠点へと辿りつく。
-MISSION_DESCRIPTION_VINCENT_09	セルバンテスを連行し、セルリアを離れようとするヴィンセントの前に、積年の宿敵が立ちはだかる。
-MISSION_DESCRIPTION_VINCENT_10	ヴィンセントは、ライサンダーの軍勢からコロニーの管制センターを守り抜かねばならない。
+MISSION_DESCRIPTION_VINCENT_08	セルバンテスを追うヴィンセントは、セルリアの荒野にある海賊の拠点へと辿りつく。
+MISSION_DESCRIPTION_VINCENT_09	セルバンテスを連行してセルリアを離れようとするヴィンセントの前に、積年の宿敵が立ちはだかる。
+MISSION_DESCRIPTION_VINCENT_10	ライサンダーの軍勢がネサリスに及べば、ヴィンセントはコロニーの管制センターを守り抜かねばならない。
 MISSION_VINCENT_01_BRIEFING_LINE_1	NOMAD艦の追跡を続けろ。連中は、採掘ルートに紛れて我々を撒くつもりだぞ。
 MISSION_VINCENT_01_BRIEFING_LINE_2	コマンダー、我が方の進路がクルコフ船に封鎖されました！
 MISSION_VINCENT_01_BRIEFING_LINE_3	サミュエル・マシューズ！　ジジイが小賢しい手を使う……。
@@ -1210,7 +1210,7 @@ MISSION_VINCENT_08_START_LINE_2	ここで最後だ、セルバンテス！\n事�
 MISSION_VINCENT_08_START_LINE_3	そうかい!?　ハーハハ!!!　待ちきれねえよ！
 MISSION_VINCENT_08_START_LINE_4	コマンダー、注意を！　エリア内にクローキング地雷を検知しました。
 MISSION_VINCENT_08_START_LINE_5	ヒュウ！　足元に気をつけな、ウサギさんたち！\n誰かさんがサプライズを隠してくれてるってよォ！
-MISSION_VINCENT_08_END_LINE_1	コマンダー！　セルバンテスの確保、拘束に成功！
+MISSION_VINCENT_08_END_LINE_1	コマンダー！　セルバンテスの確保、拘束に成功しました！
 MISSION_VINCENT_08_END_LINE_2	いいぞ、よくやった！　奴の尋問をする。タイドブレイカーに撤収するぞ。
 MISSION_VINCENT_08_END_LINE_3	着信だと？　これはセルリアの軍用回線？
 MISSION_VINCENT_08_END_LINE_4	久しぶりだな、ヴィンセント・ユヴィール。
@@ -1221,7 +1221,7 @@ MISSION_VINCENT_09_BRIEFING_LINE_3	あのルクマーンはどうなんだ、ヴ
 MISSION_VINCENT_09_BRIEFING_LINE_4	ええ。停戦協定が破られているのは、ルクマーンには格好の口実でしょう。
 MISSION_VINCENT_09_BRIEFING_LINE_5	彼とは対決せねばならんな。\n貴様にはセルバンテスの連行と尋問のための全権が与えられている。
 MISSION_VINCENT_09_BRIEFING_LINE_6	セルバンテスをルクマーンの手に渡してはならんぞ。
-MISSION_VINCENT_09_START_LINE_1	海賊の拠点を落としたのは認めるが、ここは我々の領地。\nそして私の任務は、セルバンテスを連行することだ！
+MISSION_VINCENT_09_START_LINE_1	海賊の拠点を落としたのは認めるが、ここはセルリアの領地。\nそして私の任務は、セルバンテスを連行することだ！
 MISSION_VINCENT_09_START_LINE_2	無理言うな、俺達だって海賊から聞き出すことがあるんだ。奴はこちらで連行する。
 MISSION_VINCENT_09_START_LINE_3	やってみるがいいヴィンセント！\n停戦協定が無くなったのだから、昔のように私と戦ってみせろ！
 MISSION_VINCENT_09_END_LINE_1	ヴィンセント・ユヴィールッ！
@@ -1238,19 +1238,19 @@ MISSION_VINCENT_09_END_LINE_11	落ち着け、ヴィンセント！　頭を使�
 MISSION_VINCENT_09_END_LINE_12	そのような大規模な作戦展開には同盟議会の承認が必要だ。\n相手の正体が分かるまでは、これ以上の動員はできん。
 MISSION_VINCENT_09_END_LINE_13	今は海賊をネサリスまで連行しろ。\n奴から情報を引き出す間に、我が軍は有事に備える。
 MISSION_VINCENT_10_BRIEFING_LINE_1	まったく……あの暴君が生きていたなどと、誰が想像できる？\nサンクタムの権力闘争で、くたばったはずだろう……。
-MISSION_VINCENT_10_BRIEFING_LINE_2	オズウェルは、あの要塞を造るために何年も資源をかすめ取っていたわけですね。\n完成が近づいて、活動が大胆になっていったわけだ。
-MISSION_VINCENT_10_BRIEFING_LINE_3	ジェイ、無人VAの活動は依然として活発です。\n艦隊を向かわせるべきではありませんか？\nあの要塞と、自律型VAの制御システムさえ破壊できれば、我々は勝てるわけでしょう。
+MISSION_VINCENT_10_BRIEFING_LINE_2	オズウェルは、あの要塞のために何年も資材をかすめ取っていたに違いありません。\n完成が間近になれば、活動も大胆になっていったわけか。
+MISSION_VINCENT_10_BRIEFING_LINE_3	ジェイ、無人VAの活動は依然として活発です。\n今こそ艦隊を向かわせるべきではありませんか？\n自律型VAの制御システムさえ破壊できれば、我々は勝てるわけでしょう。
 MISSION_VINCENT_10_BRIEFING_LINE_4	言われるまでもない、ヴィンセント。我が軍の艦隊は前線に向かっているところだ。
-MISSION_VINCENT_10_BRIEFING_LINE_5	情報によれば、既にクルコフとセルリアの両軍が連携しているようだ。\n二方面に展開して要塞を攻撃している。
+MISSION_VINCENT_10_BRIEFING_LINE_5	話によれば、なんとクルコフとセルリアの両軍が連携しているそうだぞ。\n二方面に展開して要塞を攻撃している、とな。
 MISSION_VINCENT_10_BRIEFING_LINE_6	ライサンダーの脅威を見れば、協調せざるを得ないというわけですか。\nそうなると、わざわざ手柄を持って行かせるのは惜しいですね。
 MISSION_VINCENT_10_BRIEFING_LINE_7	フッ、我が軍の力も見せつけてやらんとな。\nだが今は、コロニーに入り込んだライサンダーの勢力を止めるのが先決だ！
-MISSION_VINCENT_10_END_LINE_1	ライサンダーの要塞に向かうNOMADの旗艦が目撃された……と、\n偵察部隊から報告が入った。
+MISSION_VINCENT_10_END_LINE_1	偵察部隊からの報告によれば、\nライサンダーの要塞に向かう、NOMADの旗艦が目撃された……とのことだ。
 MISSION_VINCENT_10_END_LINE_2	追撃せよと、おっしゃいますか？
-MISSION_VINCENT_10_END_LINE_3	そうではない。\n彼らがライサンダーを相手に戦うなら、それはネサリスのためにもなる、ということだ。
+MISSION_VINCENT_10_END_LINE_3	そうではない。\n彼らがライサンダーを相手に戦ってくれるならば、\nそれはネサリスのための戦いにもなるだろうよ。
 MISSION_VINCENT_10_END_LINE_4	まさか、連中と手を組めと？　あのNOMADとですか？
 MISSION_VINCENT_10_END_LINE_5	あれは取るに足らん小さな傭兵団だが、\n現在のところ、DUSK強化のパイロットを持つ唯一の戦力でもある。\nもし我々がクルコフやセルリアと連携し、要塞の防衛戦力を足止めできたならば……。
 MISSION_VINCENT_10_END_LINE_6	なるほど、彼らのエースを要塞に送り届けてやれると。
-MISSION_VINCENT_10_END_LINE_7	あの子のDUSK能力を考えれば、賭けるに値する一手かもしれんぞ。
+MISSION_VINCENT_10_END_LINE_7	あの子のDUSKの力を考えれば、賭けるに値する一手かも知れませんね。
 MISSION_NAME_AURIELLE_01	警備任務
 MISSION_NAME_AURIELLE_02	家業の重さ
 MISSION_NAME_AURIELLE_03	働き手の報い
@@ -1261,16 +1261,16 @@ MISSION_NAME_AURIELLE_07	進入禁止
 MISSION_NAME_AURIELLE_08	家業と迷い
 MISSION_NAME_AURIELLE_09	人質交換
 MISSION_NAME_AURIELLE_10	クルコフの誇り
-MISSION_DESCRIPTION_AURIELLE_01	オーリエルは父の仕事に随伴し、セルリアでの商取引の安全を確保する。
+MISSION_DESCRIPTION_AURIELLE_01	父の仕事に同行するオーリエルは、セルリアでの商取引の安全を確保する。
 MISSION_DESCRIPTION_AURIELLE_02	セルリアから帰還するオーリエル達に、一つの救難信号が届く。
-MISSION_DESCRIPTION_AURIELLE_03	クルコフ・プライベート・アーミーは、窮地にあるクルコフの労働者のためにも活動する。
+MISSION_DESCRIPTION_AURIELLE_03	窮地にあるクルコフの労働者を救うため、クルコフ・プライベート・アーミーが力を振るう。
 MISSION_DESCRIPTION_AURIELLE_04	アイザックは、ある手掛かりを探すためにオーリエルを "ゾーン" 内のコロニーに派遣する。
-MISSION_DESCRIPTION_AURIELLE_05	あの宿敵がヘイル3コロニーに現れる。
+MISSION_DESCRIPTION_AURIELLE_05	ヘイル3コロニーに現れたのは、あの宿敵であった。
 MISSION_DESCRIPTION_AURIELLE_06	オーリエルは海賊セルバンテスを追跡する。海賊はアイザックを人質に取っていた。
-MISSION_DESCRIPTION_AURIELLE_07	セルバンテスの船・ハントレスを追跡するオーリエルは、ある秘密基地に辿りつく。
-MISSION_DESCRIPTION_AURIELLE_08	クルコフの補給所が攻撃に晒される中で、オーリエルは優先順位を決断せねばならない。
-MISSION_DESCRIPTION_AURIELLE_09	セルバンテスとアイザックが発見され、オーリエルは救出作戦を決行する。
-MISSION_DESCRIPTION_AURIELLE_10	オーリエルはシャドーウルヴスの残党に対する防衛作戦の指揮を執る。
+MISSION_DESCRIPTION_AURIELLE_07	セルバンテスの船・ハントレスを追うオーリエルは、隠された基地に辿りつく。
+MISSION_DESCRIPTION_AURIELLE_08	クルコフの補給所が攻撃に晒される中、オーリエルは自らに優先順位を課さねばならない。
+MISSION_DESCRIPTION_AURIELLE_09	セルバンテスとアイザックを発見したオーリエルは、救出作戦を決行する。
+MISSION_DESCRIPTION_AURIELLE_10	現れたシャドーウルヴスの残党に対し、オーリエルは防衛作戦の指揮を執る。
 MISSION_AURIELLE_01_BRIEFING_LINE_1	お父様、警備部隊の配置は完了しました。
 MISSION_AURIELLE_01_BRIEFING_LINE_2	ありがとう、オーリエル。\n今回は特に重要な取引だからな。どのようなリスクも負いたくないのだ。
 MISSION_AURIELLE_01_BRIEFING_LINE_3	我々クルコフは今なお、この星系随一のエイオナイト鉱石の供給業者だ。\nその名声は、守り通さねばならん。
@@ -1451,26 +1451,26 @@ MISSION_NAME_IZOL_07	聖域の裏側
 MISSION_NAME_IZOL_08	ザ・パック
 MISSION_NAME_IZOL_09	亡霊
 MISSION_NAME_IZOL_10	サンクタム
-MISSION_DESCRIPTION_IZOL_01	イゾルは、サンクタム議長アレクサンドラ・ローソンからの特別任務を受領する。
-MISSION_DESCRIPTION_IZOL_02	ヴィンセントは、空母リヴァイアサンで逃走するイゾルの部隊を阻止しようとする。
-MISSION_DESCRIPTION_IZOL_03	リヴァイアサンは、"ゾーン" の独立コロニーで修理と燃料補給を行う。
+MISSION_DESCRIPTION_IZOL_01	イゾルは、サンクタム議長アレクサンドラ・ローソンからの特別任務を受領していた。
+MISSION_DESCRIPTION_IZOL_02	空母リヴァイアサンで撤収を図るイゾルの部隊を阻止しに現れたのは、ネサリスのヴィンセントであった。
+MISSION_DESCRIPTION_IZOL_03	"ゾーン" の独立コロニーに到着したリヴァイアサンは修理と補給を行う。
 MISSION_DESCRIPTION_IZOL_04	クルコフ家がリヴァイアサンの出航を妨害すれば、イゾルの脳裏には過去の因縁が浮かぶ。
-MISSION_DESCRIPTION_IZOL_05	NOMADのルエラ・アウグシュタインは、イゾルと彼の軌道保安部に対する復讐を企てる。
+MISSION_DESCRIPTION_IZOL_05	NOMADのルエラ・アウグシュタインは、イゾルと軌道保安部に対する復讐を企てていた。
 MISSION_DESCRIPTION_IZOL_06	ローソン議長の命を受け、イゾルはセルリアで新たな任務に就く。
 MISSION_DESCRIPTION_IZOL_07	アレクサンドラ・ローソンは、重要なVA製造プラントを守るためにイゾルを派遣する。
 MISSION_DESCRIPTION_IZOL_08	イゾルら軌道保安部は、海賊の脱獄を阻むために急行せねばならない。
-MISSION_DESCRIPTION_IZOL_09	イゾルは識別不明VAの背後にある真実を発見する。
+MISSION_DESCRIPTION_IZOL_09	イゾルは、識別不明VAの背後にある真実を目撃する。
 MISSION_DESCRIPTION_IZOL_10	サンクタム本部が攻撃を受ける。イゾルはライサンダー・オズウェルの強襲に立ち向かわねばならない。
-MISSION_IZOL_01_BRIEFING_LINE_1	識別不明ヴァリアブルアーマーの痕跡は発見されず、か。\n我らの施設からの略奪の裏に、ネサリスが関与しているという話も、怪しいものだ……。
+MISSION_IZOL_01_BRIEFING_LINE_1	識別不明ヴァリアブルアーマーの痕跡は発見されず、か。\n我らの施設からの略奪の裏に、ネサリスが関与しているという噂も、怪しいものだ……。
 MISSION_IZOL_01_BRIEFING_LINE_2	コマンダー。議長より通信が入っています。
 MISSION_IZOL_01_BRIEFING_LINE_3	ルクマーン司令。ネサリスのコロニーの監視はいかがですか？
-MISSION_IZOL_01_BRIEFING_LINE_4	お呼び立てくださり恐縮です、ローソン議長閣下。\n観測プラットフォームを使った長期観測の結果としては、\nネサリスは識別不明のVAとは無関係であると判断致します。
+MISSION_IZOL_01_BRIEFING_LINE_4	お呼び立てくださり恐縮であります、ローソン議長閣下。\n観測プラットフォームを用いた長期観測の結果としては、\nネサリスと識別不明のVAは、無関係であると判断致します。
 MISSION_IZOL_01_BRIEFING_LINE_5	予想外でしたね。\n顧問たちは皆、軍事機密目当てのネサリスによる秘密作戦だと思っていましたよ。
 MISSION_IZOL_01_BRIEFING_LINE_6	ご苦労でした、イゾル。そろそろセルリアに戻ってきてください。\nあなたを必要とする問題は他にもあるのです。
 MISSION_IZOL_01_BRIEFING_LINE_7	コマンダー、緊急事態です！\nネサリス軍が観測プラットフォームに接近しています。
 MISSION_IZOL_01_BRIEFING_LINE_8	発見されたか……。
 MISSION_IZOL_01_BRIEFING_LINE_9	停戦協定は失効したままですから、必要とあればネサリスとの交戦は許可されましょう。
-MISSION_IZOL_01_END_LINE_1	退路は確保した！　各自、今の持ち場を放棄してリヴァイアサンへ搭乗せよ！
+MISSION_IZOL_01_END_LINE_1	退路は確保した！　各員、今の持ち場を放棄してリヴァイアサンへ搭乗せよ！
 MISSION_IZOL_02_CAPTURE_OBJECTIVE	すべてのエイオナイト精製所を占領する。
 MISSION_IZOL_02_BRIEFING_LINE_1	今の衝撃は何だ？　被害状況を出せ！
 MISSION_IZOL_02_BRIEFING_LINE_2	報告！　小惑星帯のネサリス軍が磁力アンカーを使用！\nリヴァイアサンを固定しつつあります！
@@ -1482,7 +1482,7 @@ MISSION_IZOL_02_START_LINE_1	この辺りのエイオナイト精製所が、リ
 MISSION_IZOL_02_START_LINE_2	アンカーを外すには、施設を確保してエネルギーの流れを断たねばならん。
 MISSION_IZOL_02_START_LINE_3	そんなに慌てて、どうしたイゾル。ネサリスの宙域で何をしていた？
 MISSION_IZOL_02_START_LINE_4	ヴィンセント、やはり貴様か！
-MISSION_IZOL_02_START_LINE_5	まさか……お前らサンクタムは、\n最近そこら中を荒らしている無人VAを、ネサリスの仕業だと疑ってるのか？
+MISSION_IZOL_02_START_LINE_5	ふむ……お前らサンクタムとしては、最近そこら中を荒らしている無人VAを、\nネサリスの仕業だと疑ってるってところかな？
 MISSION_IZOL_02_START_LINE_6	だとしたら見当違いもいいとこだ。自分で自分を襲うなんてことがあるかよ。
 MISSION_IZOL_02_START_LINE_7	無人だと……？　ネサリスも同様の被害を受けていると言うのか？
 MISSION_IZOL_02_START_LINE_8	いいだろう。今、貴様とやり合うつもりはない。\nアンカーを止めて我が艦を解放しろ！
@@ -1508,12 +1508,12 @@ MISSION_IZOL_03_START_LINE_6	NOMADは発見しだい排除というのが、議�
 MISSION_IZOL_03_START_LINE_7	セルリア軍をベイグラントに連れ帰ってしまうわけにはいかない。\nここで戦うしかないのか……！
 MISSION_IZOL_04_CAPTURE_OBJECTIVE	ドッキングアームの制御機構を持つ前哨基地を占領する。
 MISSION_IZOL_04_BRIEFING_LINE_1	コマンダー、問題発生です。\nコロニーのドッキングアームのアクセス権をクルコフに奪われてしまいました。\n今のリヴァイアサンはドックに擱座したも同然です。
-MISSION_IZOL_04_BRIEFING_LINE_2	付近の前哨基地からコントロールすればドッキングアームを切り離せるはずですが、\nクルコフは武装戦力を置いて、施設を占拠しております。
+MISSION_IZOL_04_BRIEFING_LINE_2	付近の前哨基地からコントロールすればドッキングアームを切り離せるはずですが、\nクルコフは武装戦力を置いて、施設を占拠しているのです。
 MISSION_IZOL_04_BRIEFING_LINE_3	構うことはない。その前哨基地を強襲し、コントロールを奪い返せばよい。
-MISSION_IZOL_04_BRIEFING_LINE_4	クルコフめ、いずれ現れるとは思っていた。\nこのコロニーは連中の庇護下ではないが、\nだからといって市民はセルリア軍に協力的でもないからな。
-MISSION_IZOL_04_BRIEFING_LINE_5	コマンダー。なぜ、こうも独立コロニーは我々を目の敵にするのです？\nセルリアの建造したコロニーが人口爆発の危機を救ったのならば、\nむしろ彼らは感謝すべきでしょう！
-MISSION_IZOL_04_BRIEFING_LINE_6	簡単なことだ。彼らはセルリアもネサリスも、独立を脅かすものと見なしているのさ。\nソブリン戦争が文字通りコロニーの主権をめぐる争いであったと、\n貴様が歴史を肌で実感していたならば、理解もできようが……。
-MISSION_IZOL_04_BRIEFING_LINE_7	ネサリスの共和同盟に加入していなかった一部のコロニー群が、\nこの "ゾーン" となったのだ。\n以来ここはセルリアともネサリスとも違う、独立の道を歩んでいる。
+MISSION_IZOL_04_BRIEFING_LINE_4	クルコフめ、いずれ現れるとは思っていた。\nこのコロニーは連中の庇護下にはないが、\nだからといって市民はセルリア軍に協力的でもないからな。
+MISSION_IZOL_04_BRIEFING_LINE_5	コマンダー。なぜ独立コロニーは、こうも我々を目の敵にするのです？\nセルリアの建造したコロニーが人口爆発の危機を救ったのならば、\nむしろ彼らは感謝すべきでしょう！
+MISSION_IZOL_04_BRIEFING_LINE_6	簡単なことだ。彼らはセルリアもネサリスも、独立を脅かすものと見なしているのさ。\nソブリン戦争が文字通りコロニーの主権(Sovereign)をめぐる争いであったと、\n貴様が歴史を肌で実感していたならば、理解もできようが……。
+MISSION_IZOL_04_BRIEFING_LINE_7	ネサリスの共和同盟に加入しなかった一部のコロニー群が、\nこの "ゾーン" となったのだ。\n以来ここはセルリアからも、ネサリスからも独立を保っている。
 MISSION_IZOL_04_BRIEFING_LINE_8	だが今は、歴史の授業をやっても仕方あるまい。\nさらに敵が集結してくる前に、ドッキングアームを外さねばならん！
 MISSION_IZOL_04_START_LINE_1	またお会いしましたね、イゾル・ルクマーン。
 MISSION_IZOL_04_START_LINE_2	ハッ。前の一戦から、まだ私に恨みがあると見えるな？
@@ -1523,11 +1523,11 @@ MISSION_IZOL_04_START_LINE_5	そんな理屈はいいから、私の復讐を受
 MISSION_IZOL_04_END_LINE_1	今だ！　ドッキングアーム切り離せ！
 MISSION_IZOL_04_END_LINE_2	ディスエンゲージ確認！　リヴァイアサン、離床しました！\n出航準備完了です、コマンダー！
 MISSION_IZOL_05_BRIEFING_LINE_1	敵が罠を仕掛けていた、ということか……。
-MISSION_IZOL_05_BRIEFING_LINE_2	イエス、サー。我々はNOMADの手で小惑星帯に追い込まれました。\n前方の採掘プラットフォームには、大規模なヴァリアブルアーマー部隊が待ち構えています。
+MISSION_IZOL_05_BRIEFING_LINE_2	イエス、サー。我々はNOMADによって小惑星帯に追い込まれました。\n前方の採掘プラットフォームには、大規模なヴァリアブルアーマー部隊が待ち構えています。
 MISSION_IZOL_05_BRIEFING_LINE_3	間違いなく、例のコロニーでNOMADの部隊を叩いたことへの報復だろうな。
 MISSION_IZOL_05_BRIEFING_LINE_4	敵はVA "ファーサイド" を複数配置し、砲撃態勢を整えています。\nこれ以上リヴァイアサンで接近するのは危険です。
 MISSION_IZOL_05_BRIEFING_LINE_5	遺憾ながら、コマンダー。我々は不利と言わざるを得ません。
-MISSION_IZOL_05_BRIEFING_LINE_6	臆することはない。\nNOMADはサンクタムの手配する犯罪者に他ならん。\nそのようなならず者を処断することは、我々の責務である！
+MISSION_IZOL_05_BRIEFING_LINE_6	臆することはない。\nNOMADはサンクタムの手配する犯罪者に他ならんのだ。\nそういった者を処断することは、我々の責務である！
 MISSION_IZOL_05_BRIEFING_LINE_7	これより、部隊を三方に分ける。私は "アービター" で主力強襲チームを指揮する。
 MISSION_IZOL_05_BRIEFING_LINE_8	まずは相手の砲撃能力を奪うことだ。しかる後に、NOMADの指揮官機を落とす。
 MISSION_IZOL_05_START_LINE_1	コロニーであたしの仲間をやったお前たちには、その報いを受けてもらう！
@@ -1546,9 +1546,9 @@ MISSION_IZOL_06_BRIEFING_LINE_7	そのモレイを捕まえられれば、謎の
 MISSION_IZOL_06_BRIEFING_LINE_8	彼らの居場所は摑んでいます。抵抗もありましょうが、生きたまま連行しなさい。
 MISSION_IZOL_06_BRIEFING_LINE_9	はっ。遂行いたします、議長閣下！
 MISSION_IZOL_06_START_LINE_1	おいおい！　サンクタムは棒を取って来させるみてェに、犬をよこしたってのか？
-MISSION_IZOL_06_START_LINE_2	大人しく投降しろ、と言って聞く耳は持つまいな？
+MISSION_IZOL_06_START_LINE_2	大人しく投降しろ……と言っても、聞く耳は持つまいな？
 MISSION_IZOL_06_START_LINE_3	はっ、ミスタ・ルクマーン！　んなモンのどこにお楽しみがある!?
-MISSION_IZOL_06_START_LINE_4	なあなあなあ、こういう時はちゃんと戦わなきゃいけねえよォ！
+MISSION_IZOL_06_START_LINE_4	なァ、なァ、なァ！　こういう時はちゃんと戦わなきゃいけねえよォ！
 MISSION_IZOL_06_START_LINE_5	やれるものならな、海賊！
 MISSION_IZOL_06_END_LINE_1	コマンダー・ルクマーン！　セルバンテスを確保しました！
 MISSION_IZOL_06_END_LINE_2	良い仕事だ。ただちに最高警備施設へ移送するぞ。
@@ -1645,8 +1645,8 @@ Triple Threat	三重の脅威
 Rescue Run	レスキュー・ラン
 Ace Plains	エース・プレーンズ
 Junctions	ジャンクション
-Official Map A	公式マップA
-Official Map B	公式マップB
+Official Map A	オフィシャル・マップA
+Official Map B	オフィシャル・マップB
 ACH_LUELLA_CHAPTER	ルエラ編コンプリート
 ACH_LUELLA_CHAPTER_DESC	ルエラ編をクリアする
 ACH_VINCENT_CHAPTER	ヴィンセント編コンプリート
@@ -1675,11 +1675,11 @@ ACH_PERFECTIONIST	完璧主義
 ACH_PERFECTIONIST_DESC	ヴァリアブルアーマーを1機も失わずにキャンペーンミッションを1つクリアする
 ACH_TURNING_THE_TIDE	形勢逆転
 ACH_TURNING_THE_TIDE_DESC	初めてコマンダースキルを使用する
-ACH_BRING_THE_BIG_GUNS	これが切り札
+ACH_BRING_THE_BIG_GUNS	切札
 ACH_BRING_THE_BIG_GUNS_DESC	コマンダーの専用ヴァリアブルアーマーを初めて配備する
 ACH_PERSPECTIVE	それぞれの視点
 ACH_PERSPECTIVE_DESC	オフラインのスカーミッシュ・マッチに各指揮官で1回ずつ勝利する
-ACH_MAP_CRAFTER	マップクラフター
+ACH_MAP_CRAFTER	マップ・クラフター
 ACH_MAP_CRAFTER_DESC	カスタム・マルチプレイヤーマップを作成する
 ACH_AREA_OF_EFFECT	マップ兵器
 ACH_AREA_OF_EFFECT_DESC	1回の攻撃を3体以上の敵機に命中させる
@@ -1733,7 +1733,7 @@ ACH_MAKING_AN_ENTRANCE	大地に立つ
 ACH_MAKING_AN_ENTRANCE_DESC	ルエラの最初のミッションをクリアする
 ACH_IN_PURSUIT	追跡
 ACH_IN_PURSUIT_DESC	ヴィンセントの最初のミッションをクリアする
-ACH_BUSINESS_ACUMEN	ビジネスの判断
+ACH_BUSINESS_ACUMEN	ビジネスの洞察力
 ACH_BUSINESS_ACUMEN_DESC	オーリエルの最初のミッションをクリアする
 ACH_SPEC_OP	スペック・オペレーション
 ACH_SPEC_OP_DESC	イゾルの最初のミッションをクリアする
@@ -1751,7 +1751,7 @@ VS	VS
 NO_NETWORK	ネットワークに接続できませんでした
 RESTORE_DEFAULTS	デフォルトに戻す
 CREDITS_TRANSLATIONS	Translations
-OPTION_TITLE_SHOW_ONSCREEN_BATTLE_CONTROLS	戦闘コントロールを表示
+OPTION_TITLE_SHOW_ONSCREEN_BATTLE_CONTROLS	戦闘アニメ中の操作説明
 OPTION_TITLE_SHOW_HELP_MESSAGES	ヘルプメッセージを表示
 CONTROLLER_DISCONNECTED	コントローラーが切断されました。\n続けるにはコントローラーを接続してください。
 XBOX_SIGN_IN_STATE_CHANGE	サインイン状態が変更されました。\nタイトル画面に戻ります。
