@@ -75,14 +75,16 @@ namespace JapaneseMod
         [HarmonyPatch(typeof(CreditsView), "RunCredits")]
         public static class RunCreditsPatch
         {
-            public static void Postfix(ref CreditsView __instance)
+            public static void Prefix(ref CreditsView __instance)
             {
                 __instance.StartCoroutine(UpdateLyrics(__instance));
             }
 
             private static IEnumerator UpdateLyrics(CreditsView instance)
             {
-                yield return new WaitForSeconds(21.7f);
+                yield return new WaitUntil(() => BaseGame.Audio.CurrentBGMAudioSource.clip.name == "Warborn - Music - Rise Up");
+
+                yield return new WaitForSeconds(20.6f);
 
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("I know the ways that you have made me stronger");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("あなたが望んでいなくても");
