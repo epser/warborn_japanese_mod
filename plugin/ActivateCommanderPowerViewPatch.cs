@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
-using TMPro;
+﻿using HarmonyLib;
+using System;
 using Warborn;
 
 namespace JapaneseMod
@@ -20,7 +15,7 @@ namespace JapaneseMod
             switch (player.SelectedCommander)
             {
                 case CommanderConfig.Commanders.LuellaAugstein:
-                    powerName = 
+                    powerName =
                         Plugin.DesilializeLocalizedSymbolJson(
                             Game.Locale.GetLocalizedString(LocaleKeys.LUELLA_COMMANDER_POWER_NAME, Array.Empty<object>())
                         ).ToUpper().Replace(" ", "\n");

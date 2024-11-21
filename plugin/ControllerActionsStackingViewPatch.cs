@@ -1,8 +1,8 @@
-﻿using InControl;
+﻿using HarmonyLib;
+using InControl;
 using System;
 using System.Collections.Generic;
 using Warborn;
-using HarmonyLib;
 
 namespace JapaneseMod
 {

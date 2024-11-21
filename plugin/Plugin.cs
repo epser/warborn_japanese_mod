@@ -147,7 +147,8 @@ public class Plugin : BaseUnityPlugin
 
     public static LocalizeSymbolJsonStruct DesilializeSingleLocalizedSymbolJson(string value)
     {
-        try {
+        try
+        {
             var parsed = JsonConvert.DeserializeObject<LocalizeSymbolJsonStruct>(value);
             if (parsed == null)
             {

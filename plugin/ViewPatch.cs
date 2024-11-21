@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
+using JapaneseMod.structs;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using Warborn;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
-using System.Text.RegularExpressions;
-using JapaneseMod.structs;
-using System.Collections.Generic;
+using Warborn;
 
 namespace JapaneseMod
 {
@@ -377,7 +377,7 @@ namespace JapaneseMod
             var textViewName = name;
             Action action = () =>
             {
-                if(Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB)
+                if (Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_JA_JP && Game.Locale.CurrentLanguageKey != Plugin.LANGUAGE_EN_GB)
                 {
                     return;
                 }
@@ -405,7 +405,7 @@ namespace JapaneseMod
                 if (Plugin.IsPatchEnabled && Game.Locale.CurrentLanguageKey == Plugin.LANGUAGE_JA_JP)
                 {
                     searchType = TextViewFontManipulator.FindFontManipulationConditions(parent.name, textView.name, Plugin.DesilializeSingleLocalizedSymbolJson(originalText), null, true).FirstOrDefault()?.englishFontType;
-                    if(searchType != null)
+                    if (searchType != null)
                     {
                         rewriteFont = Plugin.Assets.FindFontStructs(
                             null,
@@ -415,7 +415,7 @@ namespace JapaneseMod
                         ).FirstOrDefault()?.Font ?? null;
                     }
                 }
-                if(rewriteFont == null)
+                if (rewriteFont == null)
                 {
                     rewriteFont = Plugin.Assets.FindFontStructs(
                         null,

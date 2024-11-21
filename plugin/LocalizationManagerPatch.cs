@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using HarmonyLib;
+﻿using HarmonyLib;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using UnityEngine;
 using Warborn;
-using Newtonsoft.Json;
 
 namespace JapaneseMod
 {

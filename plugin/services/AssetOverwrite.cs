@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
-using JapaneseMod.structs;
+﻿using JapaneseMod.structs;
+using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using UnityEngine;
 
 namespace JapaneseMod.services
 {
@@ -17,10 +17,11 @@ namespace JapaneseMod.services
             this.config = config;
         }
 
-        internal void LoadFontAssets() {
+        internal void LoadFontAssets()
+        {
             Plugin.Logger.LogInfo("Loading font assets...");
             var path = $"{BepInEx.Paths.ConfigPath}/{MyPluginInfo.PLUGIN_GUID}/{config.assetBundleName.Value}";
-            if(!System.IO.File.Exists(path))
+            if (!System.IO.File.Exists(path))
             {
                 Plugin.Logger.LogError($"AssetBundle not found: {path}");
                 return;
