@@ -24,6 +24,10 @@ namespace JapaneseMod
             actionPrompts = new Dictionary<InputControlType, string>
             {
                 {
+                    InputControlType.LeftTrigger,
+                    "Prologue"
+                },
+                {
                     InputControlType.Action3,
                     "Epilogue"
                 },

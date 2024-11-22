@@ -18,6 +18,10 @@ namespace JapaneseMod
             {
                 return HandleEpilogueButtonPressed(ref __instance);
             }
+            else if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput && Game.Input.Controls.ZoomOut)
+            {
+                return HandlePrologueButtonPressed(ref __instance);
+            }
 
             // ボタンラベル変更
             if (CampaignMissionMapViewPatch.displayingControllerActions && !Game.Input.IsOnlyUsingController() && !Game.Input.ControllerWasLastInput)
@@ -33,6 +37,40 @@ namespace JapaneseMod
 
             return true;
         }
+
+        public static bool HandlePrologueButtonPressed(ref CampaignScene __instance)
+        {
+            CampaignSaveData activeSaveSlot = Game.Data.GetActiveSaveSlot();
+            // 選択中ミッションの情報を取得
+            var missionInfo = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.LinkedMissionInfo;
+            if (missionInfo.MissionScript != null
+                && missionInfo.MissionScript.HasCampaignMapBriefingDialogue()
+                )
+            {
+                var instance = __instance;
+                instance.CampaignView.CampaignMissionMap.MissionListPanel.SetButtonsEnabled(false);
+                instance.CampaignView.CampaignMissionMap.MapMissionInfo.StartButton.ChildButton.SetButtonEnabled(false, true);
+                __instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput = false;
+                instance.CampaignView.IsTransitioning = true;
+                Game.Network.CurrentMatch = new MatchInfo(missionInfo.MissionScript);
+                BaseGame.Audio.PlaySFX(AudioConfig.SFXKeys.UILobbyPlayerJoins, 0.5f);
+                instance.CampaignView.CampaignMissionMap.TransitionOut(true, delegate
+                {
+                    instance.RunMissionBriefing(missionInfo, delegate
+                    {
+                        BaseGame.Scene.ChangeScene("CampaignScene", typeof(CampaignScene), true, delegate (Action complete)
+                        {
+                            Game.Transition.FadeInBlack(0.6f, complete);
+                        }, delegate (Action complete)
+                        {
+                            Game.Transition.FadeOutBlack(0.6f, complete);
+                        }, null);
+                    });
+                });
+            }
+            return false;
+        }
+
 
         public static bool HandleEpilogueButtonPressed(ref CampaignScene __instance)
         {
