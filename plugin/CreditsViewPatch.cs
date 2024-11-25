@@ -85,13 +85,9 @@ namespace JapaneseMod
 
                 yield return new WaitForSeconds(20.6f);
 
-                CreditsViewPatchVariables.EnglishLyrics.ConfigureText("I know the ways that you have made me stronger");
-                CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("あなたが望んでいなくても");
-                yield return new WaitForSeconds(5.5f);
-
-                CreditsViewPatchVariables.EnglishLyrics.ConfigureText("Even if it's not the way you'd hoped it to be");
-                CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("あなたのくれた強さで");
-                yield return new WaitForSeconds(6f);
+                CreditsViewPatchVariables.EnglishLyrics.ConfigureText("I know the ways that you have made me stronger    Even if it's not the way you'd hoped it to be");
+                CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("あなたが望んでいなくても　あなたのくれた強さで");
+                yield return new WaitForSeconds(11.5f);
 
                 CreditsViewPatchVariables.EnglishLyrics.ConfigureText("Walking on coals    The fire in your eyes");
                 CreditsViewPatchVariables.JapaneseLyrics.ConfigureText("灼熱の道　燃える瞳");
