@@ -8,10 +8,15 @@ using System.Numerics;
 
 namespace JapaneseMod
 {
-    [HarmonyPatch(typeof(CampaignScene), "Update")]
+    [HarmonyPatch(typeof(CampaignScene))]
     public class CampaignScenePatch
     {
-        public static bool Prefix(ref CampaignScene __instance)
+        public static int? PreservedTabIndex = null;
+        public static int? PreservedMissionIndex = null;
+
+        [HarmonyPatch("Update")]
+        [HarmonyPrefix]
+        public static bool UpdatePrefix(ref CampaignScene __instance)
         {
             // キー押下チェック
             if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput && Game.Input.Controls.Intel)
@@ -38,16 +43,52 @@ namespace JapaneseMod
             return true;
         }
 
+        [HarmonyPatch("LoadMissionsToMapFromCurrentSaveData")]
+        [HarmonyPrefix]
+        public static bool LoadMissionsToMapFromCurrentSaveDataPatch(ref CampaignScene __instance)
+        {
+            var instance = __instance;
+            instance.CampaignView.CampaignMissionMap.TransitionOut(false, null);
+            instance.CampaignView.CampaignMissionMap.UpdateCommanderAndMissionLists();
+            instance.DisplayTraitUnlock(delegate (bool didDisplay)
+            {
+                if (!didDisplay)
+                {
+                    instance.CampaignView.CampaignMissionMap.TransitionIn(true, delegate {
+                        if (PreservedTabIndex != null)
+                        {
+                            instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.HandleTabSelected((int)PreservedTabIndex);
+                            PreservedTabIndex = null;
+                        }
+                        if (PreservedMissionIndex != null)
+                        {
+                            // リストビューの選択位置復元
+                            instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.SelectCell((int)PreservedMissionIndex);
+
+                            // スクロール調整
+                            instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.OptimiseCellVisibility();
+
+                            PreservedMissionIndex = null;
+                        }
+                    });
+                }
+            });
+            return false;
+        }
+
         public static bool HandlePrologueButtonPressed(ref CampaignScene __instance)
         {
             CampaignSaveData activeSaveSlot = Game.Data.GetActiveSaveSlot();
             // 選択中ミッションの情報を取得
             var missionInfo = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.LinkedMissionInfo;
+            PreservedTabIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.SelectedIndex;
+            PreservedMissionIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
+
             if (missionInfo.MissionScript != null
-                && missionInfo.MissionScript.HasCampaignMapBriefingDialogue()
                 )
             {
                 var instance = __instance;
+                int selectedCellIndex = instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
                 instance.CampaignView.CampaignMissionMap.MissionListPanel.SetButtonsEnabled(false);
                 instance.CampaignView.CampaignMissionMap.MapMissionInfo.StartButton.ChildButton.SetButtonEnabled(false, true);
                 __instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput = false;
@@ -58,13 +99,17 @@ namespace JapaneseMod
                 {
                     instance.RunMissionBriefing(missionInfo, delegate
                     {
-                        BaseGame.Scene.ChangeScene("CampaignScene", typeof(CampaignScene), true, delegate (Action complete)
+                        BaseGame.Scene.ChangeScene("CampaignScene", typeof(CampaignScene), true,
+                        delegate (Action complete)
                         {
+                            CampaignScene.PlayBGMAudio();
                             Game.Transition.FadeInBlack(0.6f, complete);
-                        }, delegate (Action complete)
+                        },
+                        delegate (Action complete)
                         {
                             Game.Transition.FadeOutBlack(0.6f, complete);
-                        }, null);
+                        },
+                        null);
                     });
                 });
             }
@@ -77,6 +122,8 @@ namespace JapaneseMod
             CampaignSaveData activeSaveSlot = Game.Data.GetActiveSaveSlot();
             // 選択中ミッションの情報を取得
             var missionInfo = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.LinkedMissionInfo;
+            var tabIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.SelectedIndex;
+            var missionIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
 
             if (missionInfo.MissionScript != null
                 && missionInfo.MissionScript.HasCampaignMapCompletionDialogue()
@@ -91,18 +138,36 @@ namespace JapaneseMod
                 __instance.CampaignView.CampaignMissionMap.TransitionOut(false, null);
                 Game.Transition.FadeOutBlack(0.6f, delegate
                 {
+                    CampaignScene.PlayBGMAudio();
                     Game.Transition.FadeInBlack(0.6f, null);
                     missionInfo.MissionScript.RunCampaignMapCompletionDialogue(instance.CampaignView, delegate
                     {
                         Traverse.Create(instance).Field("isRunningCompletionDialogue").SetValue(false);
                         missionInfo.MissionScript.CleanUp();
                         AnimatedBannerView missionSelectBanner = instance.CampaignView.MissionSelectBanner;
-                        Action complete2;
-                        complete2 = delegate ()
+                        Action complete2 = delegate ()
                         {
                             instance.CampaignView.CampaignMissionMap.TransitionIn(false, delegate
                             {
-                                instance.LoadMissionsToMapFromCurrentSaveData();
+                                instance.CampaignView.CampaignMissionMap.TransitionOut(animated: false, null);
+                                instance.CampaignView.CampaignMissionMap.UpdateCommanderAndMissionLists();
+                                instance.DisplayTraitUnlock(delegate (bool didDisplay)
+                                {
+                                    if (!didDisplay)
+                                    {
+                                        instance.CampaignView.CampaignMissionMap.TransitionIn(animated: true, delegate
+                                        {
+                                            // タブの選択位置復元
+                                            instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.HandleTabSelected(tabIndex);
+
+                                            // リストビューの選択位置復元
+                                            instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.SelectCell(missionIndex);
+
+                                            // スクロール調整
+                                            instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.OptimiseCellVisibility();
+                                        });
+                                    }
+                                });
                             });
                         };
                         missionSelectBanner.RunBannerAnimation(complete2);
