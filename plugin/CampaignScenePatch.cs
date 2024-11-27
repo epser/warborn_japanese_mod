@@ -11,8 +11,10 @@ namespace JapaneseMod
     [HarmonyPatch(typeof(CampaignScene))]
     public class CampaignScenePatch
     {
+        public static bool DisplayingControllerActions = false;
         public static int? PreservedTabIndex = null;
         public static int? PreservedMissionIndex = null;
+        public static InControl.KeyCombo SpaceKey = new([Key.Space]);
 
         [HarmonyPatch("Update")]
         [HarmonyPrefix]
@@ -21,22 +23,32 @@ namespace JapaneseMod
             // キー押下チェック
             if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput && Game.Input.Controls.Intel)
             {
-                return HandleEpilogueButtonPressed(ref __instance);
-            }
-            else if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput && Game.Input.Controls.ZoomOut)
-            {
                 return HandlePrologueButtonPressed(ref __instance);
+            }
+            else if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput 
+                && 
+                    (
+                        (Game.Input.IsOnlyUsingController() && Game.Input.ControllerWasLastInput && Game.Input.ActiveDevice.LeftTrigger.WasPressed)
+                        || (!Game.Input.IsOnlyUsingController() && !Game.Input.ControllerWasLastInput && SpaceKey.IsPressed)
+                    )
+                )
+            {
+                return HandleEpilogueButtonPressed(ref __instance);
             }
 
             // ボタンラベル変更
             if (CampaignMissionMapViewPatch.displayingControllerActions && !Game.Input.IsOnlyUsingController() && !Game.Input.ControllerWasLastInput)
             {
-                CampaignMissionMapViewPatch.ControllerActionsStackingView.UpdateActionPrompts(CampaignMissionMapViewPatch.actionPrompts, true, false, 0f);
+                CampaignMissionMapViewPatch.ControllerActionsStackingView.UpdateActionPrompts(
+                    CampaignMissionMapViewPatch.actionPromptsPC, true, false, 0f
+                );
                 CampaignMissionMapViewPatch.displayingControllerActions = false;
             }
             else if (!CampaignMissionMapViewPatch.displayingControllerActions && (Game.Input.IsOnlyUsingController() || Game.Input.ControllerWasLastInput))
             {
-                CampaignMissionMapViewPatch.ControllerActionsStackingView.UpdateActionPrompts(CampaignMissionMapViewPatch.actionPrompts, true, true, 0f);
+                CampaignMissionMapViewPatch.ControllerActionsStackingView.UpdateActionPrompts(
+                    CampaignMissionMapViewPatch.actionPromptsController, true, true, 0f
+                );
                 CampaignMissionMapViewPatch.displayingControllerActions = true;
             }
 
