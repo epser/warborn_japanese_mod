@@ -37,14 +37,16 @@ namespace JapaneseMod
 
         public static void Postfix(ref CampaignMissionMapView __instance)
         {
-            Plugin.Logger.LogInfo("CampaignMissionMapViewPatch Postfix");
-
             ControllerActionsStackingView = __instance.AddNewChildOfType<ControllerActionsStackingView>("ControllerActionsStackingView");
+            ControllerActionsStackingView.RectTransform.anchorMin = new Vector2(0, 0);
+            ControllerActionsStackingView.RectTransform.anchorMax = new Vector2(0, 1);
+
             ControllerActionsStackingView.SetEdgeAlignedFrame(new Frame(RectTransform.Edge.Right, RectTransform.Edge.Top, 32f, 32f, 200f, 0f));
             ControllerActionsStackingView.transform.localScale = new Vector3(1f, 1f, 1f);
 
             ControllerActionsStackingView.UpdateActionPrompts(actionPromptsController, true, true, 0f);
-            ControllerActionsStackingView.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, true, 0f, 0f, false, null, false);
+            ControllerActionsStackingView.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0f, false, null, false);
+            displayingControllerActions = true;
         }
     }
 }

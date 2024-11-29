@@ -1,10 +1,8 @@
 ﻿using HarmonyLib;
 using InControl;
-using System.Collections.Generic;
 using System;
 using UnityEngine;
 using Warborn;
-using System.Numerics;
 
 namespace JapaneseMod
 {
@@ -28,8 +26,8 @@ namespace JapaneseMod
             else if (__instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput 
                 && 
                     (
-                        (Game.Input.IsOnlyUsingController() && Game.Input.ControllerWasLastInput && Game.Input.ActiveDevice.LeftTrigger.WasPressed)
-                        || (!Game.Input.IsOnlyUsingController() && !Game.Input.ControllerWasLastInput && SpaceKey.IsPressed)
+                        (Game.Input.ControllerWasLastInput && Game.Input.ActiveDevice.LeftTrigger.WasPressed)
+                        || (!Game.Input.ControllerWasLastInput && SpaceKey.IsPressed)
                     )
                 )
             {
@@ -57,7 +55,7 @@ namespace JapaneseMod
 
         [HarmonyPatch("LoadMissionsToMapFromCurrentSaveData")]
         [HarmonyPrefix]
-        public static bool LoadMissionsToMapFromCurrentSaveDataPatch(ref CampaignScene __instance)
+        public static bool LoadMissionsToMapFromCurrentSaveDataPrefix(ref CampaignScene __instance)
         {
             var instance = __instance;
             instance.CampaignView.CampaignMissionMap.TransitionOut(false, null);
@@ -96,8 +94,7 @@ namespace JapaneseMod
             PreservedTabIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.SelectedIndex;
             PreservedMissionIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
 
-            if (missionInfo.MissionScript != null
-                )
+            if (missionInfo.MissionScript != null)
             {
                 var instance = __instance;
                 int selectedCellIndex = instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
@@ -105,6 +102,7 @@ namespace JapaneseMod
                 instance.CampaignView.CampaignMissionMap.MapMissionInfo.StartButton.ChildButton.SetButtonEnabled(false, true);
                 __instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput = false;
                 instance.CampaignView.IsTransitioning = true;
+                CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0.6f, true, null);
                 Game.Network.CurrentMatch = new MatchInfo(missionInfo.MissionScript);
                 BaseGame.Audio.PlaySFX(AudioConfig.SFXKeys.UILobbyPlayerJoins, 0.5f);
                 instance.CampaignView.CampaignMissionMap.TransitionOut(true, delegate
@@ -144,6 +142,7 @@ namespace JapaneseMod
             {
                 BaseGame.Audio.PlayConfirmSFX(-1f);
                 __instance.CampaignView.CampaignMissionMap.MissionListPanel.MissionCollectionView.AllowInput = false;
+                CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0.6f, true, null);
                 missionInfo.MissionScript.LoadDialogueCharacters();
                 Traverse.Create(__instance).Field("isRunningCompletionDialogue").SetValue(true);
                 var instance = __instance;
@@ -162,6 +161,8 @@ namespace JapaneseMod
                             instance.CampaignView.CampaignMissionMap.TransitionIn(false, delegate
                             {
                                 instance.CampaignView.CampaignMissionMap.TransitionOut(animated: false, null);
+                                CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, true, 0f, 0.6f, true, null);
+
                                 instance.CampaignView.CampaignMissionMap.UpdateCommanderAndMissionLists();
                                 instance.DisplayTraitUnlock(delegate (bool didDisplay)
                                 {
@@ -191,5 +192,49 @@ namespace JapaneseMod
             BaseGame.Audio.PlayCancelSFX();
             return false;
         }
+
+        [HarmonyPatch(nameof(CampaignScene.HandleCommanderInfoButtonPressed))]
+        [HarmonyPostfix]
+        public static void HandleCommanderInfoButtonPressedPostfix()
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0.6f, true, null);
+        }
+
+        [HarmonyPatch(nameof(CampaignScene.HandleOptionsButtonPressed))]
+        [HarmonyPostfix]
+        public static void HandleOptionsButtonPressedPostfix()
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0.6f, true, null);
+        }
+
+        [HarmonyPatch(nameof(CampaignScene.HandleOptionsScreenConfirmButtonPressed))]
+        [HarmonyPostfix]
+        public static void HandleOptionsScreenConfirmButtonPressedPostFix()
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, true, 0f, 0.6f, true, null);
+        }
+
+        [HarmonyPatch(nameof(CampaignScene.HandleCommanderViewCloseButtonPressed))]
+        [HarmonyPostfix]
+        public static void HandleCommanderViewCloseButtonPressedPostfix()
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, true, 0f, 0.6f, true, null);
+        }
+
+        [HarmonyPatch(nameof(CampaignScene.LaunchMission))]
+        [HarmonyPostfix]
+        public static void LaunchMissionPostfix()
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, false, 0f, 0.6f, true, null);
+        }
+
+        [HarmonyPatch(nameof(CampaignScene.DisplayTraitUnlock))]
+        [HarmonyPostfix]
+        public static void DisplayTraitUnlockPostfix(ref CampaignScene __instance)
+        {
+            CampaignMissionMapViewPatch.ControllerActionsStackingView?.ShowOrHideViewOffscreenInDirection(RectTransform.Edge.Right, true, 0f, 0.6f, true, null);
+        }
+
+
     }
 }
