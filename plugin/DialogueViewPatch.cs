@@ -6,14 +6,16 @@ using Warborn;
 
 namespace JapaneseMod
 {
-    [HarmonyPatch(typeof(DialogueView), "Awake")]
-    public static class DialogViewAwakePatch
+    [HarmonyPatch(typeof(DialogueView))]
+    public static class DialogViewPatch
     {
 
-        public static void Postfix(ref DialogueView __instance)
+        [HarmonyPatch("Awake")] // privateなのでnameof()に出ない
+        [HarmonyPostfix]
+        public static void AwakePostfix(ref DialogueView __instance)
         {
             Plugin.Logger.LogInfo("Awake is called in dialogue!");
-            var handleLanguageChanged = new LocalizationManager.LanguageChangedHandler(DialogViewAwakePatch.CreateHandleLanguageChanged(__instance));
+            var handleLanguageChanged = new LocalizationManager.LanguageChangedHandler(DialogViewPatch.CreateHandleLanguageChanged(__instance));
             Plugin.EventPool.AddLanguageChangedHandler(__instance, handleLanguageChanged);
         }
 
@@ -26,15 +28,10 @@ namespace JapaneseMod
                 instance.HandleLanguageChanged();
             };
         }
-    }
 
-    /**
-     * UpdateDialogueText()
-    **/
-    [HarmonyPatch(typeof(DialogueView), "UpdateDialogueText")]
-    public static class UpdateDialogueTextPatch
-    {
-        public static void Prefix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, out string __state)
+        [HarmonyPatch("UpdateDialogueText")]
+        [HarmonyPrefix]
+        public static void UpdateDialogueTextPrefix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, out string __state)
         {
             // コルーチンで本文を1文字ずつ出してるので、本文のローカライズ変換はここでやる必要がある
             Plugin.Logger.LogInfo("UpdateDialogueText is called!");
@@ -44,7 +41,9 @@ namespace JapaneseMod
             text = Plugin.DesilializeLocalizedSymbolJson(text);
         }
 
-        public static void Postfix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, string __state)
+        [HarmonyPatch("UpdateDialogueText")]
+        [HarmonyPostfix]
+        public static void UpdateDialogueTextPostfix(ref DialogueView __instance, ref string speakerName, ref bool isLeft, ref bool isAlly, ref string text, ref bool animated, string __state)
         {
             // current language
             var currentLanguage = Plugin.LocalizationManagerReference.CurrentLanguageKey;
