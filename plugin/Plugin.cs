@@ -68,7 +68,7 @@ public class Plugin : BaseUnityPlugin
             SwitchLanguage();
         }
 
-        if (IsPressedKeys(ConfigStruct.modSwitchKey.Value.MainKey, ConfigStruct.modSwitchKey.Value.Modifiers))
+        if (LocalizationManagerReference?.CurrentLanguageKey == LANGUAGE_JA_JP && IsPressedKeys(ConfigStruct.modSwitchKey.Value.MainKey, ConfigStruct.modSwitchKey.Value.Modifiers))
         {
             SwitchModMode();
         }
