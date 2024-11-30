@@ -94,7 +94,7 @@ namespace JapaneseMod
             PreservedTabIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.SelectedIndex;
             PreservedMissionIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
 
-            if (missionInfo.MissionScript != null)
+            if (missionInfo.MissionScript != null && missionInfo.MissionID != "LUELLA-INTRO")
             {
                 var instance = __instance;
                 int selectedCellIndex = instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
@@ -123,6 +123,7 @@ namespace JapaneseMod
                     });
                 });
             }
+            BaseGame.Audio.PlayCancelSFX();
             return false;
         }
 
