@@ -276,4 +276,29 @@ public class Plugin : BaseUnityPlugin
         }
         return key;
     }
+
+    public static Sprite CreateSolidColorSprite(Color color, int width = 32, int height = 32)
+    {
+        // テクスチャを作成
+        Texture2D texture = new Texture2D(width, height);
+
+        // すべてのピクセルを指定した色で塗りつぶす
+        Color[] colors = new Color[width * height];
+        for (int i = 0; i < colors.Length; i++)
+        {
+            colors[i] = color;
+        }
+        texture.SetPixels(colors);
+        texture.Apply();
+
+        // SpriteをTextureから作成
+        Sprite sprite = Sprite.Create(
+            texture,
+            new Rect(0, 0, texture.width, texture.height),
+            new Vector2(0.5f, 0.5f), // ピボットを中心に設定
+            100f  // pixelsPerUnit
+        );
+
+        return sprite;
+    }
 }
