@@ -107,7 +107,7 @@ namespace JapaneseMod
                 backLogText += $"\n[{dialogue.speaker}]\n{dialogue.text}\n";
             }
 
-            backLogView.BackLogTextView.Text.text = backLogText + "\n\n";
+            backLogView.BackLogTextView.Text.text = backLogText + "\n";
 
             // コンテンツのサイズを確定
             var vector = backLogView.BackLogTextView.Text.GetPreferredValues(backLogView.BackLogTextView.Text.text, 1920, 0);
