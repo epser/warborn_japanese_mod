@@ -1,6 +1,9 @@
 ﻿using HarmonyLib;
 using InControl;
 using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using Warborn;
 
@@ -94,6 +97,13 @@ namespace JapaneseMod
             PreservedTabIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.ChapterTabView.SelectedIndex;
             PreservedMissionIndex = __instance.CampaignView.CampaignMissionMap.MissionListPanel.SelectedMissionListCell.Index;
 
+#if DEBUG
+            if (missionInfo.MissionScript != null && missionInfo.MissionID == "LUELLA-INTRO")
+            {
+                return HandleEpilogueButtonPressed(ref __instance, true);
+            }
+#endif
+
             if (missionInfo.MissionScript != null && missionInfo.MissionID != "LUELLA-INTRO")
             {
                 var instance = __instance;
@@ -128,7 +138,7 @@ namespace JapaneseMod
         }
 
 
-        public static bool HandleEpilogueButtonPressed(ref CampaignScene __instance)
+        public static bool HandleEpilogueButtonPressed(ref CampaignScene __instance, bool debugFlg = false)
         {
             CampaignSaveData activeSaveSlot = Game.Data.GetActiveSaveSlot();
             // 選択中ミッションの情報を取得
@@ -148,11 +158,19 @@ namespace JapaneseMod
                 Traverse.Create(__instance).Field("isRunningCompletionDialogue").SetValue(true);
                 var instance = __instance;
                 __instance.CampaignView.CampaignMissionMap.TransitionOut(false, null);
+
+                var dialogueFunc = missionInfo.MissionScript.RunCampaignMapCompletionDialogue;
+#if DEBUG
+                if (missionInfo.MissionID == "LUELLA-INTRO" && debugFlg)
+                {
+                    dialogueFunc = RunAllCampaignDialogue;
+                }
+#endif
                 Game.Transition.FadeOutBlack(0.6f, delegate
                 {
                     CampaignScene.PlayBGMAudio();
                     Game.Transition.FadeInBlack(0.6f, null);
-                    missionInfo.MissionScript.RunCampaignMapCompletionDialogue(instance.CampaignView, delegate
+                    dialogueFunc(instance.CampaignView, delegate
                     {
                         Traverse.Create(instance).Field("isRunningCompletionDialogue").SetValue(false);
                         missionInfo.MissionScript.CleanUp();
@@ -193,6 +211,29 @@ namespace JapaneseMod
             BaseGame.Audio.PlayCancelSFX();
             return false;
         }
+
+#if DEBUG
+        public static void RunAllCampaignDialogue(CampaignView campaignView, Action complete)
+        {
+            var luellaCharacterInfo = CharacterConfig.GetCharacterInfo(CharacterConfig.Characters.LuellaAugstein, true);
+            var samCharacterInfo = CharacterConfig.GetCharacterInfo(CharacterConfig.Characters.SamMatthews, true);
+
+            Queue<DialogueViewAction> queue = new Queue<DialogueViewAction>();
+            var scenarioRegex = new Regex(@"^MISSION_(LUELLA|VINCENT|AURIELLE|IZOL)_.+$");
+            foreach (FieldInfo field in typeof(LocaleKeys).GetFields()) {
+                var symbol = (string)field.GetValue(null);
+
+                if (scenarioRegex.IsMatch(symbol))
+                {
+                    queue.Enqueue(new DialogueViewAction(luellaCharacterInfo, samCharacterInfo, luellaCharacterInfo, CharacterConfig.Moods.Smiling, null, false, Game.Locale.GetLocalizedString(symbol, Array.Empty<object>())));
+                }
+
+            }
+            CutsceneView cutsceneView = CutsceneView.CreateDefaultCutscene();
+            cutsceneView.ConfigureDefaultLocationWithShip(CutsceneView.CutsceneLocations.CeruliaSpace, CommanderConfig.Factions.NOMAD, false);
+            CutsceneView.RunCutscene(cutsceneView, queue, campaignView, complete);
+        }
+#endif
 
         [HarmonyPatch(nameof(CampaignScene.HandleCommanderInfoButtonPressed))]
         [HarmonyPostfix]

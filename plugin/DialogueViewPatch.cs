@@ -72,7 +72,6 @@ namespace JapaneseMod
     {
         public static ConditionalWeakTable<DialogueView, DialogueBackLogViewComponent> BackLogViewTable = new();
 
-
         [HarmonyPatch("Awake")] // privateなのでnameof()に出ない
         [HarmonyPostfix]
         public static void AwakePostfix(ref DialogueView __instance)
@@ -108,7 +107,7 @@ namespace JapaneseMod
                 backLogText += $"\n[{dialogue.speaker}]\n{dialogue.text}\n";
             }
 
-            backLogView.BackLogTextView.Text.text = backLogText + "\n";
+            backLogView.BackLogTextView.Text.text = backLogText + "\n\n";
 
             // コンテンツのサイズを確定
             var vector = backLogView.BackLogTextView.Text.GetPreferredValues(backLogView.BackLogTextView.Text.text, 1920, 0);
