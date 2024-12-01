@@ -20,7 +20,7 @@ namespace JapaneseMod.services
         internal void LoadFontAssets()
         {
             Plugin.Logger.LogInfo("Loading font assets...");
-            var path = $"{BepInEx.Paths.ConfigPath}/{MyPluginInfo.PLUGIN_GUID}/{config.assetBundleName.Value}";
+            var path = $"{BepInEx.Paths.PluginPath}/{MyPluginInfo.PLUGIN_GUID}/{config.assetBundleName.Value}";
             if (!System.IO.File.Exists(path))
             {
                 Plugin.Logger.LogError($"AssetBundle not found: {path}");

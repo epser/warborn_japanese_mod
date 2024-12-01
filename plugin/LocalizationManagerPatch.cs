@@ -35,7 +35,7 @@ namespace JapaneseMod
             {
                 Plugin.Logger.LogInfo($"Loading strings for locale {text}");
                 // プラグインPATH/{MyPluginInfo.PLUGIN_GUID}/{text}.json が存在するか確認。存在するならTextAssetとしてロード
-                string path = $"{BepInEx.Paths.ConfigPath}/{MyPluginInfo.PLUGIN_GUID}/{text}.json";
+                string path = $"{BepInEx.Paths.PluginPath}/{MyPluginInfo.PLUGIN_GUID}/{text}.json";
                 if (System.IO.File.Exists(path))
                 {
                     Plugin.Logger.LogInfo($"Found {path}");
