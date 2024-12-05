@@ -18,6 +18,17 @@
 
 - 詳細はblogにも書いています: [『WARBORN』非公式日本語ローカライズ改善Modを作った - eps_r](https://eps-r.hatenablog.com/entry/2024/12/02/warborn-japanese-mod)
 
+### ストーリー翻訳のリライト
+
+- 誤訳
+  - "Proximity Mine": 「近接鉱山」 → 「近接信管地雷」
+  - "All systems nominal.": 「すべてのシステムは名前のみ」 → 「全システム正常」
+  - その他さまざまに
+- ストーリーの雰囲気を破壊する文体や訳語の選択の修正
+- 文字がウィンドウをはみ出す、文字化け、改行記号の入力ミスなど(see [Screenshots](https://eps-r.hatenablog.com/entry/2024/12/02/warborn-japanese-mod#%E5%95%8F%E9%A1%8C%E7%82%B9))
+
+上記の深刻な問題を抱えるストーリーテキストを全面的に再翻訳しました。
+
 ### UIフォント、翻訳の向上
 
 英語などの非CJKバージョンと比べて劣化している見栄えを改善します。
@@ -40,17 +51,6 @@
 ![20241201233829](https://github.com/user-attachments/assets/292cdfa2-0a12-43d6-9395-7a7a1d050022)
 
 ![20241202151953](https://github.com/user-attachments/assets/d753e343-28d4-4897-aba5-6d0423f4bc85)
-
-### ストーリー翻訳のリライト
-
-- 誤訳
-  - "Proximity Mine": 「近接鉱山」 → 「近接信管地雷」
-  - "All systems nominal.": 「すべてのシステムは名前のみ」 → 「全システム正常」
-  - その他さまざまに
-- ストーリーの雰囲気を破壊する文体や訳語の選択
-- 文字がウィンドウをはみ出す、文字化け、改行記号の入力ミスなど(see [Screenshots](https://eps-r.hatenablog.com/entry/2024/12/02/warborn-japanese-mod#%E5%95%8F%E9%A1%8C%E7%82%B9))
-
-上記の深刻な問題を抱えるストーリーテキストを全面的に再翻訳しました。
 
 ### 実験的機能
 
