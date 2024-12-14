@@ -27,7 +27,7 @@
 - ストーリーの雰囲気を破壊する文体や訳語の選択の修正
 - 文字がウィンドウをはみ出す、文字化け、改行記号の入力ミスなど(see [Screenshots](https://eps-r.hatenablog.com/entry/2024/12/02/warborn-japanese-mod#%E5%95%8F%E9%A1%8C%E7%82%B9))
 
-上記の深刻な問題を抱えるストーリーテキストを全面的に再翻訳しました。
+上記のような深刻な問題を抱えるストーリーテキストを全面的に再翻訳しました。
 
 ### UIフォント、翻訳の向上
 
@@ -73,9 +73,83 @@
 
 ![20241202164500](https://github.com/user-attachments/assets/b7884212-48fd-4112-a8d3-f7abf9e375ca)
 
-#### メインテーマに英語と日本語の歌詞を掲載
+#### クレジット画面に英語と日本語の歌詞を掲載
 
 ![20241202164717_1](https://github.com/user-attachments/assets/33234d31-e82b-4c12-971a-85bc795cc3c4)
+
+OST: https://www.youtube.com/watch?v=gNUzb8ZDukg
+
+##### English:
+
+> I know the ways that you have made me stronger<br>
+> Even if it's not the way you'd hoped it to be<br>
+> 
+> Walking on coals<br>
+> The fire in your eyes<br>
+> A step out of line<br>
+> Is the only way of making our wrongs right<br>
+>
+> Rise up<br>
+> 'cos I've had enough of these lies<br>
+> (it's a sign, it's a sign of the times)<br>
+> Rise up<br>
+> With the rage and fear of a fight<br>
+> (it's a sign, it's a sign of the times)<br>
+>
+> Uphold our name<br>
+> From dawn to dusk<br>
+> We're both the same<br>
+> We're credulous<br>
+> 
+> Walking on coals<br>
+> The fire in your eyes<br>
+> A step out of line<br>
+> Is the only way of making our wrongs right<br>
+> 
+> Rise up<br>
+> 'cos I've had enough of these lies<br>
+> (it's a sign, it's a sign of the times)<br>
+> Rise up<br>
+> With the rage and fear of a fight<br>
+> (it's a sign, it's a sign of the times)<br>
+> 
+> (it's a sign, it's a sign of the times)
+
+##### Japanese:
+
+> あなたが望んでいなくても<br>
+> あなたのくれた強さで<br>
+> 
+> 灼熱の道<br>
+> 燃える瞳<br>
+> 踏み出す者が<br>
+> あやまちを正せるなら<br>
+> 
+> Rise up<br>
+> もう嘘はいらない<br>
+> (it's a sign, it's a sign of the times)<br>
+> Rise up<br>
+> 怖れと怒りを抱いて<br>
+> (it's a sign, it's a sign of the times)<br>
+>
+> 誰もが<br>
+> 黄昏<br>
+> 誇りで<br>
+> 染めてく<br>
+> 
+> 灼熱の道<br>
+> 燃える瞳<br>
+> 踏み出す者が<br>
+> あやまちを正せるなら<br>
+> 
+> Rise up<br>
+> もう嘘はいらない<br>
+> (it's a sign, it's a sign of the times)<br>
+> Rise up<br>
+> 怖れと怒りを抱いて<br>
+> (it's a sign, it's a sign of the times)<br>
+> 
+> (it's a sign, it's a sign of the times)
 
 ## Contact
 
