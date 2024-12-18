@@ -965,7 +965,7 @@ MISSION_LUELLA_08_BRIEFING_LINE_1	目標は、かつてDUSK療法を開発した
 MISSION_LUELLA_08_BRIEFING_LINE_2	ルーエン？　それって……（ゴホッ）……ネサリスのコロニーじゃないの？
 MISSION_LUELLA_08_BRIEFING_LINE_3	ああ。ソブリン戦争の頃、俺はそこに駐留していたんだ。\nヴァリアブルアーマーの技師としてな。
 MISSION_LUELLA_08_BRIEFING_LINE_4	お前の両親に会ったのも、その時だ。\n当時は皆、あそこを普通の軍事基地だと思っていて、疑いもしなかった。\nDUSKという言葉の意味だって知らされずに居たんだ。
-MISSION_LUELLA_08_BRIEFING_LINE_5	……軍からディアティを持ち逃げして以来、俺は指名手配の脱走犯だ。\nネサリスのコロニーに入ろうものなら、即座に撃たれるだろうな。
+MISSION_LUELLA_08_BRIEFING_LINE_5	……軍からディアティを盗み出して以来、俺は指名手配の脱走犯だ。\nネサリスのコロニーに入ろうものなら、即座に撃たれるだろうな。
 MISSION_LUELLA_08_BRIEFING_LINE_6	つまり……コロニーへは……強行突入しか……ないってことだ。
 MISSION_LUELLA_08_BRIEFING_LINE_7	そうだな。施設への最速ルートは、セクター9の居住区と農業区を突っ切るものだ。
 MISSION_LUELLA_08_BRIEFING_LINE_8	（ぜぇ、ぜぇ）……ディアティで出るよ……。\n私が行けば……そのルートを……切り拓ける。
@@ -974,13 +974,13 @@ MISSION_LUELLA_08_START_LINE_1	セクター9の駐屯ネサリス軍、全軍に
 MISSION_LUELLA_08_START_LINE_2	ヴァリアブルアーマーパイロットは順次、出撃準備。\n傭兵団NOMADからコロニーを守れ。
 MISSION_LUELLA_08_START_LINE_3	逃亡犯、サミュエル・マシューズは生きたまま捕獲するように。
 MISSION_LUELLA_08_END_LINE_1	突破された！　アーヴィン提督に増援を要請せねば！
-MISSION_LUELLA_08_END_LINE_2	今だ、地上部隊を出せッ！\n向こうの再編成の間に、何としてもDUSK抑制剤を見つけ出すんだ！
+MISSION_LUELLA_08_END_LINE_2	今だ、地上部隊を出せッ！\n向こうの再編成より早く、何としてもDUSK抑制剤を見つけ出すんだ！
 MISSION_LUELLA_08_END_LINE_3	ルエラ、いい知らせだ！　今、DUSK研究施設の探索を終えたところだが……。
 MISSION_LUELLA_08_END_LINE_4	DUSK抑制剤は手に入った。それどころか、合成設備まで見つかったぞ。
 MISSION_LUELLA_08_END_LINE_5	確かに……いい知らせ……だね。
 MISSION_LUELLA_08_END_LINE_6	設備は回収した。だが抑制剤の合成には、専門家の知識が必要だろう。
 MISSION_LUELLA_08_END_LINE_7	施設のアーカイブによれば、DUSKの科学者だった者は\n"ゾーン" のどこかに逃げ込んだ、というのがネサリスの見立てだ。
-MISSION_LUELLA_08_END_LINE_8	その科学者から、合成設備の使い方を聞き出せるかもしれん。
+MISSION_LUELLA_08_END_LINE_8	その科学者から、合成設備の使い方を教わることができるかもしれん。
 MISSION_LUELLA_08_END_LINE_9	それもいい……けど……（ゴホッ）……でも、まずは……。
 MISSION_LUELLA_08_END_LINE_10	ああ、まずは抑制剤を飲んで休め。ルーエン脱出はそれからだ。\nどのみちネサリス軍と戦わなければ、ここは出られそうにない。
 MISSION_LUELLA_09_BRIEFING_LINE_1	具合はどうだ、ルエラ？
