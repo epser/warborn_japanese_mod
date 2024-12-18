@@ -14,6 +14,8 @@
 
 本Modと本Modの制作者はRaredrop GamesおよびPQube Gamesとは無関係であり、同社の著作権や知的財産権その他の権利を侵害する意図は一切ありません。
 
+Mod側からは使用・配信等の制限や規約については設けていません。動画配信やプレイ内容の共有等は、原作側に迷惑の掛からない範囲で好きなようにしてください。
+
 ## 追加機能
 
 - 詳細はblogにも書いています: [『WARBORN』非公式日本語ローカライズ改善Modを作った - eps_r](https://eps-r.hatenablog.com/entry/2024/12/02/warborn-japanese-mod)
