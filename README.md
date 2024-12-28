@@ -1,5 +1,7 @@
 # Japanese Mecha Anime Style Dialogue Mod for WARBORN
 
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/epser/warborn_japanese_mod/total)
+
 ストラテジーゲーム『WARBORN』の日本語ローカライズの品質を調整し、ストーリーの可読性と雰囲気を向上します。また、幾つかのQOLに関する追加機能を提供します（ゲームバランスは変更しません）。
 
 ## 配布物
