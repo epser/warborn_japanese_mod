@@ -800,7 +800,7 @@ MISSION_LUELLA_00_MID_LINE_6	セルリア軍のジャミングに違いない。
 MISSION_LUELLA_00_MID_LINE_7	（カタカタッ……カチッ）
 MISSION_LUELLA_00_MID_LINE_8	よし……サブシステム、オンライン……兵装チェック……。
 MISSION_LUELLA_00_MID_LINE_9	ルエラ、どこだ！　出撃だろうが！
-MISSION_LUELLA_00_MID_LINE_10	やってるでしょ、サム！　もう発進準備中。
+MISSION_LUELLA_00_MID_LINE_10	やってるでしょ、サム！　もう発進準備に入ってる。
 MISSION_LUELLA_00_MID_LINE_11	ルエラ・アウグシュタイン！　"ディアティ"、降下開始！
 MISSION_LUELLA_00_MID_LINE_12	間に合ったみたいね。みんな、調子は？
 MISSION_LUELLA_00_MID_LINE_13	たった今、最高になったとこだ。\nNOMADのエースパイロットが来てくれたんだものな。
@@ -855,7 +855,7 @@ MISSION_LUELLA_02_START_LINE_1	ここの人たちが出て行きたいってい�
 MISSION_LUELLA_02_START_LINE_2	コロニーが無かったら、今頃このセルリア全体がどうなってたか想像もつかないよ。
 MISSION_LUELLA_02_START_LINE_3	上官殿!?　市街にVAのシグナルを検知しました！
 MISSION_LUELLA_02_START_LINE_4	クソッ、上層部の言っていた、傭兵とかって連中だ！\nどうやってセンサーをすり抜けた？
-MISSION_LUELLA_02_START_LINE_5	部隊は直ちに展開しろ！　前哨基地に近寄らせるな！
+MISSION_LUELLA_02_START_LINE_5	部隊は直ちに展開しろ。前哨基地に近付かせるな！
 MISSION_LUELLA_02_END_LINE_1	これでシティ15の人たちの時間は稼げた。\n少なくとも、サンクタムの奴らが戻ってくるまではね。
 MISSION_LUELLA_02_END_LINE_2	そろそろセルリアに長居しすぎたかもしれんが、また次の依頼だ。
 MISSION_LUELLA_03_BRIEFING_LINE_1	今回の目標だが、\nセルリア軍の軌道保安部 (OSD) が警備する、サンクタムの兵器研究所の破壊となる。\n依頼主は匿名だ。
@@ -869,9 +869,9 @@ MISSION_LUELLA_03_BRIEFING_LINE_8	汚れ仕事のために金を払ってる相�
 MISSION_LUELLA_03_BRIEFING_LINE_9	正直、考えたくもないな。
 MISSION_LUELLA_03_START_LINE_1	ちょっと、どういうことさ!?
 MISSION_LUELLA_03_START_LINE_2	あのVAはみんな、軌道保安部 (OSD) のものじゃないよ！
-MISSION_LUELLA_03_START_LINE_3	あたしたちより前に、あいつらがOSDの警備部隊をやったに違いない。\nだったら味方？
-MISSION_LUELLA_03_START_LINE_4	気をつけろルエラ。あの識別不明VAは通信にも応じない。\n目撃者を作りたくないといった行動にも見える。
-MISSION_LUELLA_03_START_LINE_5	俺達が施設攻撃の任務を果たすためには……。\nあの先客が誰にせよ、相手をせねばならんようだ。
+MISSION_LUELLA_03_START_LINE_3	あたしたちより前に、あいつらがOSDの警備部隊をやったに違いない。\nだとしたら味方か？
+MISSION_LUELLA_03_START_LINE_4	気をつけろルエラ。あの識別不明VAは通信に応じていない。\n目撃者を作りたくないといった行動にも見える。
+MISSION_LUELLA_03_START_LINE_5	俺達が施設への攻撃を果たすためには……。\nあの先客が誰であれ、相手をせねばならんようだ。
 MISSION_LUELLA_03_END_LINE_1	これで最後！\nさて、施設を壊さないと。
 MISSION_LUELLA_03_END_LINE_2	ルエラ、施設はいい。ベイグラントに戻れ！　これはまずいぞ！
 MISSION_LUELLA_03_END_LINE_3	戻ったよサム、状況は？
@@ -881,8 +881,8 @@ MISSION_LUELLA_04_BRIEFING_LINE_2	OSDは集結拠点として、この2つの古
 MISSION_LUELLA_04_BRIEFING_LINE_3	アステロイドでカモフラージュして、センサーをごまかしてたのか。\nやるじゃない。
 MISSION_LUELLA_04_BRIEFING_LINE_4	ベイグラントの周囲に偵察隊を出していたのは幸運だったな。\nそうでなければ、気付かずやられていたところだ。
 MISSION_LUELLA_04_BRIEFING_LINE_5	これからどうする？
-MISSION_LUELLA_04_BRIEFING_LINE_6	簡単に言えば、先手を打ってやる。\n敵の不意を突いて、逆襲してやろうじゃないか。
-MISSION_LUELLA_04_BRIEFING_LINE_7	お前は攻撃チームAを指揮して、このポイント、1つ目のステーションに向かえ。\n2つ目のステーションに送る別動隊、チームBとの同時攻撃だ。
+MISSION_LUELLA_04_BRIEFING_LINE_6	簡単に言えば、先手を打ってやる。\n敵の不意を突いてやろうじゃないか。
+MISSION_LUELLA_04_BRIEFING_LINE_7	お前は攻撃チームAを指揮して、このポイント、1つ目の採掘ステーションに向かえ。\n2つ目のステーションに送る別動隊、チームBとの同時攻撃だ。
 MISSION_LUELLA_04_BRIEFING_LINE_8	時間が惜しい。すぐにかかるぞ。
 MISSION_LUELLA_04_START_LINE_1	何だと!?　こいつら、一体どこから！
 MISSION_LUELLA_04_END_LINE_1	チームA、1つ目の採掘ステーション内の敵を撃破したよ。
@@ -949,7 +949,7 @@ MISSION_LUELLA_07_START_LINE_1	DUSK抑制剤を探すためには、前哨基地
 MISSION_LUELLA_07_START_LINE_2	分かってるな？　このエリア全体が、クローキング地雷で覆われている。\n熱を一定時間感知すると爆発する仕組みだ。
 MISSION_LUELLA_07_START_LINE_3	VA "パスファインダー" を使って進路をクリアにしろ。\nまず彼らを送って、エリアをスキャンするんだ。\nそれで範囲内の地雷が爆発し、安全に通れるようになる。
 MISSION_LUELLA_07_MID_LINE_1	封鎖軍事区域への侵入者に告ぐ！
-MISSION_LUELLA_07_MID_LINE_2	今すぐVAを放棄して投降し、我々の尋問を受けろ。
+MISSION_LUELLA_07_MID_LINE_2	今すぐVAを放棄して投降し、こちらの尋問を受けろ。
 MISSION_LUELLA_07_MID_LINE_3	抵抗するならば発砲する！
 MISSION_LUELLA_07_MID_LINE_4	なんでよ……ここは……放棄区画のはずでしょ……！
 MISSION_LUELLA_07_MID_LINE_5	ネサリス軍め。未だに侵入者を、こうも警戒するか。
@@ -1029,7 +1029,7 @@ MISSION_LUELLA_10_END_LINE_2	貴様ら、いったい何を!?
 MISSION_LUELLA_10_END_LINE_3	ルエラ急げ！　リアクターが爆発する前に脱出するんだ！
 MISSION_LUELLA_10_END_LINE_4	やった！
 MISSION_LUELLA_10_END_LINE_5	よくやった、ルエラ！　お前は今日、多くの命を救ったんだ。
-MISSION_LUELLA_10_END_LINE_6	でも、要塞の中の人たちは？　ライサンダーの信者はどうなったの？
+MISSION_LUELLA_10_END_LINE_6	でも、要塞の人たちは？　ライサンダーの信者はどうなったの？
 MISSION_LUELLA_10_END_LINE_7	彼らも、要塞の危機には気付いていたようだな。\n大量の脱出シャトルが飛び出していったのが見えたよ。\nライサンダーの艦隊も退散したとさ。
 MISSION_LUELLA_10_END_LINE_8	リアクターは、狙い通りに制御システムを巻き込んで爆発してくれた。\n各地の自律型VAは機能を停止したようだ……。\n要するに、ようやく戦いは終わったってことだ、ルエラ！
 MISSION_LUELLA_10_END_LINE_9	これから、ネサリスとセルリア、クルコフはどうするんだろう？\nいがみ合ってた皆が、この戦いでは協力してくれたけど。
