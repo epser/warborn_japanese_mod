@@ -1124,7 +1124,7 @@ MISSION_VINCENT_04_START_LINE_5	報告。付近一帯にクローキング地雷
 MISSION_VINCENT_04_START_LINE_6	フン、やはりな。簡単な仕事にはならんか。
 MISSION_VINCENT_04_END_LINE_1	コマンダー。敵ヴァリアブルアーマーの残骸から、生存者や所属の痕跡を調査しました。
 MISSION_VINCENT_04_END_LINE_2	投降してくれりゃ、つくづく良かったんだが。\nこいつらの正体は、何か分かりそうか？
-MISSION_VINCENT_04_END_LINE_3	そこが問題でして……。パイロットは存在しませんでした。\nあの敵VAは、初めからカラだったのです。
+MISSION_VINCENT_04_END_LINE_3	問題はそこです……パイロットは存在しませんでした。\nあの敵VAは、初めからカラだったことになります。
 MISSION_VINCENT_04_END_LINE_4	ヴァリアブルアーマーの、自動化技術といったものか？\nあのVAが、何らかの方法で遠隔操縦されていたと……。
 MISSION_VINCENT_04_END_LINE_5	破片から回収できたのは、このデータモジュールだけです。
 MISSION_VINCENT_04_END_LINE_6	見てみるか……読み取れるのは、いくつかの座標だけだ。セルリアの圏内のようだが。
@@ -1136,20 +1136,20 @@ MISSION_VINCENT_05_BRIEFING_LINE_3	くれぐれも慎重にな。サンクタム
 MISSION_VINCENT_05_BRIEFING_LINE_4	輸送船をハイジャックした輩も、サンクタムと関わりがあるのでしょうか？
 MISSION_VINCENT_05_BRIEFING_LINE_5	そうとも思えんが、敵の大元は依然として掴めないままだからな。注意は払えよ。
 MISSION_VINCENT_05_START_LINE_1	まだ何も見つからないのか？　もう数日は経つってのに……。
-MISSION_VINCENT_05_START_LINE_2	はっ、まだ何もありません。\n施設の規模が大きく、ほとんどのデータが厳重に暗号化されております。
-MISSION_VINCENT_05_START_LINE_3	セルリアにネサリス軍が!?　我が軍の施設に、強奪を仕掛けているって奴らか！
+MISSION_VINCENT_05_START_LINE_2	はっ、まだ何も。\n施設の規模が大きく、ほとんどのデータが厳重に暗号化されております。
+MISSION_VINCENT_05_START_LINE_3	セルリアにネサリス軍だと!?　我が軍の施設に、強奪を仕掛けているって奴らか！
 MISSION_VINCENT_05_START_LINE_4	検索を続けろ。俺は彼らに状況を説明する。
 MISSION_VINCENT_05_START_LINE_5	イエス、サー！
 MISSION_VINCENT_05_START_LINE_6	そこのセルリア軍、聞いてくれ！　我々に戦闘の意志はない！
-MISSION_VINCENT_05_START_LINE_7	ネサリスでは多数の輸送船がハイジャックされ、行方知れずになっている。\n俺達はこの放棄された製造プラントで、その手掛かりを集めていたんだ。\n必要なのは情報だけだ。
+MISSION_VINCENT_05_START_LINE_7	ネサリスでは多数の輸送船がハイジャックされ、行方知れずになっている。\nこちらは放棄された製造プラントで、手掛かりを集めていたんだ。\n必要なのは情報だけだ。
 MISSION_VINCENT_05_START_LINE_8	外交ゴッコなど無駄だ。ネサリスのクズどもが見え透いた嘘を言いやがって！\n貴様らは警備部隊を排除して、停戦協定を破ったのだろうが！
-MISSION_VINCENT_05_START_LINE_9	聞けと言っている！　ここは完全に無人だったんだ。協定は破っちゃいない。
-MISSION_VINCENT_05_START_LINE_10	ここで手柄を立ててやる！　VAは全機前進、ネサリスの侵入者を撃破せよ！
-MISSION_VINCENT_05_START_LINE_11	クソッ、選択の余地無しか！　探し物ごとプラントを奪われるわけにはいかないぞ！
+MISSION_VINCENT_05_START_LINE_9	聞けと言っている！　ここは完全に無人だったんだ。協定を破っちゃいない。
+MISSION_VINCENT_05_START_LINE_10	ここで手柄を立ててやる！　VAは全機前進、侵入者のネサリスどもを撃破せよ！
+MISSION_VINCENT_05_START_LINE_11	クソッ、一方的じゃないか！\n探し物ごとプラントを奪われるわけにはいかないぞ！
 MISSION_VINCENT_05_END_LINE_1	コマンダー、検索にヒットするものがありました！\n関連するアーカイブをダウンロード中です。
 MISSION_VINCENT_05_END_LINE_2	ようやくか！　完了しだい全機撤収！\n"タイドブレイカー" に帰投し、回収データを確認する。
 MISSION_VINCENT_05_END_LINE_3	セルリアンめ、わけを聞こうともせず！
-MISSION_VINCENT_05_END_LINE_4	「わけ」だと？　停戦協定を破った言い訳を、ここでしてみるか、ヴィンセント!?
+MISSION_VINCENT_05_END_LINE_4	「わけ」だと？　停戦協定を破った言い訳を、ここでしてみるか、ヴィンセント！
 MISSION_VINCENT_05_END_LINE_5	いいか、私の責任ごときは同盟議会で取りようもある。\nだがこの一件では貴様自身が、軍法会議にかけられるかもしれんのだぞ。
 MISSION_VINCENT_05_END_LINE_6	ジェイ……。
 MISSION_VINCENT_05_END_LINE_7	それだけのことをしたんだ。得るものはあったんだろうな？
@@ -1158,8 +1158,8 @@ MISSION_VINCENT_05_END_LINE_9	いかにも怪しいな。ソブリン戦争の�
 MISSION_VINCENT_05_END_LINE_10	ちょうど輸送船を数隻、誰にも気付かれないよう隠すならば……。\nうってつけの場所かもしれません。
 MISSION_VINCENT_06_RALLY_OBJECTIVE	いずれかの味方ユニット1体を、\n集結地点に到達させる。
 MISSION_VINCENT_06_BRIEFING_LINE_1	コマンダー、ご依頼の概略レポートです。
-MISSION_VINCENT_06_BRIEFING_LINE_2	ご苦労。君たちには情報収集のため、軌道造船所へ侵入してもらうことになる。
-MISSION_VINCENT_06_BRIEFING_LINE_3	不必要な交戦は避けるように。何が起きているかを静かに観察してくるんだ。
+MISSION_VINCENT_06_BRIEFING_LINE_2	ご苦労。君たちには情報収集のため、軌道造船所へ潜入してもらうことになる。
+MISSION_VINCENT_06_BRIEFING_LINE_3	不必要な交戦は避けるように。何が起きているかを静かに探ってくるんだ。
 MISSION_VINCENT_06_BRIEFING_LINE_4	残念ながら、俺は前回のセルリア軍との衝突のかどで、\n同盟議会の緊急評議に召喚されている。
 MISSION_VINCENT_06_BRIEFING_LINE_5	ネサリスの各コロニーの代表者と通信リンクが繋がっている。オンライン会議だな。
 MISSION_VINCENT_06_BRIEFING_LINE_6	俺の身柄はまだタイドブレイカーにあるが、\n議会の決定が下るまでは動くことができないんだ。
@@ -1167,10 +1167,10 @@ MISSION_VINCENT_06_BRIEFING_LINE_7	賊の手がかりを見失うなよ。期待
 MISSION_VINCENT_06_START_LINE_1	大丈夫でしょうか、コマンダーは……。
 MISSION_VINCENT_06_START_LINE_2	提督がついているんだぞ。\nアーヴィン提督はいつもヴィンセントさんを気にかけておられる。
 MISSION_VINCENT_06_START_LINE_3	あの方が "ソブリン戦争の竜" と呼ばれているのは、伊達じゃないんだ。\n提督は私やお前たちの思う以上にタフだよ。
-MISSION_VINCENT_06_START_LINE_4	戻ってきた！　VAだけだ。輸送船はいない。
-MISSION_VINCENT_06_START_LINE_5	そうか……。奴らは我が軍の輸送船をここに持ち込んで、解体しているに違いない。
-MISSION_VINCENT_06_START_LINE_6	荷物や部材は、さらに別の所へと運び出しているようだがな。
-MISSION_VINCENT_06_START_LINE_7	奴ら、こちらに気付いたようです。撤退しましょう！
+MISSION_VINCENT_06_START_LINE_4	戻ってきた！　VAだけですね。輸送船がいない。
+MISSION_VINCENT_06_START_LINE_5	間違いない。奴ら、我が軍の輸送船を運び込んで解体しているんだ。
+MISSION_VINCENT_06_START_LINE_6	積み荷や部材は、さらに別の所へと運び出しているようだがな。
+MISSION_VINCENT_06_START_LINE_7	敵がこちらに気付いたようです。撤退しましょう！
 MISSION_VINCENT_06_START_LINE_8	我々の装備ではあのVA、"サーペンス" には対処できない。\n集結地点からコマンダーへ連絡せねば。
 MISSION_VINCENT_06_START_LINE_9	間違っても、"サーペンス" に正面からぶつかれるだなんて思うなよ……。
 MISSION_VINCENT_06_MID_LINE_1	着いたぞ！　タイドブレイカー応答願う。\nこちらは造船所の偵察隊だ。増援を要請！
@@ -1369,11 +1369,11 @@ MISSION_AURIELLE_06_END_LINE_4	お父様がどこに連れて行かれたか、�
 MISSION_AURIELLE_06_END_LINE_5	どうやらセルバンテスは旗艦ハントレスに乗り、\nアイザック社長を連れて惑星セルリアへ向かったようです。
 MISSION_AURIELLE_06_END_LINE_6	分かりました、行きましょう。目的地はセルリアです！
 MISSION_AURIELLE_07_BRIEFING_LINE_1	コマンダー。セルリア近傍の採掘ステーションの一つが、\n大気圏に突入する海賊旗艦・ハントレスを観測しました。
-MISSION_AURIELLE_07_BRIEFING_LINE_2	既にその軌道から、目的地を割り出しております。
+MISSION_AURIELLE_07_BRIEFING_LINE_2	すでに軌道から、目的地を割り出しております。
 MISSION_AURIELLE_07_BRIEFING_LINE_3	秘密基地といったものがあると？
 MISSION_AURIELLE_07_BRIEFING_LINE_4	そうも見えますが、まだ情報が足りません。
-MISSION_AURIELLE_07_BRIEFING_LINE_5	時間が無いのですよ！
-MISSION_AURIELLE_07_BRIEFING_LINE_6	可及的速やかに強襲部隊を編成。お父様を探しに、あそこへ降ります！
+MISSION_AURIELLE_07_BRIEFING_LINE_5	情報を集めているような時間は、無いのですよ！
+MISSION_AURIELLE_07_BRIEFING_LINE_6	至急、強襲部隊を編成。お父様を探しに、そこへ降ります！
 MISSION_AURIELLE_07_START_LINE_1	これは……シャドーウルヴスの基地じゃないっていうの!?
 MISSION_AURIELLE_07_START_LINE_2	封鎖軍事区域に、攻撃部隊だと!?　ええい、どうやってここを見つけた！
 MISSION_AURIELLE_07_START_LINE_3	セルバンテスに引っかけられた？
